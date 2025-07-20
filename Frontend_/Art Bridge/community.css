@@ -5,13 +5,16 @@
     box-sizing: border-box;
     font-family: 'IBM Plex Serif', serif;
 }
+body::selection{
+    background-color: #000000;
+    color: white;
+}
 
 #page {
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
 }
 
 /* Navigation Styles */

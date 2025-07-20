@@ -1,28 +1,57 @@
-// Mobile menu functionality
-const menuToggle = document.querySelector('.menu');
-const sidebar = document.querySelector('.nav-links');
-const closeBtn = document.querySelector('.close-btn');
+/**
+ * Art Bridge - Main JavaScript
+ * 
+ * This file contains all the interactive functionality for the Art Bridge website,
+ * including mobile navigation, dropdown menus, and content sliders.
+ * 
+ * Features:
+ * - Mobile-responsive navigation menu
+ * - Dropdown menus with smooth animations
+ * - Auto-advancing content slider
+ * - Art collections slider with manual navigation
+ */
 
-// Toggle menu visibility
+/**
+ * Mobile Navigation Menu
+ * Handles the mobile menu toggle, close button, and click outside functionality
+ */
+// Core Navigation Elements
+const menuToggle = document.querySelector('.menu');      // Mobile menu toggle button
+const sidebar = document.querySelector('.nav-links');    // Sidebar navigation container
+const closeBtn = document.querySelector('.close-btn');   // Close button in mobile menu
+
+/**
+ * Toggle Mobile Menu
+ * Shows/hides the mobile navigation menu when the menu button is clicked
+ */
 menuToggle.addEventListener('click', () => {
     sidebar.classList.toggle('active');
 });
 
-// Close menu when close button is clicked
+/**
+ * Close Mobile Menu
+ * Hides the mobile navigation menu when the close button is clicked
+ */
 closeBtn.addEventListener('click', () => {
     sidebar.classList.remove('active');
 });
 
-// Close menu when clicking outside
+/**
+ * Close Menu on Outside Click
+ * Hides the mobile menu when clicking anywhere outside of it
+ */
 document.addEventListener('click', (e) => {
     if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
         sidebar.classList.remove('active');
     }
 });
 
-// Handle dropdown menus
+/**
+ * Dropdown Menu Handler
+ * Manages the dropdown menus in the navigation with smooth animations
+ * and proper keyboard accessibility
+ */
 const dropdowns = document.querySelectorAll('.dropdown');
-
 dropdowns.forEach(dropdown => {
     const arrow = dropdown.querySelector('#arrow');
     const content = dropdown.querySelector('.dropdown-content');
@@ -30,7 +59,7 @@ dropdowns.forEach(dropdown => {
     arrow.addEventListener('click', (e) => {
         e.stopPropagation();
         
-        // Close other dropdowns
+        // Close other dropdowns when opening a new one
         dropdowns.forEach(other => {
             if (other !== dropdown) {
                 other.querySelector('.dropdown-content').classList.remove('active');
@@ -44,7 +73,15 @@ dropdowns.forEach(dropdown => {
     });
 });
 
-// Slider functionality
+/**
+ * Main Content Slider
+ * Controls the auto-advancing hero slider with manual navigation controls
+ * Features:
+ * - Auto-advances every 5 seconds
+ * - Pauses on hover
+ * - Smooth transitions between slides
+ * - Responsive design
+ */
 const slider = document.querySelector('.slider');
 const sliderContainer = document.querySelector('.slider-container');
 const items = document.querySelectorAll('.items');
@@ -55,35 +92,32 @@ const counter = document.querySelector('.counter');
 let currentIndex = 0;
 const totalItems = items.length;
 
-// Update slider position
+// Update main slider position
 function updateSlider() {
     const translateX = currentIndex * 100;
     sliderContainer.style.transform = `translateX(-${translateX}%)`;
     counter.textContent = `${currentIndex + 1}/${totalItems}`;
 }
 
-// Handle navigation
+// Handle main slider navigation
 prevBtn.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-    
     updateSlider();
 });
 
 nextBtn.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % totalItems;
-    
     updateSlider();
-    
 });
 
-// Auto-advance slider
+// Auto-advance functionality for main slider
 let autoAdvance;
 
 function startAutoAdvance() {
     autoAdvance = setInterval(() => {
         currentIndex = (currentIndex + 1) % totalItems;
         updateSlider();
-    }, 3000);
+    }, 5000);
 }
 
 function stopAutoAdvance() {
@@ -94,12 +128,18 @@ function stopAutoAdvance() {
 slider.addEventListener('mouseenter', stopAutoAdvance);
 slider.addEventListener('mouseleave', startAutoAdvance);
 
-// Initialize slider
+// Initialize main slider
 updateSlider();
 startAutoAdvance();
 
-
-// Art bridge collections slider
+/**
+ * Art Bridge Collections Slider
+ * Handles the horizontal scrolling gallery of art collections
+ * Features:
+ * - Manual navigation with previous/next buttons
+ * - Responsive layout
+ * - Smooth scrolling behavior
+ */
 const collectionsContainer = document.querySelector('.collections-container');
 const collectionsSlider = document.querySelector('.collections-slider');
 const prevColBtn = document.querySelector('#prevCol');
@@ -108,13 +148,13 @@ const itemms = document.querySelectorAll('.itemm');
 let currentIndexCol = 0;
 const totalItemsCol = itemms.length;
 
-// Update slider position
+// Update collections slider position
 function updateSliderCol() {
-    const translateX = currentIndexCol * 30;
+    const translateX = currentIndexCol * 70;
     collectionsSlider.style.transform = `translateX(-${translateX}%)`;
 }
 
-// Handle navigation
+// Handle collections slider navigation
 prevColBtn.addEventListener('click', () => {
     currentIndexCol = (currentIndexCol - 1 + totalItemsCol) % totalItemsCol;
     updateSliderCol();
@@ -125,5 +165,10 @@ nextColBtn.addEventListener('click', () => {
     updateSliderCol();
 });
 
-// Initialize slider
+// Initialize collections slider
 updateSliderCol();
+
+
+
+
+

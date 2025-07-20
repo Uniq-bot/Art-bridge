@@ -1,16 +1,46 @@
 <!DOCTYPE html>
+<!--
+  Art Bridge - Home Page
+  Main landing page for Art Bridge, featuring key sections about art sharing,
+  community engagement, and museum partnerships.
+  
+  This page includes:
+  - Responsive navigation with dropdown menus
+  - Hero section with animated text
+  - Program highlights
+  - Mission statement
+  - Interactive sliders for content display
+  - FAQ section
+  - Newsletter signup
+  - Footer with site links
+-->
 <html lang="en">
+<!-- Document Head - Contains metadata, stylesheets, and page title -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Bridge</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Ensure GT America is loaded for all headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'GT America', 'GT America Fallback', sans-serif;
+            font-weight: 700;
+        }
+        /* Apply IBM Plex Serif to all paragraphs */
+        p {
+            font-family: 'IBM Plex Serif', serif;
+        }
+    </style>
 </head>
+<!-- Main Document Body -->
 <body>
     <div id="page">
-        <header>
+          <!-- Site Header with Main Navigation -->
+  <header>
             <nav>
                 <div class="menu" id="menu-toggle">
                   <span>MENU</span>  <i class="fa-solid fa-bars"></i>
@@ -85,12 +115,15 @@
                 </ul>
             </aside>
         </header>
-        <main>
-            <div class="hero">
-                <h1 class="hero-text1">Expanding Access </h1>
-                <h1 class="hero-text2">to Creative Communities</h1>
+          <!-- Main Content Area -->
+  <main>
+                <!-- Hero Section with Animated Headlines -->
+    <div class="hero" data-aos="fade-up">
+                <h1 class="hero-text1" data-aos="fade-left">Expanding Access </h1>
+                <h1 class="hero-text2" data-aos="fade-right">to Creative Communities</h1>
             </div>
-           <div class="secondHero">
+               <!-- Program Highlights Section -->
+    <div class="secondHero" data-aos="fade-up">
                     <div class="leftContent">
                             <div class="container">
                                 <div class="textContainer">
@@ -110,7 +143,8 @@
                         </div>
                     </div>
            </div>
-           <div class="ourMission">
+               <!-- Mission Statement Section -->
+    <div class="ourMission" data-aos="fade-up">
                <div class="topContent">
                <h3>OUR MISSION</h3>
                <h1>Art Bridges delivers access to meaningful experiences with art for personal and    community wellbeing.</h1>
@@ -125,8 +159,10 @@
                </div>
               </div>
            </div>
-           <div class="slider">
+               <!-- Interactive Content Slider -->
+    <div class="slider" data-aos="fade-up">
                 <div class="slider-container">
+               
                     <div class="items">
                         <div class="right">
                             <img src="https://cdn.sanity.io/images/x76dkvvf/prod/b87bf0309efd10ad66415a7df184ce10f3d6f655-1200x800.png?auto=format&w=1080&q=75" alt="">
@@ -165,17 +201,18 @@
                     </div>
                 </div>
             </div>
-            <div class="controls">
+            <div class="controls" data-aos="fade-up">
                 <button class="prev">Previous</button>
                 <span class="counter">1/4</span>
                 <button class="next">Next</button>
             </div>
-            <div class="faqs">
-               <div class="topper">
+                <!-- FAQ Section -->
+    <div class="faqs" data-aos="fade-left">
+               <div class="topper" data-aos="fade-up">
                 <h3>HOW WE FUND MUSEUMS</h3>
                 <h1>At Art Bridges, we do things a little differently. We support partners and projects, rather than grantees and grants.</h1>
                </div>
-               <div class="mainer">
+               <div class="mainer" data-aos="fade-right">
                     <div class="contentainer">
                         <div class="left">
                             <span>1</span>
@@ -188,7 +225,7 @@
                                 We provide museum partners with the financial, strategic, and logistical support needed to travel exhibitions, loan or borrow artworks, and develop related community programming.</p>
                         </div>
                     </div>
-                    <div class="contentainer">
+                    <div class="contentainer" data-aos="fade-up">
                         <div class="left">
                             <span>2</span>
                             <h3>
@@ -204,7 +241,7 @@
                         </div>
                         
                     </div>
-                    <div class="contentainer">
+                    <div class="contentainer" data-aos="fade-up">
                         <div class="left">
                             <span>3</span>
                             <h3>
@@ -212,7 +249,7 @@
                                      Process</span></h3>
                          
                         </div>
-                        <div class="right">
+                        <div class="right" data-aos="fade-up">
                             <p>
                                 Once a project has been approved, the museum partner is invited to apply for funding and collaborate with our program and awards teams on an application.</p>
                         </div>
@@ -221,38 +258,41 @@
                 
                </div>
             </div>
-            <div class="impact">
+            <div class="impact" data-aos="fade-up">
                 <h3>OUR IMPACT</h3>
-                <div class="Grid-numbers">
-                    <div class="number">
+                <div class="Grid-numbers" data-aos="fade-left">
+                    <div class="number" data-aos="fade-up-left">
                         <h1>200+</h1>
                         <p>Museums Supported</p>
                     </div>
-                    <div class="number">
+                    <div class="number" data-aos="fade-up-left">
                         <h1>200+</h1>
                         <p>Museums Supported</p>
                     </div>
-                    <div class="number">
+                    <div class="number" data-aos="fade-up-right">
                         <h1>200+</h1>
                         <p>Museums Supported</p>
                     </div>
-                    <div class="number">
+                    <div class="number" data-aos="fade-up-left">
                         <h1>200+</h1>
                         <p>Museums Supported</p>
                     </div>
                 </div>
                
             </div>
-            <div class="availableCollection">
+            <div class="availableCollection" data-aos="fade-up"
+            data-aos-anchor-placement="top-center">
                 <h2>Available Collections</h2>
                 <p>Browse the Art Bridges Collection—an expanding vision of American art from the 19th century to present day, encompassing multiple media and voices—and our Partner Loan Network, which provides museums with the logistical and strategic support needed to circulate and diversify their collections.</p>
                 <button>Browse the Collections</button>
             </div>
-            <div class="artbridgeCollections">
+            <div class="artbridgeCollections" data-aos="fade-up"
+            data-aos-anchor-placement="top-center">
                 <h4>Art Bridge Collections</h4>
                 <div class="collections-container">
                     <div class="collections-slider">
-                        <div class="itemm">
+                        <div class="itemm" data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-bottom">
                             <div class="imagee">
                                 <img src="https://cdn.sanity.io/images/x76dkvvf/prod/3df4d7534470dd6c053ea67040c995ba71c14f7a-551x560.jpg?auto=format&w=640&q=75" alt="">
                             </div>
@@ -261,7 +301,8 @@
                                 <span>Re-Echo</span>
                             </div>
                         </div>
-                        <div class="itemm">
+                        <div class="itemm" data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-bottom">
                             <div class="imagee">
                                 <img src="https://cdn.sanity.io/images/x76dkvvf/prod/4646ff74c88a6d2ea42c1583cc89cbebac741ce5-560x782.jpg?auto=format&w=640&q=75" alt="">
                             </div>
@@ -270,7 +311,8 @@
                                 <span>Re-Echo</span>
                             </div>
                         </div>
-                        <div class="itemm">
+                        <div class="itemm" data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-bottom">
                             <div class="imagee">
                                 <img src="https://cdn.sanity.io/images/x76dkvvf/prod/d5f23c0c691f152f9c6d7a402c4484691e810e50-1080x799.jpg?auto=format&w=1080&q=75" alt="">
                             </div>
@@ -279,7 +321,8 @@
                                 <span>Re-Echo</span>
                             </div>
                         </div>
-                        <div class="itemm">
+                        <div class="itemm" data-aos="fade-up"
+                        data-aos-anchor-placement="bottom-bottom">
                             <div class="imagee">
                                 <img src="https://cdn.sanity.io/images/x76dkvvf/prod/3df4d7534470dd6c053ea67040c995ba71c14f7a-551x560.jpg?auto=format&w=640&q=75" alt="">
                             </div>
@@ -296,93 +339,69 @@
                 </div>
             </div>
            </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </main>
-        <footer class="footer">
+          <!-- Site Footer with Newsletter Signup and Navigation -->
+   <footer class="footer">
             <div class="newsletter">
               <div class="newsletter-content">
                 <h2>Sign up for Art Bridges News</h2>
-                <p>Stay informed about our latest initiatives, partnerships, and opportunities to engage with American art.</p>
-                <form class="newsletter-form">
-                  <input type="email" placeholder="Enter your email address" required>
-                  <button type="submit">Subscribe</button>
-                </form>
+                <p>Learn about collection highlights, program offerings, and more.</p>
               </div>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Your email" />
+                <button type="submit">→</button>
+              </form>
             </div>
-            <div class="footer-content">
-              <div class="footer-section">
-                <h3>Art Bridge</h3>
-                <p>Connecting museums and communities through art.</p>
-              </div>
-              <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                </ul>
-              </div>
-              <div class="footer-section">
-                <h3>Connect With Us</h3>
-                <div class="social-links">
-                  <a href="#"><i class="fab fa-facebook"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-linkedin"></i></a>
+          
+            <div class="footer-main">
+              <div class="footer-left">
+                <div class="logo">Art <span>Bridges</span><sup>®</sup></div>
+                <div class="footer-links">
+                  <div><strong>Art Sharing</strong> <span>▾</span></div>
+                  <div><strong>Community Engagement</strong> <span>▾</span></div>
+                  <div><strong>Ideas & Resources</strong> <span>▾</span></div>
+                  <div><strong>Discover Art Bridges</strong></div>
+                  <div><strong>Partner With Us</strong></div>
                 </div>
               </div>
+          
+              <div class="footer-right">
+                <h3>Art Bridges Collection</h3>
+                <p>The Art Bridges Collection contains more than 200 objects that are available for loan to museums across the United States, free of charge.</p>
+                <a href="#" class="cta-button">Learn More</a>
+              </div>
             </div>
+          
             <div class="footer-bottom">
-              <p>&copy; 2025 Art Bridge. All rights reserved.</p>
+              <div class="footer-nav">
+                <a href="#">Media Kit</a>
+                <a href="#">Newsroom</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+              </div>
+              <div class="footer-carousel">
+                <button>←</button>
+                <button>→</button>
+              </div>
             </div>
-        </footer>
+          </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init(
+   {
+    duration: 1000,
+    once: true,
+    offset: 120,
+    easing: 'ease-in-sine',
+   }
+  );
+</script>
     <script src="index.js"></script>
 </body>
 </html>
         
     </div>
     
-
 
 
 
