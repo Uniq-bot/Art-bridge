@@ -10,6 +10,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.getElementById('sidebar');         // Sidebar navigation element
     const closeBtn = document.querySelector('.close-btn');      // Close button in mobile menu
     const dropdowns = document.querySelectorAll('.dropdown');   // All dropdown menu elements
+    const searchbtn=document.querySelector('.searchbtn')
+    const nav=document.querySelector('nav')
+    const searchbar=document.querySelector('.search')
+    searchbtn.addEventListener('click',()=>{
+        searchbar.classList.add('searchactive')
+        nav.style.opacity=0;
+        setTimeout(()=>{
+        nav.style.display='none'
+
+        }, 1000)
+    })
+    const close=document.querySelector('.close-search')
+    close.addEventListener('click', ()=>{
+        searchbar.classList.remove('searchactive')
+        nav.style.display='flex'
+        setTimeout(()=>{
+            nav.style.opacity=1;
+
+        }, 100)
+
+
+
+    })
+
 
     /**
      * Mobile Menu Toggle

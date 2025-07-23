@@ -18,17 +18,60 @@ body::selection{
     overflow-x: hidden;
 }
 
+
+
 /* Navigation Styles */
 
 header {
+    height: 10vh;
     width: 100%;
     background: #fff;
     padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
+    position: relative;
     z-index: 1000;
 }
+.search{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -100%;
+    transition: 0.5s ease-in-out;
+    
+
+}
+
+
+  .search input::placeholder {
+    color: #999;
+  }
+.search.searchactive{
+    top: 0;
+}
+.search input{
+    width: 90%;
+    height: 90%;
+    font-size: 2em;
+    padding: 0.5em 2em;
+    border: none;
+    outline: none;
+    
+}
+.search::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  width:90%;
+  height: 1px;
+  background-color: rgb(152, 149, 149);
+}
+.search .close-search{
+    padding: 2em;
+    font-size: 1.5em;
+}
+
 
 nav {
     width: 100%;
@@ -37,6 +80,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 0.5s ease-in-out;
 }
 
 .menu {
@@ -61,10 +105,14 @@ nav {
     background-color: #ffffff;
     font-size: 2em;
     overflow-y: auto;
+    
 }
 
 .nav-links.active {
     left: 0;
+}
+.whole{
+    width: 100%;
 }
 
 .nav-links ul {
@@ -72,7 +120,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem;
+    
 
 }
 
@@ -85,12 +133,18 @@ nav {
     color: #2c3e50;
 }
 
+
+.dropdown .div{
+    display: flex   ;
+    align-items: center;
+    width: 100%;
+}
+
 .nav-links li a {
     text-decoration: none;
     color: #2c3e50;
     font-weight: 400;
     transition: color 0.3s ease;
-    width: 100%;
    
 }
 .nav-links li i {
@@ -135,7 +189,16 @@ nav {
 /* Dropdown Styles */
 .dropdown {
     position: relative;
+    height: 100%;
+    width: 100%;
+    white-space:0;
+    font-size: 1.5em;
+   
     
+}
+.div{
+    display: flex;
+     justify-content: space-between;
 }
 
 .dropdown-content {
@@ -149,14 +212,20 @@ nav {
     height: 0;
     padding: 0;
     margin: 0;
+    opacity: 0;
+    left: -100%;
+    font-size: 1em;
 }
 
 .dropdown-content.active {
+    padding: 1em;
     visibility: visible;
     min-height: 100px;
     display: flex;
     flex-direction: column;
     height: auto;
+    opacity: 1;
+    left: 0;
 }
 .dropdown-content li a {
     flex: 1;
@@ -294,6 +363,7 @@ header {
 }
 
 .ctas p {
+    margin: 0;
     font-size: 1rem;
     color: #2c3e50;
 }
