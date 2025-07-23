@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600;700&display=swap');*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'IBM Plex Serif', serif;
 }
 body::selection{
     background-color: #000000;
@@ -15,10 +15,7 @@ body::selection{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
 }
-
-
 
 /* Navigation Styles */
 
@@ -389,27 +386,23 @@ header {
 
 /* header end here  */
 
-/* Main starts here  */
-main {
-    width: 100%;
-    position: relative;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
+/* main starts here  */
 
-/* Hero Section Styles */
-#heroSection {
+main{
     width: 100%;
     min-height: 100vh;
-    position: relative;
-    background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/299b3717f8baa0e2c6d579c30de4f8c95d2b5b0e-1800x1200.jpg?auto=format&w=1920&q=75');
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+
 }
 
-#heroSection::before {
+.hero-section{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/d551a511edcddc3e0186a80962f65f33dd0dd6a6-1421x1065.png?auto=format&w=1920&q=75');
+    position: relative;
+}
+.hero-section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -422,603 +415,227 @@ main {
         rgba(0, 0, 0, 0.4) 50%,
         rgba(0, 0, 0, 0.6) 100%
     );
-    z-index: 1;
 }
-
-#heroSection .hero-content {
+.text-content{
     position: absolute;
     bottom: 10%;
-    left: 10%;
     color: white;
-    z-index: 2;
-    max-width: 600px;
+    left: 10%;  
+    display: flex; 
+    flex-direction: column;
 }
-
-#heroSection .hero-content h1 {
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+.text-content h2{
+    font-size: 3rem;
 }
-
-#heroSection .hero-content h1 span {
+.text-content h2 span{
     font-style: italic;
-}
-
-#heroSection .hero-content p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    opacity: 0.9;
-    font-style: italic;
-}
-
-/* Second Section Styles */
-#secondSection {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    background-color: #ffffff;
-    padding: 2rem 0;
-}
-
-#secondSection .top {
-    width: 90%;
-    min-height: 40vh;
-    position: relative;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ccc;
-    padding: 4rem 3rem;
-    margin: 0 auto;
-}
-
-#secondSection .top h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-#secondSection .top h3 {
-    font-size: 2.5rem;
-    letter-spacing: -2px;
     font-weight: 500;
-    opacity: 0.9;
+}
+.text-content p{
+    width: 40%;
+    font-size: 1.3em;
 }
 
-#secondSection .second {
-    width: 90%;
-    min-height: 40vh;
-    position: relative;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ccc;
-    padding: 4rem 3rem;
-    margin: 0 auto;
+/* hero section end here  */
+/* about section starts here  */
+
+.about-section{
+    width: 100%;
+    min-height: 60vh;
     display: flex;
+    padding: 5em;
+}
+.about-section .left{
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 2em 10em 0 0 ;
+}
+.about-section .right{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+
+}
+.right .grid{
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid .itemms{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 2em 2em 0;
+    gap: 1em;
+}
+.itemms p{
+    padding: 0 5em 0 0 ;
+}
+
+/* about section end here  */
+
+/* learn-and-engagement starts here  */
+
+.links-for-other-page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+}
+
+.links-for-other-page .learn-and-engagement{
+    display: flex;
+    width: 100%;
+    min-height: 50vh;
+    background-color: #D4EDD3;
+    padding: 4em 4em;
     justify-content: space-between;
 }
-
-#secondSection .second .left {
-    width: 50%;
-    padding: 2rem;
+.learn-and-engagement .left{
+    width: 45%;
+    height: 60vh;
+    overflow: hidden;
+}
+.learn-and-engagement .left img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.learn-and-engagement .right{
+    width: 45%;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
 
-#secondSection .second .left h1 {
-    font-size: 2.5rem;
-    letter-spacing: -2px;
-    font-weight: 500;
-    opacity: 0.9;
 }
-
-#secondSection .second .left h1 span {
-    font-style: italic;
-    font-weight: 300;
-}
-
-#secondSection .second .left p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    opacity: 0.9;
-    padding-right: 2rem;
-}
-
-#secondSection .second .right {
-    width: 50%;
-    padding: 2rem;
+.learn-and-engagement .right .upper{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+
+}
+.learn-and-engagement .right h1{
+    font-size: 3em;
+}
+.learn-and-engagement .right button{
+    font-size: 1.2em;
+    padding: 0.6em 2em;
+    border: none;
+    border-radius: 50px;
+    background-color: #000000;
+    color: white;
+}
+.learn-and-engagement .right p{
+    font-size: 1.5em;
+    padding-right: 6em;
+}
+
+
+.links-for-other-page .evaluation{
+    display: flex;
+    width: 100%;
+    min-height: 80vh;
+    background-color: #D1BDFA;
+    padding: 4em 4em;
     justify-content: space-between;
 }
-
-#secondSection .second .right .image {
-    width: 100%;
-    height: 50vh;
-    position: relative;
-    background-color: #ffffff;
+.evaluation .left{
+    width: 45%;
+    height: 60vh;
+    overflow: hidden;
 }
-
-#secondSection .second .right .image img {
+.evaluation .left img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
-#secondSection .second .right p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    opacity: 0.9;
-    font-style: italic;
-}
-#heroSection{
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/299b3717f8baa0e2c6d579c30de4f8c95d2b5b0e-1800x1200.jpg?auto=format&w=1920&q=75');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-#heroSection::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.1) 0%,
-        rgba(0, 0, 0, 0.4) 50%,
-        rgba(0, 0, 0, 0.6) 100%
-    );
-    z-index: 1;
-}
-.hero-content{
-    position: absolute;
-    bottom: 10%;
-    left: 10%;  
-    color: white;
-    z-index: 2;
-    max-width: 600px;
-   
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-.hero-content h1 span {
-    font-style: italic;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    opacity: 0.9;
-}
-
-/* Add a subtle glow effect */
-.hero-content h1::after {
-    content: '';
-    display: block;
-    width: 60%;
-    height: 2px;
-    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.5));
-    margin-top: 1rem;
-    opacity: 0.8;
-}
-
-#secondSection{
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    background-color: #ffffff;
-    padding: 2rem 0;
-}
-.top{
-    width: 90%;
-   min-height: 40vh;
-    position: relative;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ccc;
-    padding: 4rem 3rem;
-    margin: 0 auto;
-}
-.top h2{
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-.top h3{
-    font-size: 2.5rem;
-    letter-spacing: -2px;
-    font-weight: 500;
-    opacity: 0.9;
-}
-
-.second{
-    width: 90%;
-    min-height: 40vh;
-    position: relative;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ccc;
-    padding: 4rem 3rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-.left{
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    }
-    .left h1{
-        font-size: 2.5rem;
-        letter-spacing: -2px;
-        font-weight: 500;
-        opacity: 0.9;
-    }
-    .left h1 span{
-        font-style: italic;
-        font-weight: 300;
-    }
-    .left p{
-        font-size: 1.2rem;
-        font-weight: 400;
-        line-height: 1.6;
-        opacity: 0.9;
-        padding-right: 2rem;
-    }
-.right{
-        width: 50%;
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .right .image{
-        width: 100%;
-        height: 50vh;
-        position: relative;
-        background-color: #ffffff;
-    }
-    .right .image img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .right p{
-        font-size: 1.2rem;
-        font-weight: 400;
-        line-height: 1.6;
-        opacity: 0.9;
-        font-style: italic;
-    }
-
-    /* Third Section Styles */
-#thirdSection {
-    width: 100%;
-    min-height: 10vh;
-    position: relative;
-    background-color: #ffffff;
-    padding: 2rem 0;
-}
-
-#thirdSection .thirdSec-top {
-    width: 90%;
-    position: relative;
-    background-color: #ffffff;
-    margin: 0 auto;
-}
-
-#thirdSection .thirdSec-top h2 {
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 1.2;
-    padding-right: 20rem;
-    padding-top: 3rem;
-}
-
-#thirdSection .thirdSec-second {
-    width: 90%;
-    position: relative;
-    background-color: #ffffff;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-#thirdSection .thirdSec-second .item {
-    width: 100%;
-    min-height: 10vh;
-    position: relative;
-    background-color: #ffffff;
-    padding: 4rem 0rem;
-    display: flex;
-    flex-direction: column;
-}
-
-#thirdSection .thirdSec-second .item h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-#thirdSection .thirdSec-second .item span {
-    font-style: italic;
-    font-weight: 400;
-    font-size: 2em;
-    color: pink;
-}
-
-#thirdSection .thirdSec-second .item p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    opacity: 0.9;
-    font-style: italic;
-    font-family: 'Georgia', 'Times New Roman', serif;
-}
-        /* Fourth Section - Main Content Section
-   Contains three main sections with alternating background colors */
-
-/* Main Top Section - Purple Background */
-#fourthSection {
-    width: 100%;
-    min-height: 40vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-#fourthSection .fourthSec-top {
-    /* Purple background section */
-    background-color: #D1BDFA;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-}
-
-/* Left Content - Text and Description */
-#fourthSection .fourthSec-top .left {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#fourthSection .fourthSec-top .left h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-#fourthSection .fourthSec-top .left p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    opacity: 0.9;
-    font-style: italic;
-    font-family: 'Georgia', 'Times New Roman', serif;
-}
-
-/* Right Content - Image Section */
-#fourthSection .fourthSec-top .right {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#fourthSection .fourthSec-top .left img {
-    width: 90%;
+.evaluation .right{
+    width: 45%;
     height: 60vh;
-    object-fit: cover;
-}
-
-/* Upper Section - Title and Button */
-#fourthSection .fourthSec-top .right .upper {
-    width: 100%;
-    min-height: 10vh;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+    padding-left: 4em;
 
-#fourthSection .fourthSec-top .right .upper h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
 }
+.evaluation .right .upper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
 
-#fourthSection .fourthSec-top .right .upper button {
-    background-color: black;
-    color: white;
+}
+.evaluation .right h1{
+    font-size: 3em;
+}
+.evaluation .right button{
+    font-size: 1.2em;
+    padding: 0.6em 2em;
     border: none;
-    width: 30em;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#fourthSection .fourthSec-top .right .upper button:hover {
-    background-color: #2980b9;
-}
-/* Second Section - Green Background */
-#fourthSection .fourthSec-sec {
-    background-color: #D4EDD3;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-}
-
-    #fourthSection .fourthSec-sec .left {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#fourthSection .fourthSec-sec .left h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-#fourthSection .fourthSec-sec .left p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    opacity: 0.9;
-    font-style: italic;
-    font-family: 'Georgia', 'Times New Roman', serif;
-}
-
-#fourthSection .fourthSec-sec .right {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#fourthSection .fourthSec-sec .left img {
-    width: 90%;
-    height: 60vh;
-    object-fit: cover;
-}
-
-#fourthSection .fourthSec-sec .right .upper {
-    width: 100%;
-    min-height: 10vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#fourthSection .fourthSec-sec .right .upper h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-#fourthSection .fourthSec-sec .right .upper button {
-    background-color: black;
+    border-radius: 50px;
+    background-color: #000000;
     color: white;
-    border: none;
-    width: 30em;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+}
+.evaluation .right p{
+    font-size: 1.5em;
 }
 
-#fourthSection .fourthSec-sec .right .upper button:hover {
-    background-color: #2980b9;
-}
-
-/* Third Section - Beige Background */
-#fourthSection .fourthSec-bot {
+.links-for-other-page .fellows-program{
+    display: flex;
+    width: 100%;
+    min-height: 50vh;
     background-color: #EDDFD3;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-}
-
-    #fourthSection .fourthSec-bot .left {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
+    padding: 4em 4em;
     justify-content: space-between;
 }
-
-#fourthSection .fourthSec-bot .left h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-#fourthSection .fourthSec-bot .left p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    opacity: 0.9;
-    font-style: italic;
-    font-family: 'Georgia', 'Times New Roman', serif;
-}
-
-#fourthSection .fourthSec-bot .right {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#fourthSection .fourthSec-bot .left img {
-    width: 90%;
+.fellows-program .left{
+    width: 45%;
     height: 60vh;
+    overflow: hidden;
+}
+.fellows-program .left img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
-
-#fourthSection .fourthSec-bot .right .upper {
-    width: 100%;
-    min-height: 10vh;
-    position: relative;
+.fellows-program .right{
+    width: 45%;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
 
-#fourthSection .fourthSec-bot .right .upper h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
 }
+.fellows-program .right .upper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
 
-#fourthSection .fourthSec-bot .right .upper button {
-    background-color: black;
-    color: white;
+}
+.fellows-program .right h1{
+    font-size: 3em;
+}
+.fellows-program .right button{
+    font-size: 1.2em;
+    padding: 0.6em 2em;
     border: none;
-    width: 30em;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    background-color: #000000;
+    color: white;
+}
+.fellows-program .right p{
+    font-size: 1.5em;
+    padding-right: 6em;
 }
 
-#fourthSection .fourthSec-bot .right .upper button:hover {
-    background-color: #2980b9;
-}
 
-
-/* Fifth Section - Partner Stories Section */
 #fifthSection{
     width: 90%;
     min-height: 100vh;
@@ -1032,7 +649,7 @@ main {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.2;
-    text-align: center;
+    margin-top: 2em;
     margin-bottom: 2rem;
 }
 
@@ -1152,7 +769,7 @@ main {
 
 
 
-  
+
   .footer {
     background-color: #1a162a;
     color: #fff;

@@ -189,19 +189,24 @@
  .five{
    background-color:#D4EDD3 ;
    /* min-height: 20vh; */
+   min-height: 50vh;
    width:100%;
    display:grid;
-   grid-template-columns: 2fr 2fr;
-   grid-template-rows: 1fr;
-   gap:10em;
+   grid-template-columns: 1fr 1fr;
+   gap: 5em;
+   padding: 2em;
    
+ }
+ .fifth-image{
+  width:100%;
+  height: 60%;
  }
 
  .fifth-image img{
-   height:80%;
+   height:100%;
    width: 100%;
-   padding:5em 0 0 2em;
-   object-fit: content;
+   /* padding:5em 0 0 2em; */
+   object-fit: cover;
  }
  .fifth-image p{
    font-style: italic;
@@ -209,9 +214,14 @@
  }
 
 .fifth-learn{
-   padding:20em 0;
+   /* padding:20em 0; */
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 100%;
+   justify-content: center;
 }
-.first{
+.fifth-learn .fist{
    justify-content: center;
 }
 .second{
@@ -521,4 +531,4 @@
       text-align: center;
     }
   }
-  
+
