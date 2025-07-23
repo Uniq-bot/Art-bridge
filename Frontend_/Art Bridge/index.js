@@ -104,3 +104,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+const sliderContainer = document.querySelector('.slider-container');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const items = document.querySelectorAll('.items');
+const counter = document.querySelector('.counter');
+let currIndex = 0;
+
+const slideContent = (indexx) => {
+    items.forEach((item, i) => {
+        item.style.transform = `translateX(${(i - indexx) * 100}%)`;
+        item.classList.toggle('slide', i===indexx)
+    });
+    counter.innerHTML = `${indexx + 1}/${items.length}`;
+};
+
+slideContent(currIndex);
+
+const time = setInterval(() => {
+    currIndex = (currIndex + 1) % items.length;
+    slideContent(currIndex);
+}, 3000);
+
+const stopAuto = () => clearInterval(time);
+
+prevBtn.addEventListener('click', () => {
+    if (currIndex > 0) {
+        currIndex--;
+        slideContent(currIndex);
+        stopAuto();
+    }
+});
+
+nextBtn.addEventListener('click', () => {
+    if (currIndex < items.length - 1) {
+        currIndex++;
+        slideContent(currIndex);
+        stopAuto();
+    }
+});

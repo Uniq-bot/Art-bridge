@@ -6,7 +6,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // DOM Elements
-    const menuToggle = document.getElementById('menu-toggle');  // Mobile menu toggle button
+      const menuToggle = document.getElementById('menu-toggle');  // Mobile menu toggle button
     const sidebar = document.getElementById('sidebar');         // Sidebar navigation element
     const closeBtn = document.querySelector('.close-btn');      // Close button in mobile menu
     const dropdowns = document.querySelectorAll('.dropdown');   // All dropdown menu elements
