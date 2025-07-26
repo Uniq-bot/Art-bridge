@@ -114,14 +114,23 @@ const counter = document.querySelector('.counter');
 let currIndex = 0;
 
 const slideContent = (indexx) => {
+    if(currIndex===4){
+    currIndex=0
+}
     items.forEach((item, i) => {
         item.style.transform = `translateX(${(i - indexx) * 100}%)`;
-        item.classList.toggle('slide', i===indexx)
+        setTimeout(()=>{
+            item.style.opacity=1
+            setTimeout(() => {
+                item.classList.toggle('slide', i===indexx)
+                
+            }, 300);
+        }, 200)
     });
     counter.innerHTML = `${indexx + 1}/${items.length}`;
 };
 
-slideContent(currIndex);
+
 
 const time = setInterval(() => {
     currIndex = (currIndex + 1) % items.length;
