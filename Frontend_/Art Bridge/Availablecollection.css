@@ -422,8 +422,8 @@ font-weight: bold;
 }
 .container{
     display:grid;
-    grid-template-columns: repeat(3, 400px);
-    min-height: 80vh;
+    grid-template-columns: repeat(3, 300px);
+    min-height: 50vh;
     text-align: center;
     gap:4rem 4rem;
     padding:2rem ; 
