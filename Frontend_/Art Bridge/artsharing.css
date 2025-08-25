@@ -841,6 +841,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1em;
 }
 
 #fourthSection .fourthSec-top .right .upper h2 {
@@ -1229,14 +1230,18 @@ main {
     width: 100%;
   }
   
-  .logo {
+  .footer-left .logo {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
+    color: white;
   }
-  
+  .logo sup{
+    font-size: 1.3em;
+  }
   .logo span {
     font-weight: 600;
+    
   }
   
   .footer-links {

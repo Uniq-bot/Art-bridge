@@ -1,0 +1,129 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+section{
+    width:100%;
+    min-height:100vh;
+    background-image: url('https://media.istockphoto.com/id/941325408/photo/artists-collection-at-showroom.jpg?s=612x612&w=0&k=20&c=a9Fcrqj68LZQtap1aDEPIypTppZw2M7a8jUXCIW1HMQ=');
+   background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+section::before{
+     content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+}
+.image-para h1{
+  padding-bottom:0.5em;
+  font-size: 2em;
+  line-height: 1;
+  font-weight:10;
+}
+
+.image-para{
+    position:absolute;
+    padding:0 0 2em 3em;
+    color:white;
+    font-size:1.5em;
+    /* font-style: italic; */
+    bottom:0;
+    line-height:1.3em;
+    
+}
+ .middle{
+    min-height:90vh;
+    width:100%;
+   
+ }
+
+ .topic{
+    padding: 4em 2em;
+ }
+ .topic h1{
+    font-size:2.5em;
+ }
+
+ .images-grid{
+    display:grid;
+    grid-template-columns: 2fr 1fr  ;
+   /* grid-template-rows: 1fr 1fr; */
+    gap:20px;
+    /* height: 70vh; */   
+   
+ }
+
+  .image-item img{
+    height:100vh;
+    width:100%;
+    padding:0 2em;
+  
+  }
+  .image-item p{
+    font-style: italic;
+    padding:0 0 4em 2em;
+  }
+
+
+  .main{
+     min-height:80vh;
+     background-color:#EDDFD3 ;
+     padding:3em 0;
+  }
+  .heading h3{
+    padding:2em;
+  }
+  .heading h1{
+      font-size:2.5em;
+      padding: 0 0 2em 1em;
+  }
+  .tabs{
+    display:flex;
+    flex-direction: row;
+    gap:30px;
+    padding:0 2em;
+  }
+  .image-division{
+    display:grid;
+   grid-template-columns: 1fr 1fr;
+   column-gap: 3em;
+   grid-template-rows: 1fr;
+    height:80vh;
+    width:100%; 
+    padding: 1em 2em;
+  }
+
+  
+  .images{
+    display: flex;
+    flex-direction: column;
+  }
+  .images img {
+     height:60vh;
+  }
+  .images p{
+    font-style: italic;
+    margin-top: 20px;
+  }
+  .para{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+  }
+  
+  
