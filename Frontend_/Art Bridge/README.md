@@ -1,6 +1,6 @@
-# Art Bridge Website
+# Art Pool Website
 
-A responsive website for the Art Bridge Foundation.
+A responsive website for the Art Pool Foundation.
 
 ## Getting Started
 
