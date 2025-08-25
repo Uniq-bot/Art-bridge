@@ -1,7 +1,7 @@
 /*
- * Art Bridge - Main Stylesheet
+ * Art Pool - Main Stylesheet
  * 
- * This file contains all the styles for the Art Bridge website,
+ * This file contains all the styles for the Art Pool website,
  * including responsive design, typography, and component styling.
  * 
  * Table of Contents:
@@ -708,6 +708,7 @@ header {
     align-items: center;
      transition: transform 0.5s ease-in-out;
     padding: 2rem;
+    opacity: 0;
 }
 
 .items .right {
