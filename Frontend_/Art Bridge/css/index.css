@@ -967,8 +967,31 @@ text-align: center;
 
 .collections-container {
     width: 100%;
-    overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.collection-item{
+    width:20%;
+   height: 60vh;
+   display: flex;
+}
+.collection-item div{
+    width: 80%;
+}
+.collection-item div h3{
+    width: fit-content;
+}
+.collection-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+   transition:0.5s all ease-in-out;
+
+    ;
+}
+.collection-item:hover img{
+    transform: scale(1.01);
 }
 
 .collections-slider {

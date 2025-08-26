@@ -154,3 +154,84 @@ nextBtn.addEventListener('click', () => {
         stopAuto();
     }
 });
+
+const collections = [
+    {
+      name: "LEE KRASNER",
+      title: "Re-Echo",
+      image: "https://cdn.sanity.io/images/x76dkvvf/prod/3df4d7534470dd6c053ea67040c995ba71c14f7a-551x560.jpg?auto=format&w=640&q=75"
+    },
+    {
+      name: "Barley L. Hendrics",
+      title: "Brenda P",
+      image: "https://cdn.sanity.io/images/x76dkvvf/prod/4646ff74c88a6d2ea42c1583cc89cbebac741ce5-560x782.jpg?auto=format&w=640&q=75"
+    },
+    {
+      name: "Marsden hartley",
+      title: "Give Us This Day",
+      image: "https://cdn.sanity.io/images/x76dkvvf/prod/d5f23c0c691f152f9c6d7a402c4484691e810e50-1080x799.jpg?auto=format&w=1080&q=75"
+    },
+    {
+      name: "Edward Jean Steichen",
+      title: "Re-Echo",
+      image:'https://cdn.sanity.io/images/x76dkvvf/prod/4cbb34a37da6694c9d47691e5ac7cafd97456d79-465x560.jpg?auto=format&w=640&q=75'  
+      },
+      {
+        name: "Terry Adkins",
+        title: "Native Son(Circus)",
+        image:'https://cdn.sanity.io/images/x76dkvvf/prod/aeab67b71d3ffc23538768dc12b1dbb90cf520d5-1080x812.jpg?auto=format&w=1080&q=75'
+      },
+        {
+            name: "Jeff Koons",
+            title: "One Ball Total Equilibrium Tank",
+            image:'https://cdn.sanity.io/images/x76dkvvf/prod/667cdcc6121ad1ee331b66f2c002400f2457bea4-769x1080.jpg?auto=format&w=828&q=75'       
+            },
+            {
+                name: "Mark Rothko",
+                title: "Black on Black",
+                image:'https://cdn.sanity.io/images/x76dkvvf/prod/30a3936726573dfe03fe20a92afc07676b5e50ac-576x385.jpg?auto=format&w=640&q=75'
+            }
+           
+  ];
+  
+  const collectionsContainer = document.querySelector('.collections-container');
+const nextCol = document.querySelector('#nextCol');
+const prevCol = document.querySelector('#prevCol');
+
+let index = 0; // define before use
+const itemsPerPage = 3;
+
+const renderContainerData = () => {
+  // clear old items
+  collectionsContainer.innerHTML = "";
+
+  // slice and render
+  collections.slice(index, index + itemsPerPage).forEach(collection => {
+    const collectionItem = document.createElement('div');
+    collectionItem.classList.add('collection-item');
+    collectionItem.innerHTML = `
+      <img src="${collection.image}" alt="${collection.name}">
+      <div>
+        <h3>${collection.name}</h3>
+        <p>${collection.title}</p>
+      </div>
+    `;
+    collectionsContainer.appendChild(collectionItem);
+  });
+};
+
+renderContainerData();
+
+nextCol.addEventListener('click', () => {
+  if (index + itemsPerPage < collections.length) {
+    index++;
+    renderContainerData();
+  }
+});
+
+prevCol.addEventListener('click', () => {
+  if (index > 0) {
+    index--;
+    renderContainerData();
+  }
+});
