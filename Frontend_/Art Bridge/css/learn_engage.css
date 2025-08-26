@@ -145,6 +145,12 @@ section::before{
     padding: 3em;
     border-bottom: 2px solid #E8DEFD;
     gap:20em;
+    justify-content: space-between;
+  }
+  .flex-content p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   button{
     background-color: rgb(60, 60, 173);
