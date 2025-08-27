@@ -69,12 +69,28 @@ h3 {
 
 p {
     font-family: 'IBM Plex Serif', serif;
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1.9rem;
     line-height: 1.7;
-    margin: 0 0 1.5rem;
+    margin: 0 0 2.2rem;
     color: var(--color-secondary);
-    opacity: 0.9;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Adjust line height for better readability in articles */
+.article-content p {
+    line-height: 1.9;
+    margin-bottom: 1.8rem;
+}
+
+/* Lead paragraph */
+.lead {
+    font-size: 2.1rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
 }
 
 .italic {
@@ -385,7 +401,7 @@ main {
     margin-bottom: 25px;
 }
 
-/* FAQ Section */
+/* FAQ Styles */
 .faq-section {
     background-color: #fff;
 }
@@ -408,33 +424,46 @@ main {
 }
 
 .faq-item {
-    border-bottom: 1px solid #eee;
-    padding: 30px 0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1.5rem 0;
+    cursor: pointer;
 }
 
 .faq-question {
     font-size: 1.5rem;
     font-weight: 500;
-    color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
-    padding: 1rem 0;
-    border-bottom: 1px solid #eee;
-    transition: var(--transition-base);
+    transition: color 0.3s ease;
 }
 
-.faq-question:hover {
-    color: #000;
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-right: 2rem;
+    margin-top: 0;
+    color: #666;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Adjust based on your content */
+    margin-top: 1rem;
 }
 
 .faq-arrow {
-    font-size: 20px;
-    transform: rotate(0deg);
-    transition: transform 0.3s;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
 }
 
+.faq-item.active .faq-arrow {
+    transform: rotate(180deg);
+}
+
+.faq-item:hover .faq-question {
+    color: #000;
+}
 /* Call to Action */
 .cta-section {
     background: linear-gradient(135deg, #c8e6c9 0%, #e1bee7 100%);

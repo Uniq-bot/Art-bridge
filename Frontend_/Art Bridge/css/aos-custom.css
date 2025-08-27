@@ -1,0 +1,133 @@
+/* Custom AOS animations */
+
+/* Fade animations */
+[data-aos^='fade'][data-aos^='fade'] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+[data-aos^='fade'][data-aos^='fade'].aos-animate {
+    opacity: 1;
+    transform: none;
+}
+
+/* Fade up */
+[data-aos='fade-up'] {
+    transform: translate3d(0, 30px, 0);
+}
+
+/* Fade down */
+[data-aos='fade-down'] {
+    transform: translate3d(0, -30px, 0);
+}
+
+/* Fade right */
+[data-aos='fade-right'] {
+    transform: translate3d(-30px, 0, 0);
+}
+
+/* Fade left */
+[data-aos='fade-left'] {
+    transform: translate3d(30px, 0, 0);
+}
+
+/* Zoom animations */
+[data-aos^='zoom'][data-aos^='zoom'] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+[data-aos^='zoom'].aos-animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+}
+
+[data-aos='zoom-in'] {
+    transform: scale(0.8);
+}
+
+[data-aos='zoom-in-up'] {
+    transform: translate3d(0, 40px, 0) scale(0.8);
+}
+
+/* Slide animations */
+[data-aos^='slide'][data-aos^='slide'] {
+    transition-property: transform;
+    visibility: hidden;
+}
+
+[data-aos^='slide'].aos-animate {
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+}
+
+[data-aos='slide-up'] {
+    transform: translate3d(0, 100%, 0);
+}
+
+[data-aos='slide-down'] {
+    transform: translate3d(0, -100%, 0);
+}
+
+[data-aos='slide-right'] {
+    transform: translate3d(-100%, 0, 0);
+}
+
+[data-aos='slide-left'] {
+    transform: translate3d(100%, 0, 0);
+}
+
+/* Flip animations */
+[data-aos^='flip'][data-aos^='flip'] {
+    backface-visibility: hidden;
+    transition-property: transform;
+}
+
+[data-aos='flip-left'] {
+    transform: perspective(2500px) rotateY(-100deg);
+}
+
+[data-aos='flip-right'] {
+    transform: perspective(2500px) rotateY(100deg);
+}
+
+/* Custom timing classes */
+[data-aos-delay='100'] {
+    transition-delay: 100ms;
+}
+
+[data-aos-delay='200'] {
+    transition-delay: 200ms;
+}
+
+[data-aos-delay='300'] {
+    transition-delay: 300ms;
+}
+
+[data-aos-delay='400'] {
+    transition-delay: 400ms;
+}
+
+[data-aos-delay='500'] {
+    transition-delay: 500ms;
+}
+
+/* Performance optimizations */
+[data-aos] {
+    pointer-events: none;
+}
+
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+
+/* Mobile optimizations */
+@media screen and (max-width: 768px) {
+    [data-aos] {
+        transition-duration: 0.5s !important;
+    }
+    
+    [data-aos-delay] {
+        transition-delay: 0s !important;
+    }
+}

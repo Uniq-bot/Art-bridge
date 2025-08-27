@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Pool</title>
     <link rel="stylesheet" href="../css/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/navbar.css">
@@ -128,12 +128,12 @@
           <!-- Main Content Area -->
   <main>
                 <!-- Hero Section with Animated Headlines -->
-    <div class="hero" data-aos="fade-up">
+    <div class="hero" data-aos="fade-down">
                 <h1 class="hero-text1" data-aos="fade-left">Expanding Access </h1>
                 <h1 class="hero-text2" data-aos="fade-right">to Creative Communities</h1>
             </div>
                <!-- Program Highlights Section -->
-    <div class="secondHero" data-aos="fade-up">
+    <div class="secondHero" data-aos="fade-down">
                     <div class="leftContent">
                             <div class="container">
                                 <div class="textContainer">
@@ -154,7 +154,7 @@
                     </div>
            </div>
                <!-- Mission Statement Section -->
-    <div class="ourMission" data-aos="fade-up">
+    <div class="ourMission" data-aos="fade-down">
                <div class="topContent">
                <h3>OUR MISSION</h3>
                <h1>Art Pool delivers access to meaningful experiences with art for personal and community wellbeing.</h1>
@@ -170,7 +170,7 @@
               </div>
            </div>
                <!-- Interactive Content Slider -->
-    <div class="slider" data-aos="fade-up">
+    <div class="slider" data-aos="fade-down">
                 <div class="slider-container">
                
                     <div class="items slide">
@@ -211,14 +211,14 @@
                     </div>
                 </div>
             </div>
-            <div class="controls" data-aos="fade-up">
+            <div class="controls" data-aos="fade-down">
                 <button class="prev">Previous</button>
                 <span class="counter">1/4</span>
                 <button class="next">Next</button>
             </div>
                 <!-- FAQ Section -->
     <div class="faqs" data-aos="fade-left">
-               <div class="topper" data-aos="fade-up">
+               <div class="topper" data-aos="fade-down">
                 <h3>HOW WE FUND MUSEUMS</h3>
                 <h1>At Art Pool, we do things a little differently. We support partners and projects, rather than grantees and grants.</h1>
                </div>
@@ -235,7 +235,7 @@
                                 We provide museum partners with the financial, strategic, and logistical support needed to travel exhibitions, loan or borrow artworks, and develop related community programming.</p>
                         </div>
                     </div>
-                    <div class="contentainer" data-aos="fade-up">
+                    <div class="contentainer" data-aos="fade-down">
                         <div class="left">
                             <span>2</span>
                             <h3>
@@ -251,7 +251,7 @@
                         </div>
                         
                     </div>
-                    <div class="contentainer" data-aos="fade-up">
+                    <div class="contentainer" data-aos="fade-down">
                         <div class="left">
                             <span>3</span>
                             <h3>
@@ -259,7 +259,7 @@
                                      Process</span></h3>
                          
                         </div>
-                        <div class="right" data-aos="fade-up">
+                        <div class="right" data-aos="fade-down">
                             <p>
                                 Once a project has been approved, the museum partner is invited to apply for funding and collaborate with our program and awards teams on an application.</p>
                         </div>
@@ -268,7 +268,7 @@
                 
                </div>
             </div>
-            <div class="impact" data-aos="fade-up">
+            <div class="impact" data-aos="fade-down">
                 <h3>OUR IMPACT</h3>
                 <div class="Grid-numbers" data-aos="fade-left">
                     <div class="number" data-aos="fade-up-left">
@@ -290,13 +290,13 @@
                 </div>
                
             </div>
-            <div class="availableCollection" data-aos="fade-up"
+            <div class="availableCollection" data-aos="fade-down"
             data-aos-anchor-placement="top-center">
                 <h2>Available Collections</h2>
                 <p>Browse the Art Pool Collection—an expanding vision of American art from the 19th century to present day, encompassing multiple media and voices—and our Partner Loan Network, which provides museums with the logistical and strategic support needed to circulate and diversify their collections.</p>
                 <button>Browse the Collections</button>
             </div>
-            <div class="artbridgeCollections" data-aos="fade-up"
+            <div class="artbridgeCollections" data-aos="fade-down"
             data-aos-anchor-placement="top-center">
                 <h4>Art Pool Collections</h4>
                 <div class="collections-container">
@@ -356,14 +356,10 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init(
-   {
-    duration: 1000,
-    once: true,
-    offset: 120,
-    easing: 'ease-in-sine',
-   }
-  );
+  AOS.init({
+    duration: 800,
+    once: true
+  });
 </script>
     <script src="../js/index.js"></script>
     <script src="../js/navbar.js"></script>
