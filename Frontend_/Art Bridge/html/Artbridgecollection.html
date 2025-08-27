@@ -3,290 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARTBRIDGECOLLECTION</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <title>Art Bridges Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
-
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #767676;
+            --accent-color: #0066CC;
+            --background-color: #FFFFFF;
+            --text-color: #333333;
+            --font-heading: 'GT America', 'Helvetica Neue', Arial, sans-serif;
+            --font-body: 'GT America', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text-color);
+            font-size: 16px;
+            font-weight: 400;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+          
+        }
+        
+    
+        
+    
+        
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
 <body>
-  <head>
-    <header>
-      <div class="search">
-          <input type="text" placeholder="Search your intreast">
-           <div class="close-search">
-                  <i class="fa-solid fa-xmark"></i>
-              </div>
-      </div>
-          <nav>
-              <div class="menu" id="menu-toggle">
-                <span>MENU</span>  <i class="fa-solid fa-bars"></i>
-              </div>
-              <div class="logo">
-                  <p>Art <h1></h1> Pool</p>
-              </div>
-              <div class="ctas">
-                  <i class="searchbtn fa-solid fa-search"></i>
-                  <p>Application Portal</p>
-                  <a href="contact.html" class="contact-button">Contact Us</a>
-              </div>
-          </nav>
-          <aside id="sidebar" class="nav-links">
-              <div class="close-btn">
-                  <i class="fa-solid fa-xmark"></i>
-              </div>
-              <ul class="whole">
-                  <li style="font-size: 1.5em;"><a href="index.html">Discover Art Pool</a></li>
-                  <li style="font-size: 1.5em;"><a href="partnerwithus.html">Partner with Us</a></li>
-                  <li class="dropdown">
-                     <div class="div"> <a href="artsharing.html">Art Sharing</a> <i id="arrow" class="fa-solid fa-angle-down"></i> </div>
-                      <ul class="dropdown-content">
-                          <li>
-                              <a href="../html/Availablecollection.html">Available Collections</a>
-                              <i class="fa-solid fa-angle-right"></i>
-                          </li>
-                          <li>
-                              <a href="../html/Artbridgecollection.html">Art Bridge Collection</a>
-                              <i class="fa-solid fa-angle-right"></i>
-                          </li>
-                          <li>
-                              <a href="../html/travelling.html">Traveling Exhibitions</a>
-                              <i class="fa-solid fa-angle-right"></i>
-                          </li>
-                          <li>
-                              <a href="../html/cohortprograms.html">Cohort Programs</a>
-                              <i class="fa-solid fa-angle-right"></i>
-                          </li>
-                      </ul>
-                  </li>
-                  <li class="dropdown">
-                    <div class="div"><a href="../html/communityEngment.html">Community Engagement</a> <i id="arrow" class="fa-solid fa-angle-down"></i></div>  
-                      <ul class="dropdown-content">
-                          <li>
-                              <a href="../html/learn_engage.html">Learning and Engagement</a>
-                              <i class="fa-solid fa-angle-right"></i>
-                          </li>
-                          <li>
-                              <a href="../html/fellowprograms.html">Fellow Programs</a>
-                              <i class="fa-solid fa-angle-right"></i>
-                          </li>
-                          <li>
-                              <a href="../html/evaluation.html">Evaluation</a>
-                              <i class="fa-solid fa-angle-right"></i>
-                          </li>
-                      </ul>
-                  </li>
-                  <li class="dropdown">
-                     <div class="div"><a href="../html/idearesources.html">Idea Resources</a> <i id="arrow" class="fa-solid fa-angle-down"></i></div> 
-                      <ul class="dropdown-content">
-                          <li>
-                              <a href="../html/idea.html">Idea Center</a>
-                              <i class="fa-solid fa-angle-right"></i>
-                          </li>
-                          <li>
-                              <a href="../html/convening.html">Convening</a>
-                              <i class="fa-solid fa-angle-right"></i>
-                          </li>
-                      </ul>
-                  </li>
-              </ul>
-          </aside>
-      </header>
-    <div id="heroSection">
-               <div class="hero-content">
-                <h1>Art <span>Bridges Collection</span></h1>
-                <p>The Art Bridges Collection represents an expanding vision of American art from the 19th century to present day and encompasses multiple media and voices.</p>
-               </div>
+  <header>
+    <div class="search">
+        <input type="text" placeholder="Search your intreast">
+         <div class="close-search">
+                <i class="fa-solid fa-xmark"></i>
             </div>
-  </head>
-    <main>
-        <section class="about-section">
-            <div class="about-header">
-                <h1>About</h1>
-            </div>
-            <div class="about-content">
-                The Art Bridges Collection contains over 200 artworks that are available for loan to museums across the
-                United States. We believe art is meant to be seen, but we also recognize that there are many barriers to
-                borrowing works of art, one of the largest being financial. For this reason, we ensure that loans from
-                our collection are free of cost to borrowing venues.
-            </div>
-        </section>
-        <section class="goals">
-            <div class="goals-header">
-                <h1>Goals</h1>
-            </div>
-            <div class="goal-card">
-                <div class="card">
-                    <h1>.01</h1>
-                    <h2>Eliminate the financial and strategic barriers</h2>
-                    <p>of borrowing artworks</p>
-                </div>
-                <div class="card">
-                    <h1>.02</h1>
-                    <h2>Eliminate the financial and strategic barriers</h2>
-                    <p>of borrowing artworks</p>
-                </div>
-                <div class="card">
-                    <h1>.03</h1>
-                    <h2>Eliminate the financial and strategic barriers</h2>
-                    <p>of borrowing artworks</p>
-                </div>
-                <div class="card">
-                    <h1>.04</h1>
-                    <h2>Eliminate the financial and strategic barriers</h2>
-                    <p>of borrowing artworks</p>
-                </div>
-                <div class="card">
-                    <h1>.05</h1>
-                    <h2>Eliminate the financial and strategic barriers</h2>
-                    <p>of borrowing artworks</p>
-                </div>
-                <div class="card">
-                    <h1>.06</h1>
-                    <h2>Eliminate the financial and strategic barriers</h2>
-                    <p>of borrowing artworks</p>
-                </div>
-            </div>
-        </section>
-        <section class="works-section">
-            <div class="works-header">
-                <h1>How It Works</h1>
-            </div>
-            <div class="works-content">
-                We work closely with our partner museums to share art and increase accessibility. A partnership with us
-                typically begins by having a conversation with our Curatorial team. At this time, a partner museum can
-                request
-                specific works, or we can offer suggestions for thematically relevant art. Once availability is
-                confirmed, a
-                partner museum submits an application. Upon approval, we’ll discuss next steps, including an opportunity
-                for
-                additional Learning & Engagement funding.
-            </div>
-        </section>
-        <section class="program-section">
-            <div class="program-header">
-                <h1>Program Support</h1>
-            </div>
-            <div class="program-content">
-               Collection loans are available at no cost to borrowing venues.<br>
-               <br> <p>We pay for direct costs relating to:</p><br>
-                <li> Two-way shipping of artwork(s) and related logistics</li>
-                <li> Insurance coverage (works remain under our policy)</li>
-                <li> Crating</li>
-                <li> Conservation</li>
-                <li> Courier expenses, if required</li>
-                <li> Art handlers, if required</li>
-                <li> Additional security, if required</li>
-                <br>
-            </div>
-            <div class="program-content1">
-                <p> We pay for direct costs relating to:</p>
-                <br>
-                <li> Facility reports and environmental readings</li>
-                <li> Contacts for appropriate artists/estates, galleries, and scholars</li>
-                <li> Additional scholarship and access to our extensive research files</li>
-            </div>
-        </section>
-       <div class="loans-section">
-  <h2 class="loans-header">
-    Loans from the Art Bridges Collection come at no financial <br>
-    burden to borrowing venues.
-  </h2>
-</div>
-  <div class="showcase">
-    <div class="showcase-item">
-      <img src="https://images.unsplash.com/photo-1666693907032-89521b18e8e2?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFydCUyMGluJTIwbWV1c2l1bSUyMHdpdGglMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D" alt="Gallery Image 1">
-      <div class="caption">
-        We provide support for facility reports, artist access, and Learning & Engagement programs
-      </div>
     </div>
-    <div class="showcase-item">
-      <img src="https://images.unsplash.com/photo-1700241547643-f7254382a06e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXJ0JTIwaW4lMjBtZXVzaXVtJTIwd2l0aCUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Gallery Image 2">
-      <div class="caption">
-        Our curatorial team will assist you in shaping your project
-      </div>
-    </div>
-  </div>
-  <div class="Featured-section">
-  <h2 class="Featured-header">
-   Featured artworks
-  </h2>
-</div>
-<div class="gallery-flex">
-  <div class="art-item">
-    <h3>FRANK LLOYD WRIGHT</h3>
-    <p><em>Laylight from the B. Harley Bradley House, Kankakee,...</em></p>
-    <img src="Frank Lloyd Wright’s.avif" alt="Artwork 1">
-  </div>
-
-  <div class="art-item">
-    <h3>HOWARDENA PINDELL</h3>
-    <p><em>Untitled</em></p>
-    <img src="Howardena Pindell.avif" alt="Artwork 2">
-  </div>
-
-  <div class="art-item">
-    <h3>RICHARD SERRA</h3>
-    <p><em>Artaud</em></p>
-    <img src="Richard Serra.avif" alt="Artwork 3">
-  </div>
-
-  <div class="art-item">
-    <h3>FRITZ SCHOLDER</h3>
-    <p><em>Hollywood Indian</em></p>
-    <img src="Fritz Scholder.avif" alt="Artwork 4">
-  </div>
-  <div class="gallery-flex">
-    <div class="art-item">
-    <h3>Guillermo Galindo</h3>
-    <p> <em>Sonic Border</em></p>
-    <img src="Guiollermo Galimdo.avif" alt="Artwork 5">
-  </div>
-  <div class="art-item">
-    <h3>Alice Trumbull Mason</h3>
-    <p> <em>Magnitude of Regions</em></p>
-    <img src="Alice.avif" alt="Artwork 5">
-  </div>
-  <div class="art-item">
-    <h3>Derrick Adams</h3>
-    <p> <em>Tables Turned 1</em></p>
-    <img src="Derrick Adams.avif" alt="Artwork 5">
-  </div>
-<div class="art-item">
-    <h3>Mickalene Thomas</h3>
-    <p> <em>Portrait of Qusuquzah #5</em></p>
-    <img src="Mickalene Thomas.avif" alt="Artwork 5">
-  </div>
-  </div>
-</div>
-<section class="sec5">
-        <div class="main4">
-            <div class="j1">
-                <p class="pp">Ready to Borrow?</p>
-                <p class="pj"><i>Reach out to us to begin a <br> partnership.</i></p>
-                <a href="contact.html" class="c1 contact-button">Contact Us</a>
+        <nav>
+            <div class="menu" id="menu-toggle">
+              <span>MENU</span>  <i class="fa-solid fa-bars"></i>
             </div>
-            <div class="j2">
-                <img src="https://plus.unsplash.com/premium_photo-1661894448777-7c94a7d9b0a2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <div class="logo">
+                <p>Art <h1></h1> Pool</p>
             </div>
-          </section>
-          <section class="sec6">
-  <div class="last">
-    <div>
-      <h1>Sign up for Art Bridges News</h1>
-      <p>Learn about collection Highlights,program offerings,and more.</p>
-    </div>
-    <div class="ib">
-      <input type="email" placeholder="Your email" />
-      <button class="sign">Sign Up</button>
-    </div>
-  </div>
-</section>
+            <div class="ctas">
+                <i class="searchbtn fa-solid fa-search"></i>
+                <p>Application Portal</p>
+                <a href="contact.html" class="contact-button">Contact Us</a>
+            </div>
+        </nav>
+        <aside id="sidebar" class="nav-links">
+            <div class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <ul class="whole">
+                <li style="font-size: 1.5em;"><a href="index.html">Discover Art Pool</a></li>
+                <li style="font-size: 1.5em;"><a href="partnerwithus.html">Partner with Us</a></li>
+                <li class="dropdown">
+                   <div class="div"> <a href="artsharing.html">Art Sharing</a> <i id="arrow" class="fa-solid fa-angle-down"></i> </div>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="../html/Availablecollection.html">Available Collections</a>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a href="../html/Artbridgecollection.html">Art Pool Collection</a>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a href="../html/travelling.html">Traveling Exhibitions</a>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a href="../html/cohortprograms.html">Cohort Programs</a>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                  <div class="div"><a href="../html/communityEngment.html">Community Engagement</a> <i id="arrow" class="fa-solid fa-angle-down"></i></div>  
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="../html/learn_engage.html">Learning and Engagement</a>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a href="../html/fellowprograms.html">Fellow Programs</a>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a href="../html/evaluation.html">Evaluation</a>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                   <div class="div"><a href="../html/idearesources.html">Idea Resources</a> <i id="arrow" class="fa-solid fa-angle-down"></i></div> 
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="../html/idea.html">Idea Center</a>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <a href="../html/convening.html">Convening</a>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="art-bridges-logo">
+                    <div class="logo-arc"></div>
+                    <div>
+                        <h1>Art Pool <span style="font-weight: 400; color: var(--secondary-color);">Collection</span></h1>
+                    </div>
+                </div>
+                <p class="hero-description" style="font-size: 1.25rem; line-height: 1.6; max-width: 600px; margin: 1.5rem 0;">
+                    The Art Bridges Collection represents an expanding vision of American art from the 19th century to present day and encompasses multiple media and voices.
+                </p>
+                
+            </div>
+        </div>
+    </section>
 
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Introduction Section -->
+            <section class="section">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <p class="section-subtitle" style="font-size: 1rem; letter-spacing: 2px; color: var(--secondary-color); text-transform: uppercase; margin-bottom: 1rem;">New Artwork Available</p>
+                    <h2 class="section-title" style="font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 1.5rem;">Art Pool Collection</h2>
+                    <p class="section-description" style="font-size: 1.125rem; color: var(--text-color); max-width: 700px; margin: 0 auto 2rem; line-height: 1.6;">
+                        View the latest works in the Art Pool Collection and more artwork.
+                    </p>
+                    <a href="#" class="cta-button" style="display: inline-block; background: var(--primary-color); color: white; padding: 0.75rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 500; transition: all 0.3s ease;">See the Collection</a>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-image" style="background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/6269d35eba24001179632cea207e6f7e4f513f82-1512x906.jpg?auto=format&w=640&q=75')"></div>
+                    <div class="gallery-image" style="background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/402f306b791ca8774b17ce98830a423b5751fe3a-906x906.jpg?auto=format&w=384&q=75')"></div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="section">
+                <h2 class="section-title" style="margin-bottom: 40px;">About</h2>
+                <p class="about-text">
+                    The Art Bridges Collection contains over 200 artworks that are available for loan to museums across the United States. We believe art is meant to be seen, but we also recognize that there are many barriers to borrowing works of art, one of the largest being financial. For this reason, we ensure that loans from our collection are free of cost to borrowing venues.
+                </p>
+
+                <!-- Goals -->
+                <h2 class="section-title" style="margin-bottom: 60px;">Goals</h2>
+                <div class="goals-grid">
+                    <div class="goal-item">
+                        <div class="goal-number">01.</div>
+                        <h3 class="goal-title">Eliminate the financial and strategic barriers</h3>
+                        <p class="goal-description">of borrowing artworks</p>
+                    </div>
+                    <div class="goal-item">
+                        <div class="goal-number">02.</div>
+                        <h3 class="goal-title">Increase the diversity</h3>
+                        <p class="goal-description">of artworks at museums</p>
+                    </div>
+                    <div class="goal-item">
+                        <div class="goal-number">03.</div>
+                        <h3 class="goal-title">Fill the gaps</h3>
+                        <p class="goal-description">in museum collections</p>
+                    </div>
+                    <div class="goal-item">
+                        <div class="goal-number">04.</div>
+                        <h3 class="goal-title">Interpret historical works</h3>
+                        <p class="goal-description">in new and innovative ways</p>
+                    </div>
+                    <div class="goal-item">
+                        <div class="goal-number">05.</div>
+                        <h3 class="goal-title">Foster community engagement</h3>
+                        <p class="goal-description">and help borrowing venues attract new audiences</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sample Artworks -->
+            <div class="sample-artworks">
+                <div class="sample-artwork" style="background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/a8499dd10fd210fe57923b4a6be740e804bc867a-479x956.jpg?auto=format&w=384&q=75');background-position: center;background-size: cover;"></div>
+                <div class="sample-artwork" style="background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/0a0aedf8ef4de43dcda207d2a46ef77c442d0cb5-576x471.jpg?auto=format&w=384&q=75');background-position: center;background-size: cover;"></div>
+                <div class="sample-artwork" style="background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/52e41d7879c879b6eb3a5bf8572f5411b945bc73-454x1056.jpg?auto=format&w=384&q=75');background-position: center;background-size: cover;"></div>
+                <div class="sample-artwork" style="background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/bc8a7b3958244b724a3429d916120489a9abde3e-1056x847.jpg?auto=format&w=384&q=75');background-position: center;background-size: cover;"></div>
+            </div>
+
+            <div class="view-all-btn">
+                <a href="#" class="cta-button">View All Artworks</a>
+            </div>
+        </div>
     </main>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-image" style="background: url('')"></div>
+                <div class="contact-content">
+                    <p class="section-subtitle">Ready to Borrow?</p>
+                    <h2>Reach out to us to begin a partnership</h2>
+                    <a href="../html/contact.html" class="cta-button">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Artworks -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 60px;">Featured artworks</h2>
+            <div class="artworks-grid">
+                <div class="artwork-item">
+                    <div class="artwork-image" style="background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/e6076b371e82d34266972eca7d350b3d5c9bd404-481x576.jpg?auto=format&w=384&q=75');background-position: center;background-size: cover;"></div>
+                    <p class="artist-name">FRANK LLOYD WRIGHT</p>
+                    <p class="artwork-title">Laylight from the B. Harley Bradley House, Kankakee, Illinois</p>
+                </div>
+                <div class="artwork-item">
+                    <div class="artwork-image" style="background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/7b4e6454ccb669dab1738b8fd97eabe23020127a-1056x704.jpg?auto=format&w=384&q=75');background-position: center;background-size: cover;"></div>
+                    <p class="artist-name">HOWARDENA PINDELL</p>
+                    <p class="artwork-title">Untitled</p>
+                </div>
+                <div class="artwork-item">
+                    <div class="artwork-image" style="background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/ba717a376c07a75a07728f72b611f69b131d0b7f-560x683.jpg?auto=format&w=384&q=75');background-position: center;background-size: cover;"></div>
+                    <p class="artist-name">RICHARD SERRA</p>
+                    <p class="artwork-title">Artaud</p>
+                </div>
+                <div class="artwork-item">
+                    <div class="artwork-image" style="background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/7f76fad197b9baf7621e228e947d4759c81cdf56-540x271.png?auto=format&w=384&q=75');background-position: center;background-size: cover;"></div>
+                    <p class="artist-name">FRITZ SCHOLDER</p>
+                    <p class="artwork-title">Hollywood Indian</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 40px;">How It Works</h2>
+            <p class="process-text">
+                We work closely with our partner museums to share art and increase accessibility. A partnership with us typically begins by having a conversation with our Curatorial team. At this time, a partner museum can request specific works, or we can offer suggestions for thematically relevant art. Once availability is confirmed, a partner museum submits an application. Upon approval, we'll discuss next steps, including an opportunity for additional Learning & Engagement funding.
+            </p>
+
+            <div class="support-section">
+                <h3>Program Support</h3>
+                <p style="margin-bottom: 20px;">Collection loans are available at no cost to borrowing venues.</p>
+                <p style="margin-bottom: 20px;">We pay for direct costs relating to:</p>
+                <ul class="support-list">
+                    <li>Two-way shipping of artwork(s) and related logistics</li>
+                    <li>Insurance coverage (works remain under our policy)</li>
+                    <li>Crating</li>
+                    <li>Conservation</li>
+                    <li>Facility reports and environmental readings</li>
+                    <li>Contacts for appropriate artists/estates, galleries, and scholars</li>
+                    <li>Additional scholarship and access to our extensive research files</li>
+                </ul>
+
+                <p class="highlight-text">
+                    Loans from the Art Bridges Collection come at no financial burden to borrowing venues.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+      <div class="newsletter">
+        <div class="newsletter-content">
+          <h2>Sign up for Art Pool News</h2>
+          <p>Learn about collection highlights, program offerings, and more.</p>
+        </div>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email" />
+          <button type="submit">→</button>
+        </form>
+      </div>
+    
+      <div class="footer-main">
+        <div class="footer-left">
+          <div class="logo">Art <span>Bridges</span><sup>®</sup></div>cd
+            <div><strong>Art Sharing</strong> <span>▾</span></div>
+            <div><strong>Community Engagement</strong> <span>▾</span></div>
+            <div><strong>Ideas & Resources</strong> <span>▾</span></div>
+            <div><strong>Discover Art Pool</strong></div>
+            <div><strong>Partner With Us</strong></div>
+          </div>
+        </div>
+    
+        <div class="footer-right">
+          <h3>Art Pool Collection</h3>
+          <p>The Art Pool Collection contains more than 200 objects that are available for loan to museums across the United States, free of charge.</p>
+          <a href="#" class="cta-button">Learn More</a>
+        </div>
+      </div>
+    
+      <div class="footer-bottom">
+        <div class="footer-nav">
+          <a href="#">Media Kit</a>
+          <a href="#">Newsroom</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms and Conditions</a>
+        </div>
+        <div class="footer-carousel">
+          <button>←</button>
+          <button>→</button>
+        </div>
+      </div>
+    </footer>
+
+
     <script src="../js/navbar.js"></script>
 </body>
-
 </html>
