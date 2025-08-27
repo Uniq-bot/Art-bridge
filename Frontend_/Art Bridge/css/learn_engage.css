@@ -89,12 +89,48 @@ section::before{
       font-size:2.5em;
       padding: 0 0 2em 1em;
   }
-  .tabs{
-    display:flex;
-    flex-direction: row;
-    gap:30px;
-    padding:0 2em;
+ /* Tab styles */
+.tabs {
+  padding-left: 1em;
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.tabs h3 {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #666;
+  margin: 5px 0;
+}
+
+.tabs h3:hover {
+  background-color: #f5f5f5;
+}
+
+.tabs h3.active {
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tabs {
+      flex-direction: column;
+      gap: 10px;
   }
+  
+  .tabs h3 {
+      width: 100%;
+      text-align: left;
+      padding: 12px 15px;
+  }
+}
   .image-division{
     display:grid;
    grid-template-columns: 1fr 1fr;

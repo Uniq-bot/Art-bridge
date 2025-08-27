@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-    <div id="page" data-aos="fade-in">
-      <header data-aos="fade-down">
+<body data-aos="fade-in">
+    <div id="page">
+      <header data-aos="fade-down" data-aos-delay="100">
         <div class="search">
             <input type="text" placeholder="Search your intreast">
              <div class="close-search">
@@ -95,22 +96,22 @@
 
             </aside>
         </header>
-        <div id="heroSection">
+        <div id="heroSection" data-aos="fade-up" data-aos-delay="200">
             <div class="hero-content">
                 <h1>Art Pool <span> Fellow Programs</span></h1>
-                <p data-aos="fade-up" data-aos-delay="100">Our Fellows Program is dedicated to developing inclusive<br>
+                <p>Our Fellows Program is dedicated to developing inclusive<br>
                  museum leadership with a national group of emerging arts<br>
                 professionals and mentors.</p>
             </div>
         </div>
-    <div class="second-section" data-aos="fade-up" data-aos-delay="200">
+    <div class="second-section" data-aos="fade-up" data-aos-delay="300">
         <p>The program began as a three-year pilot to establish career pathways for historically underrepresented groups<br>
          in the arts and to offer new models for fellowship roles in museums. We launched the third year and the<br>
          evaluation of the program in the fall of 2024, and therefore we are not placing fellows at new locations. Check <br>
          back here for updates on the program or subscribe to our newsletter.</p>
     </div>
 
-    <div class="third">
+    <div class="third" data-aos="fade-up" data-aos-delay="100">
         <h1>The Art Pool Fellows Program establishes career pathways<br>
         for historically underrepresente
         groups in the arts and offers<br>
@@ -133,41 +134,41 @@
     </div>
     
    <div class="description">
-      <div class="description-one">
+      <div class="description-one" data-aos="fade-right" data-aos-delay="200">
             <h1>"...the program aspires to change who works in and <br>leads museums." </h1>
             <p class="name"><strong>KRISTIN PEDROZO</strong></p>
             <P class="info">Art Pool Fellow,Memphis Brooks Museum of art</P>
         </div>
-        <div class="description-two">
+        <div class="description-two" data-aos="fade-left" data-aos-delay="300">
             <p>Partners hire fellows to work at their museums for three-year appointments. Each position is connected to <br>
                 substantial, multiyear Art Pool programs—including major initiatives like the Cohort Program and Partner<br>
                  Loan Network—and depends on the capacity needs of our partner museums.
             </p><br>
-            <p data-aos="fade-up" data-aos-delay="300">In addition to ongoing professional development, the Art Pool Fellows travel to Bentonville for annual <br>gatherings as well as a monthlong residency and orientation in their first year.</p>
+            <p>In addition to ongoing professional development, the Art Pool Fellows travel to Bentonville for annual <br>gatherings as well as a monthlong residency and orientation in their first year.</p>
         </div>
 
    </div>
 
-   <div class="four" data-aos="fade-up" data-aos-delay="400">
+   <div class="four" data-aos="fade-up" data-aos-delay="100">
     <div class="image">
         <img src="https://cdn.sanity.io/images/x76dkvvf/prod/d4a488984d996a417a30b34eadad25f3959f4cc3-1512x2016.jpg?auto=format&w=1080&q=75">
      </div>
         <p>Art Pool Fellows,Summer 2023</p>
    </div>
 
-   <div class="five">
+   <div class="five" data-aos="fade-up" data-aos-delay="200">
       <div class="fifth-image">
         <img src="https://cdn.sanity.io/images/x76dkvvf/prod/739e7921b22752177d70d37ff1de63378d59e3d7-1179x1544.jpg?auto=format&w=1920&q=75">
               <p>Art Pool Fellows at the Farewell Dinner at Tavola Trattoria.(Bentonville,AR)</p>
       </div>
 
-    <div class="fifth-section" data-aos="fade-up" data-aos-delay="500">
+    <div class="fifth-section" data-aos="fade-up" data-aos-delay="300">
         <p class="fist"> LEARN MORE</p>
         <h1 class="second"> Meet the Rising Stars in our Fellows Program</h1>
         <button class="meet-button"> Meet the Fellow</button>
     </div>
    </div>
-<footer class="footer" data-aos="fade-up">
+<footer class="footer" data-aos="fade-up" data-aos-delay="100">
             <div class="newsletter">
               <div class="newsletter-content">
                 <h2>Sign up for Art Pool News</h2>
@@ -211,34 +212,15 @@
               </div>
             </div>
           </footer> 
-
-</div>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
 <script src="../js/navbar.js"></script>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 10,
+        easing: 'ease-in-out'
+      });
+    </script>
 </body>
 </html>

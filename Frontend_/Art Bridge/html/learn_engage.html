@@ -9,24 +9,21 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    
-
-
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="search">
+<body data-aos="fade-in">
+    <header data-aos="fade-down" data-aos-delay="100">
+        <div class="search" data-aos="fade-up" data-aos-delay="300">
             <input type="text" placeholder="Search your intreast">
              <div class="close-search">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
         </div>
             <nav>
-                <div class="menu" id="menu-toggle">
+                <div id="menu-toggle">
                   <span>MENU</span>  <i class="fa-solid fa-bars"></i>
                 </div>
-                <div class="logo">
+                <div class="logo" data-aos="fade-up" data-aos-delay="200">
                     <p>Art <h1></h1> Pool</p>
                 </div>
                 <div class="ctas">
@@ -39,7 +36,7 @@
                 <div class="close-btn">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
-                <ul class="whole">
+                <ul class="whole" data-aos="fade-up" data-aos-delay="100">
                     <li style="font-size: 1.5em;"><a href="index.html">Discover Art Pool</a></li>
                     <li style="font-size: 1.5em;"><a href="partnerwithus.html">Partner with Us</a></li>
                     <li class="dropdown">
@@ -97,14 +94,14 @@
             </aside>
         </header>
     <section>
-        <div class="image-para">
+        <div class="image-para" data-aos="fade-up" data-aos-delay="200">
             <h1><span>Art Bridges</span> <i>Learning & <br>
                 Engagement</i></h1>
             <p> The Learning & Enagagement team helps our<br> museum partners create transformative programs<br> that connect with diverse communities, actively <br>engage audiences in new ways,and highlight<br> interdisciplinary connections. </p>
         </div>
     </section>
-    <div class="middle">
-      <div class="topic">
+    <div class="middle" data-aos="fade-up" data-aos-delay="300">
+      <div class="topic" data-aos="fade-up" data-aos-delay="100">
            <h3>WHO CAN APPLY?</h3>
             <h1>Museum partners with current or upcoming Art Bridges <br>Collection placements, Partner Loan Network groupings, or <br>traveling exhibitions, as well as those who are a part of the Art<br> Bridges Cohort Program, are eligible to apply for Learning & <br>Engagement support.</h1>
         </div>
@@ -121,28 +118,28 @@
     </div>
 
     <div class="main">
-        <div class="heading">
+        <div class="heading" data-aos="fade-up" data-aos-delay="200">
             <h3> WHAT'S THE PROCESS ?</h3>
             <h1>Once your art sharing project is approved, we will work with you<br> to submit your Learning & Engagement application.</h1>
         </div>
         <div class="tabs">
-            <h3>1. Let's Get Started</h3>
-            <h3>2.Taking the Next Step</h3>
-            <h3>3.strengthen Your Application</h3>
-            <h3>4.Review</h3>
-            <h3>5.Funding Project</h3>
+            <h3 onclick="shiftContent(1)">1. Let's Get Started</h3>
+            <h3 onclick="shiftContent(2)">2.Taking the Next Step</h3>
+            <h3 onclick="shiftContent(3)">3.strengthen Your Application</h3>
+            <h3 onclick="shiftContent(4)">4.Review</h3>
+            <h3 onclick="shiftContent(5)">5.Funding Project</h3>
         </div>
         <div class="image-division">
                 <div class="images">
                     <img src="https://cdn.sanity.io/images/x76dkvvf/prod/8e5b23cda8d9d6d3fe221c0b68cf77c1e2eb5fa6-981x736.jpg?auto=format&w=828&q=75">
                  <p>Guest speakers and attendees at the lecture “For Which It<br>Stands: Brick by Brick: Black Women Breaking New Ground”,<br> hosted at the Avery Research Center at College of Charleston,<br> July 2022. Courtesy of the Gibbes Museum of Art (Charlston,<br> NC). Programming inspired by the exhibition Fights for<br>Freedom: William H. Johnson Picturing Justice. The exhibition<br> is organized by the Smithsonian American Art Museum.</p> 
                 </div>
-                <div class="para">
+                <div class="para" data-aos="fade-up" data-aos-delay="200">
                     <h2>We start by scheduling two calls—one to walk<br> you through the process and another to have a<br> generative discussion about your ideas.</h2>
                </div> 
         </div>
     </div>
-    <div class="flex-section">
+    <div class="flex-section" data-aos="fade-up" data-aos-delay="200">
         <div class="content"><h1><strong>Work With Us</strong></h1></div>
         <div class="flex-content"><h2><button>1</button>Community-building Support</h2>
             <p>
@@ -164,7 +161,61 @@
         <p>For more information, or if you have any questions, please contact Jasmine DeJackome, Learning & <br>Engagement Manager, at education@artbridgesfoundation.org.</p>
        
     </div>
+    <footer class="footer" data-aos="fade-up" data-aos-delay="100">
+        <div class="newsletter">
+          <div class="newsletter-content">
+            <h2>Sign up for Art Pool News</h2>
+            <p>Learn about collection highlights, program offerings, and more.</p>
+          </div>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" />
+            <button type="submit">→</button>
+          </form>
+        </div>
+      
+        <div class="footer-main">
+          <div class="footer-left">
+            <div class="logo">Art <span>Bridges</span><sup>®</sup></div>
+            <div class="footer-links">
+              <div><strong>Art Sharing</strong> <span>▾</span></div>
+              <div><strong>Community Engagement</strong> <span>▾</span></div>
+              <div><strong>Ideas & Resources</strong> <span>▾</span></div>
+              <div><strong>Discover Art Pool</strong></div>
+              <div><strong>Partner With Us</strong></div>
+            </div>
+          </div>
+      
+          <div class="footer-right">
+            <h3>Art Pool Collection</h3>
+            <p>The Art Pool Collection contains more than 200 objects that are available for loan to museums across the United States, free of charge.</p>
+            <a href="#" class="cta-button">Learn More</a>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <div class="footer-nav">
+            <a href="#">Media Kit</a>
+            <a href="#">Newsroom</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+          </div>
+          <div class="footer-carousel">
+            <button>←</button>
+            <button>→</button>
+          </div>
+        </div>
+      </footer>
     <script src="../js/navbar.js"></script>
+    <script src="../js/learning.js"></script>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 10,
+        easing: 'ease-in-out'
+      });
+    </script>
 </body>
 </html>
