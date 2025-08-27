@@ -1,0 +1,302 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+    color: #222;
+  }
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-us{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
+  }
+  select {
+    width: 300px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select:hover {
+    border-color: #999;
+}
+
+select:focus {
+    outline: none;
+    border-color: #666;
+}
+.details{
+    display: flex;
+    justify-content: center;
+    gap: 20em;
+    padding: 5em 2em;
+}
+  form {
+  }
+
+  h3 {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  h3::before {
+    content: attr(data-step);
+    background: #1a1530;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+  }
+
+  .row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .row > div {
+    flex: 1;
+  }
+
+  .optional {
+    font-style: italic;
+    color: #555;
+    font-weight: normal;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    background: #1a1530;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background: #30254d;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-number {
+    background-color: #2d3748;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a5568;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.optional {
+    color: #a0aec0;
+    font-style: italic;
+    font-weight: normal;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+    background-color: #f7fafc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #805ad5;
+    background-color: white;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.organization-section {
+    margin-top: 30px;
+}
+
+.organization-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    background-color: #4a5568;
+    color: white;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #2d3748;
+}
+
+.address-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px 0;
+}
+
+.section p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.social-section h3 {
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.2s;
+}
+
+.social-link:hover {
+    border-color: #999;
+    color: #333;
+}
