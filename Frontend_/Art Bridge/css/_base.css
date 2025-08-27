@@ -1,0 +1,190 @@
+/* 
+ * Art Bridge - Base Styles
+ * Contains all global styles, variables, and resets
+ */
+
+/* 1. Font Imports & Variables */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600;700&display=swap');
+
+/* GT America Font Face */
+@font-face {
+    font-family: 'GT America';
+    src: url('https://cdn.jsdelivr.net/gh/uniq-bot/Art-bridge@main/fonts/GT-America-Standard-Regular.woff2') format('woff2'),
+         local('GT America Fallback'),
+         local('sans-serif');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT America';
+    src: url('https://cdn.jsdelivr.net/gh/uniq-bot/Art-bridge@main/fonts/GT-America-Standard-Bold.woff2') format('woff2'),
+         local('GT America Fallback'),
+         local('sans-serif');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 2. CSS Variables */
+:root {
+    /* Colors */
+    --primary-color: #000000;
+    --secondary-color: #1a162a;
+    --accent-color: #f5f5f5;
+    --text-color: #333;
+    --light-text: #fff;
+    --border-color: #e0e0e0;
+    
+    /* Typography */
+    --font-heading: 'GT America', 'GT America Fallback', sans-serif;
+    --font-body: 'IBM Plex Serif', serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* 3. Global Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 4. Base Typography */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-heading);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body::selection {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-family: var(--font-body);
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 5. Layout Utilities */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.section {
+    padding: var(--spacing-xl) 0;
+}
+
+/* 6. Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+.btn--primary:hover {
+    background-color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.btn--outline {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn--outline:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-decoration: none;
+}
+
+/* 7. Forms */
+input, textarea, select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    transition: border-color var(--transition-fast);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* 8. Helper Classes */
+.text-center { text-align: center; }
+.text-uppercase { text-transform: uppercase; }
+.mt-1 { margin-top: var(--spacing-xs); }
+.mt-2 { margin-top: var(--spacing-sm); }
+.mt-3 { margin-top: var(--spacing-md); }
+.mt-4 { margin-top: var(--spacing-lg); }
+.mt-5 { margin-top: var(--spacing-xl); }
