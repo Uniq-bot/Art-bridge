@@ -1,198 +1,325 @@
 <!DOCTYPE html>
+<!--
+  Evaluation Page - Art Pool
+  This page showcases the evaluation programs and resources offered by Art Pool.
+  It includes information about evaluation services, COVES program, and evaluation resources.
+-->
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluation</title>
+    <title>Evaluation - Art Pool</title>
     <link rel="stylesheet" href="../css/evaluation.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
 
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/gt-america-standard');
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'GT America Standard', 'IBM Plex Serif', serif;
+        }
+    </style>
+</head>
 <body>
-  <header>
-    <div class="search">
-        <input type="text" placeholder="Search your intreast">
-         <div class="close-search">
-                <i class="fa-solid fa-xmark"></i>
+    <div id="page">
+        <!-- Header Section with Navigation -->
+        <header>
+            <div class="search">
+                <input type="text" placeholder="Search your interest">
+                <div class="close-search">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
             </div>
-    </div>
-        <nav>
-            <div class="menu" id="menu-toggle">
-              <span>MENU</span>  <i class="fa-solid fa-bars"></i>
+            <nav>
+                <div class="menu" id="menu-toggle">
+                    <span>MENU</span> <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="logo">
+                    <p>Art Pool</p>
+                </div>
+                <div class="ctas">
+                    <i class="searchbtn fa-solid fa-search"></i>
+                    <p>Application Portal</p>
+                    <button>Contact Us</button>
+                </div>
+            </nav>
+    <aside id="sidebar" class="nav-links">
+        <div class="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <ul class="whole">
+            <li style="font-size: 1.5em;"><a href="index.html">Discover Art Pool</a></li>
+            <li style="font-size: 1.5em;"><a href="partnerwithus.html">Partner with Us</a></li>
+            <li class="dropdown">
+               <div class="div"> <a href="artsharing.html">Art Sharing</a> <i id="arrow" class="fa-solid fa-angle-down"></i> </div>
+                <ul class="dropdown-content">
+                    <li>
+                        <a href="../html/Availablecollection.html">Available Collections</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="../html/Artbridgecollection.html">Art Bridge Collection</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="../html/travelling.html">Traveling Exhibitions</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="../html/cohortprograms.html">Cohort Programs</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+              <div class="div"><a href="../html/communityEngment.html">Community Engagement</a> <i id="arrow" class="fa-solid fa-angle-down"></i></div>  
+                <ul class="dropdown-content">
+                    <li>
+                        <a href="../html/learn_engage.html">Learning and Engagement</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="../html/fellowprograms.html">Fellow Programs</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="../html/evaluation.html">Evaluation</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+               <div class="div"><a href="../html/idearesources.html">Idea Resources</a> <i id="arrow" class="fa-solid fa-angle-down"></i></div> 
+                <ul class="dropdown-content">
+                    <li>
+                        <a href="../html/idea.html">Idea Center</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="../html/convening.html">Convening</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+  </header>
+        <!-- Hero Section -->
+        <section id="heroSection" data-aos="fade-up">
+            <div class="hero-content" data-aos="fade-right" data-aos-delay="100">
+                <h1 data-aos="fade-right" data-aos-delay="200">Evaluation <span>Programs</span></h1>
+                <p data-aos="fade-right" data-aos-delay="300">
+                    Art Bridges believes in the power of evaluation to create meaningful change in the field.
+                    We provide support for evaluation activities that allow museums to better understand their
+                    audiences, measure program impact, and make responsive visitor-based decisions.
+                </p>
             </div>
-            <div class="logo">
-                <p>Art <h1></h1> Pool</p>
-            </div>
-            <div class="ctas">
-                <i class="searchbtn fa-solid fa-search"></i>
-                <p>Application Portal</p>
-                <button>Contact Us</button>
-            </div>
-        </nav>
-        <aside id="sidebar" class="nav-links">
-            <div class="close-btn">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-            <ul class="whole">
-                <li style="font-size: 1.5em;"><a href="index.html">Discover Art Pool</a></li>
-                <li style="font-size: 1.5em;"><a href="partnerwithus.html">Partner with Us</a></li>
-                <li class="dropdown">
-                   <div class="div"> <a href="artsharing.html">Art Sharing</a> <i id="arrow" class="fa-solid fa-angle-down"></i> </div>
-                    <ul class="dropdown-content">
-                        <li>
-                            <a href="../html/Availablecollection.html">Available Collections</a>
-                            <i class="fa-solid fa-angle-right"></i>
-                        </li>
-                        <li>
-                            <a href="../html/Artbridgecollection.html">Art Bridge Collection</a>
-                            <i class="fa-solid fa-angle-right"></i>
-                        </li>
-                        <li>
-                            <a href="../html/travelling.html">Traveling Exhibitions</a>
-                            <i class="fa-solid fa-angle-right"></i>
-                        </li>
-                        <li>
-                            <a href="../html/cohortprograms.html">Cohort Programs</a>
-                            <i class="fa-solid fa-angle-right"></i>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                  <div class="div"><a href="../html/communityengagement.html">Community Engagement</a> <i id="arrow" class="fa-solid fa-angle-down"></i></div>  
-                    <ul class="dropdown-content">
-                        <li>
-                            <a href="../html/learn_engage.html">Learning and Engagement</a>
-                            <i class="fa-solid fa-angle-right"></i>
-                        </li>
-                        <li>
-                            <a href="../html/fellowprograms.html">Fellow Programs</a>
-                            <i class="fa-solid fa-angle-right"></i>
-                        </li>
-                        <li>
-                            <a href="../html/evaluation.html">Evaluation</a>
-                            <i class="fa-solid fa-angle-right"></i>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                   <div class="div"><a href="../html/idearesources.html">Idea Resources</a> <i id="arrow" class="fa-solid fa-angle-down"></i></div> 
-                    <ul class="dropdown-content">
-                        <li>
-                            <a href="../html/idea.html">Idea Center</a>
-                            <i class="fa-solid fa-angle-right"></i>
-                        </li>
-                        <li>
-                            <a href="../html/convening.html">Convening</a>
-                            <i class="fa-solid fa-angle-right"></i>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </aside>
-    </header>
-  <head>
-    <div id="heroSection">
-               <div class="hero-content">
-                <h1>Art Brideges <span> Evaluation</span></h1>
-                <p>Art Bridges believes in the power of evaluation to create meaningful change in the field.
-                     We provide support for evaluation activities that allow museums to better understand their
-                     audiences, measure program impact, and make responsive visitor-based decisions.</p>
-               </div>
-            </div>
-            <section class="about-section">
+        </section>
+        <!-- About Section -->
+        <section class="about-section" data-aos="fade-up">
             <div class="about-header">
-                <h1>Getting Started with Evaluation</h1>
+                <h2>Getting Started with Evaluation</h2>
             </div>
             <div class="about-content">
-                The Art Bridges Collection contains over 200 artworks that are available for loan to museums across the
-                United States. We believe art is meant to be seen, but we also recognize that there are many barriers to
-                borrowing works of art, one of the largest being financial. For this reason, we ensure that loans from
-                our collection are free of cost to borrowing venues.
+                <p>
+                    The Art Bridges Collection contains over 200 artworks that are available for loan to museums across the
+                    United States. We believe art is meant to be seen, but we also recognize that there are many barriers to
+                    borrowing works of art, one of the largest being financial. For this reason, we ensure that loans from
+                    our collection are free of cost to borrowing venues.
+                </p>
             </div>
-            </section>
-            <section class="Services-section">
-                <div class="services-header">
-                    <h1>Services Supported by Art Bridges</h1>
+        </section>
+        <!-- Services Section -->
+        <section class="services-section" data-aos="fade-up">
+            <div class="services-header">
+                <h2>Services Supported by Art Bridges</h2>
+            </div>
+            <div class="services-content">
+                <ul>
+                    <li data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <h3>Evaluation Awards</h3>
+                            <p>Front-End, Formative, and Summative Evaluation support for your projects.</p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="150">
+                        <i class="fas fa-bullseye"></i>
+                        <div>
+                            <h3>Consultation Services</h3>
+                            <p>Expert guidance on Outcomes, Goals, and Measurements for your programs.</p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>COVES Program</h3>
+                            <p>Comprehensive audience research and evaluation framework.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="services-note" data-aos="fade-up" data-aos-delay="250">
+                    <p><strong>Note:</strong> The above list is not exhaustive. We encourage you to reach out to our team with any ideas you have to evaluate your Art Bridges project(s).</p>
                 </div>
-                <div class="services-content1">
-                    <li>Front-End, Formative, and Summative Evaluation Awards </li><br> 
-                    <li>Outcomes, Goals, and Measurements Consultation</li><br>
-                    <li>COVES -Art Bridges Audience Research</li>
+            </div>
+        </section>
+        <!-- COVES Section -->
+        <section class="cove-section" data-aos="fade-up">
+            <div class="cove-container">
+                <div class="cove-text" data-aos="fade-right">
+                    <p class="cove-subtitle">Visitor Experience Studies</p>
+                    <h2 class="cove-header">COVES Spotlight</h2>
+                    <div class="cove-content">
+                        <p>Our commitment to access includes access to insightful, actionable data. COVES is designed to help your museum measure impact and ensure meaningful, accessible art experiences.</p>
+                        <p><a href="#" class="coves-link">COVES (Collaboration for Ongoing Visitor Experience Studies)</a> is a validated survey tool that allows museums to learn directly from visitors about their museum experience. Including ongoing information about who visitors are, what their motivations for visiting are, what they do during their visit, and how they feel about their experience.</p>
+                        <div class="ctas" data-aos="fade-up" data-aos-delay="200">
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <a href="#" class="btn btn-outline">Contact Us</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="services-content2">
-                    <p> Note: The above list is not exhaustive. We encourage you to reach out to our team with 
-                        any ideas you have to evaluate your Art Bridges project(s).</p>
+                <div class="cove-img" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1605719125065-3dd9e3f79057?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Museum visitors engaging with art">
                 </div>
-            </section>
-           <section class="cove-section">
-  <div class="cove-container">
-    <div class="cove-text">
-        <p>Visitor Experience Studies</p>
-      <h2 class="cove-header">COVES Spotlight</h2>
-      <p class="cove-content">
-        Our commitment to access includes access to insightful, actionable data. COVES is designed to help your museum measure impact and ensure meaningful, accessible art experiences.
-        <a href="#">COVES (Collaboration for Ongoing Visitor Experience Studies)</a>  is a validated survey tool that allows museums to learn directly from visitors about their museum experience. Including ongoing information about who visitors are, what their motivations for visiting are, what they do during their visit, and how they feel about their experience.
+            </div>
+        </section>
+        <!-- Evaluation Resources Section -->
+        <section class="resources-section" data-aos="fade-up">
+            <div class="section-header">
+                <h2>Evaluation Resources</h2>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="resource-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>2023 COVES Report</h3>
+                    <p>Learn about the impact of COVES on visitor experience and demographic analysis in museums nationwide.</p>
+                    <a href="#" class="resource-link">View Report <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="resource-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="resource-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Evaluation Toolkit</h3>
+                    <p>Access our comprehensive guide to creating project goals, measurements, and evaluation strategies.</p>
+                    <a href="#" class="resource-link">Access Toolkit <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="resource-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="resource-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Wellness Toolkit</h3>
+                    <p>Discover how art experiences can support emotional, social, and cognitive wellness in visitors.</p>
+                    <a href="#" class="resource-link">Explore Wellness <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+                <p>For questions or to learn more, contact our Research & Evaluation Manager, <strong>Max Fey</strong>, at <a href="mailto:evaluation@artbridgesfoundation.org" class="email-link">evaluation@artbridgesfoundation.org</a></p>
+            </div>
+        </section>
+        <!-- Partner Stories Section -->
+        <section class="stories-section" data-aos="fade-up">
+            <div class="section-header">
+                <p class="section-subtitle">Stories We Love</p>
+                <h2>Partner Stories</h2>
+                <a href="#" class="btn btn-outline">View All Stories</a>
+            </div>
+            <div class="stories-grid">
+                <article class="story-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="story-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1706430433638-b9f3183a496e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RGVsZWF3YXJlJTIwQXJ0JTIwTXVzZXVtfGVufDB8fDB8fHww" alt="Delaware Art Museum">
+                        <span class="story-tag">Partner Story</span>
+                    </div>
+                    <div class="story-content">
+                        <h3>Delaware Art Museum</h3>
+                        <p>With the support of Art Bridges, the Delaware Art Museum (DelArt) exhibited "Estampas de la Raza: Contemporary Prints from the Romo Collection"...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="story-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1699640358839-c2399c558cb0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RGVsZWF3YXJlJTIwQXJ0JTIwTXVzZXVtfGVufDB8fDB8fHww" alt="Orlando Museum of Art">
+                        <span class="story-tag">Partner Story</span>
+                    </div>
+                    <div class="story-content">
+                        <h3>Orlando Museum of Art</h3>
+                        <p>The Orlando Museum of Art (OMA) hosted "Reflections," a program that paired workshops with artwork. "Reflections" served individuals with cancer, and helped...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="story-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1724125783479-3db2144717ab?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8RGVsZWF3YXJlJTIwQXJ0JTIwTXVzZXVtfGVufDB8fDB8fHww" alt="Westmoreland Museum of American Art">
+                        <span class="story-tag">Partner Story</span>
+                    </div>
+                    <div class="story-content">
+                        <h3>Westmoreland Museum of American Art</h3>
+                        <p>Using evaluation to inform exhibition marketing and programming, and measure impact at The Westmoreland Museum of American Art.</p>
+            </div>
+        </section>
+       
+    <footer class="footer">
+        <div class="newsletter">
+          <div class="newsletter-content">
+            <h2>Sign up for Art Pool News</h2>
+            <p>Learn about collection highlights, program offerings, and more.</p>
+          </div>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" />
+            <button type="submit">→</button>
+          </form>
+        </div>
+      
+        <div class="footer-main">
+          <div class="footer-left">
+            <div class="logo">Art <span>Bridges</span><sup>®</sup></div>
+            <div class="footer-links">
+              <div><strong>Art Sharing</strong> <span>▾</span></div>
+              <div><strong>Community Engagement</strong> <span>▾</span></div>
+              <div><strong>Ideas & Resources</strong> <span>▾</span></div>
+              <div><strong>Discover Art Pool</strong></div>
+              <div><strong>Partner With Us</strong></div>
+            </div>
+          </div>
+      
+          <div class="footer-right">
+            <h3>Art Pool Collection</h3>
+            <p>The Art Pool Collection contains more than 200 objects that are available for loan to museums across the United States, free of charge.</p>
+            <a href="#" class="cta-button">Learn More</a>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <div class="footer-nav">
+            <a href="#">Media Kit</a>
+            <a href="#">Newsroom</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+          </div>
+          <div class="footer-carousel">
+            <button>←</button>
+            <button>→</button>
+          </div>
+        </div>
+      </footer>
 
-Participating museums will receive a validated survey, a $5,000 award, training, and reporting support from Art Bridges.Through this process of collecting valuable responses from visitors, museums can put visitor experience at the forefront of decision-making and better understand how they compare to other art museums.
-      </p>
-    </div>
-    <div class="cove-img">
-      <img src="https://images.unsplash.com/photo-1605719125065-3dd9e3f79057?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Art Bridges Logo">
-    </div>
-  </div>
-  </section>
-  <section class="Evaluation-section">
-    <div class="evaluation-header">
-        <h1>Evaluation Resources </h1>
-    </div>
-    <div class="evaluation-content">
-        Explore the <a href="#">2023 COVES (-Art Bridges Aggregate Report)</a>to learn more about the type of data analysis that is possible with COVES and to see how Art Bridges is learning more about our impact on the field in shifting visitor demographics and experience ratings of museum visitors.<br>
-        Explore the <a href="#">Art Bridges Evaluation toolkit</a>to learn more about creating project goals and measurements, types of evaluation and practical examples for including evaluation in the front end and summative stages of a project.<br>
-        Explore the <a href="#">Art Bridges + Wellness toolkit</a>to learn more about wellness instruments to understand how art experiences can support emotional, social, cognitive, and physical wellness in museum visitors.<br>
-        For questions or to learn more, contact our Research & Evaluation Manager, Max Fey, at evaluation@artbridgesfoundation.org.
-    </div>
-
-  </section>
-<section class="partner-section">
-    <div class="partner header">
-        <p>Stories We Love</p>
-        <h1>Partner Stories</h1>
-         <button class="sign">View all Stories</button>
-    </div>
-    <div class="partner-flex">
-  <div class="story-item">
-     <img src="https://plus.unsplash.com/premium_photo-1706430433638-b9f3183a496e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RGVsZWF3YXJlJTIwQXJ0JTIwTXVzZXVtfGVufDB8fDB8fHww" alt="story1">
-    <p>Partner Story</p>
-    <h3>Deleaware Art Museum</h3>
-    <p><em> With the support of Art Bridges, the Delaware Art Museum (DelArt) exhibited 
-      "Estampas de la Raza: Contemporary Prints from the Romo Collection"...</em></p>
-  </div>
-  <div class="story-item">
-    <img src="https://images.unsplash.com/photo-1699640358839-c2399c558cb0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RGVsZWF3YXJlJTIwQXJ0JTIwTXVzZXVtfGVufDB8fDB8fHww" alt="story1">
-    <p>Partner Story</p>
-    <h3>>Orlando Museum of Art</h3>
-    <p><em>  The Orlando Museum of Art (OMA) hosted "Reflections," a program that paired workshops with artwork.
-      "Reflections" served individuals with cancer, and helped...</em></p>
-  </div>
-  <div class="story-item">
-    <img src="https://images.unsplash.com/photo-1724125783479-3db2144717ab?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8RGVsZWF3YXJlJTIwQXJ0JTIwTXVzZXVtfGVufDB8fDB8fHww" alt="story1">
-    <p>Partner Story</p>
-    <h3>Westmoreland Museum of American Art</h3>
-    <p><em>Using evaluation to inform exhibition marketing and programming, and measure impact at 
-      The Westmoreland Museum of American Art</em></p>
-  </div>
-    </div>
-</section>
-<div class="last">
-    <div>
-      <h1>Sign up for Art Bridges News</h1>
-      <p>Learn about collection Highlights,program offerings,and more.</p>
-    </div>
-    <div class="ib">
-      <input type="email" placeholder="Your email" />
-      <button class="sign">Sign Up</button>
-    </div>
-  </div>
-</section>
-
-  </head>
+    <!-- AOS Animation Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
+    <script src="../js/evaluation.js"></script>
+</body>
+</html>
