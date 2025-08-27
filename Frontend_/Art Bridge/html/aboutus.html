@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Art Pool</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .about-hero {
+            background-color: #f8f8f8;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .about-hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .mission-section, .team-section, .values-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #222;
+        }
+        
+        .mission-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .mission-text {
+            flex: 1;
+        }
+        
+        .mission-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .mission-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .value-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .value-card i {
+            font-size: 2.5rem;
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+        
+        .value-card h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            text-align: center;
+        }
+        
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #f8f8f8;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .team-member h3 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .team-member p {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="search">
+            <input type="text" placeholder="Search your interest">
+            <div class="close-search">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <nav>
+            <div class="menu" id="menu-toggle">
+                <span>MENU</span>  <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="logo">
+                <p>Art <h1></h1> Pool</p>
+            </div>
+            <div class="ctas">
+                <i class="searchbtn fa-solid fa-search"></i>
+                <p>Application Portal</p>
+                <a href="contact.html" class="contact-button">Contact Us</a>
+            </div>
+        </nav>
+        <!-- Include your navigation menu here -->
+    </header>
+
+    <section class="about-hero">
+        <h1>About Art Pool</h1>
+        <p>Empowering artists and communities through creative expression and cultural exchange</p>
+    </section>
+
+    <section class="mission-section">
+        <h2 class="section-title">Our Mission</h2>
+        <div class="mission-content">
+            <div class="mission-text">
+                <p>At Art Pool, we believe in the transformative power of art to connect people, inspire change, and build stronger communities. Our mission is to create accessible platforms for artists to showcase their work, collaborate with peers, and engage with diverse audiences.</p>
+                <p>Founded in 2015, Art Pool has grown from a small local initiative to a global network of artists, curators, and art enthusiasts. We're committed to breaking down barriers in the art world and making art accessible to all.</p>
+            </div>
+            <div class="mission-image">
+                <img src="https://cdn.sanity.io/images/x76dkvvf/prod/739e7921b22752177d70d37ff1de63378d59e3d7-1179x1544.jpg" alt="Art Pool Exhibition">
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <h2 class="section-title">Our Values</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <i class="fas fa-palette"></i>
+                <h3>Creativity</h3>
+                <p>We celebrate innovation and original expression in all artistic forms.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Community</h3>
+                <p>We build bridges between artists, audiences, and communities.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-globe-americas"></i>
+                <h3>Diversity</h3>
+                <p>We champion diverse voices and perspectives in the arts.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-lock-open"></i>
+                <h3>Accessibility</h3>
+                <p>We believe art should be accessible to everyone, everywhere.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Team Member">
+                <h3>Sarah Johnson</h3>
+                <p>Founder & Creative Director</p>
+            </div>
+            <div class="team-member">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member">
+                <h3>Michael Chen</h3>
+                <p>Head of Community</p>
+            </div>
+            <div class="team-member">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team Member">
+                <h3>Elena Rodriguez</h3>
+                <p>Curator</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="newsletter">
+            <div class="newsletter-content">
+                <h2>Sign up for Art Pool News</h2>
+                <p>Learn about collection highlights, program offerings, and more.</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email" />
+                <button type="submit">→</button>
+            </form>
+        </div>
+        <div class="footer-main">
+            <div class="footer-left">
+                <div class="logo">Art <span>Pool</span></div>
+                <p>© 2025 Art Pool. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <div><a href="aboutus.html">About Us</a></div>
+                    <div><a href="contact.html">Contact</a></div>
+                    <div><a href="#">Privacy Policy</a></div>
+                    <div><a href="#">Terms of Service</a></div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/navbar.js"></script>
+</body>
+</html>
