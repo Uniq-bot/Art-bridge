@@ -4,10 +4,17 @@
     padding: 0;
 }
 
+/* Contact page specific styles */
+.contact-page {
+   background: #fff;
+   color: var(--text-color);
+   padding: 2rem 0;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-family), sans-serif;
     background: #fff;
-    color: #222;
+    color: var(--text-color);
   }
   main{
     display: flex;

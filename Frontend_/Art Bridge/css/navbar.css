@@ -330,6 +330,8 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
+    width: 20%;
+    justify-content: space-between;
 }
 
 .ctas i {
@@ -345,6 +347,7 @@ header {
     margin: 0;
     font-size: 1rem;
     color: #2c3e50;
+    width: fit-content;
 }
 
 .ctas i:hover {
@@ -352,7 +355,7 @@ header {
    color: white;
 }
 
-.ctas button {
+.ctas a {
     background-color: black;
     color: white;
     border: none;
@@ -360,9 +363,10 @@ header {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
-.ctas button:hover {
+.ctas a:hover {
     background-color: #2980b9;
 }
 

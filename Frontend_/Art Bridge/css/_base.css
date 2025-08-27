@@ -30,33 +30,60 @@
 /* 2. CSS Variables */
 :root {
     /* Colors */
-    --primary-color: #000000;
-    --secondary-color: #1a162a;
-    --accent-color: #f5f5f5;
-    --text-color: #333;
-    --light-text: #fff;
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --accent-color: #3498db;
+    --light-gray: #f5f5f5;
+    --dark-gray: #333;
+    --white: #ffffff;
+    --black: #000000;
+    --text-color: #333333;
     --border-color: #e0e0e0;
     
     /* Typography */
-    --font-heading: 'GT America', 'GT America Fallback', sans-serif;
-    --font-body: 'IBM Plex Serif', serif;
+    --font-heading: 'GT America', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-body: 'GT America', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
     
     /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 3rem;
-    --spacing-xl: 4rem;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 3rem;
     
     /* Border Radius */
     --border-radius-sm: 4px;
     --border-radius-md: 8px;
-    --border-radius-lg: 12px;
+    --border-radius-lg: 16px;
     
     /* Transitions */
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    --transition-fast: 0.15s ease-in-out;
+    --transition-normal: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+    
+    /* Box Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    
+    /* Container Widths */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    
+    /* Z-index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-offcanvas: 1050;
+    --z-modal: 1060;
+    --z-popover: 1070;
+    --z-tooltip: 1080;
 }
 
 /* 3. Global Reset */
@@ -73,7 +100,7 @@ html {
 }
 
 body {
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
     line-height: 1.6;
     color: var(--text-color);
     background-color: #fff;
@@ -83,20 +110,97 @@ body {
 
 body::selection {
     background-color: var(--primary-color);
-    color: var(--light-text);
+    color: var(--white);
 }
 
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 0.5em;
+    color: var(--primary-color);
+}
+
+/* Paragraphs and Text Elements */
+p, li, td, th, label, input, textarea, select, button {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-color);
 }
 
 p {
-    font-family: var(--font-body);
     margin-bottom: 1em;
-    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Buttons */
+button, .btn, input[type="button"], input[type="submit"], input[type="reset"] {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Blockquotes */
+blockquote {
+    font-family: var(--font-body);
+    font-style: italic;
+    margin: 1.5em 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid var(--accent-color);
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Code and Preformatted Text */
+code, pre, kbd, samp {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+pre {
+    padding: 1em;
+    overflow-x: auto;
+    border-radius: var(--border-radius-sm);
+}
+
+/* Form Elements */
+input, textarea, select {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+}
+
+th, td {
+    padding: 0.75em;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 a {

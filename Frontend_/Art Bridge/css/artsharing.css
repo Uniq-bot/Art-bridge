@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
 }
 body::selection{
     background-color: #000000;
@@ -401,7 +401,7 @@ main {
     line-height: 1.6;
     opacity: 0.9;
     font-style: italic;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-body);
 }
         /* Fourth Section - Main Content Section
    Contains three main sections with alternating background colors */
@@ -446,7 +446,7 @@ main {
     line-height: 1.6;
     opacity: 0.9;
     font-style: italic;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-body);
 }
 
 /* Right Content - Image Section */
@@ -525,7 +525,7 @@ main {
     line-height: 1.6;
     opacity: 0.9;
     font-style: italic;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-body);
 }
 
 #fourthSection .fourthSec-sec .right {
@@ -602,7 +602,7 @@ main {
     line-height: 1.6;
     opacity: 0.9;
     font-style: italic;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-body);
 }
 
 #fourthSection .fourthSec-bot .right {
@@ -763,7 +763,7 @@ main {
     opacity: 0.9;
     font-style: italic;
     margin-bottom: 2rem;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-body);
 }
 
 #fifthSection .partner-content .partner-item button{
