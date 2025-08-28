@@ -1,84 +1,85 @@
 const artPrograms = [
     {
-      imageLink: "https://cdn.sanity.io/images/x76dkvvf/prod/304148f36c0eba2f229f5e10f0477c8061987a1f-923x687.png?auto=format&w=640&q=75",
-      title: "AMSTeens Art Council",
-      heading: "Community Building, Interdisciplinary, Youth and Family, Learning, Perception, Depth, Students",
-      info: "Art Museum of South Texas (AMST) convened their Teen Advisory Council to create and participate in artmaking, financial, and business workshops centered on themes from..."
+      imageLink: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&w=1000&q=80",
+      title: "Global Youth Art Exchange",
+      heading: "Community Building, Intercultural Exchange, Youth Engagement, Cross-Cultural Learning, International Collaboration",
+      info: "Connecting young artists from different continents through virtual workshops and collaborative projects that celebrate cultural diversity and shared creativity...",
+      access: true
     },
     {
-      imageLink: "https://cdn.sanity.io/images/x76dkvvf/prod/0846a36063fd4fc85bf4fc4fd6255cd54c31bd17-382x253.png?auto=format&w=640&q=75", 
-      title: "Fresh Film Series- Frame to Frame: Where Film Meets Art",
-      heading: "Interdisciplinary, Artist Collaborations, Breadth",
-      info: "The 'Fresh Film Series,' which activated a Partner Loan Network of 15 Art Bridges artworks, featured curated film screenings by writer and critic Carlos Valladares that..."
+      imageLink: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&w=1000&q=80", 
+      title: "World Music & Visual Arts Fusion",
+      heading: "Interdisciplinary, International Artist Collaborations, Cultural Fusion, Live Performance",
+      info: "A groundbreaking series that pairs visual artists with musicians from different cultural traditions, creating immersive experiences that blend visual and auditory artistry...",
+      access: true
     },
     {
-      imageLink: "https://cdn.sanity.io/images/x76dkvvf/prod/b5ed55b0e9fc8714921ca2e050a29ca6804a5f84-1080x1080.jpg?auto=format&w=640&q=75",
-      title: "Art & Tech Fusion Family Day and Virtual Reality Nights at the Canton Museum of Art", 
-      heading: "Innovative, Interdisciplinary, In Gallery, Youth and Family, Breadth",
-      info: "The Canton Museum of Art activated the 'Ginny Ruffner: Reforestation of the Imagination' exhibition with augmented reality and virtual reality programming for audiences of all..."
-    },
-  
-    {
-      imageLink: "https://cdn.sanity.io/images/x76dkvvf/prod/ed0c8ccc3c0187878c2007a22fbb3e92a844f4c8-4032x3024.jpg?auto=format&w=640&q=75",
-      title: "Chill Nights at the Richard M. Ross Art Museum",
-      heading: "Community Building, Innovative, Interdisciplinary, Wellness, Students, Perception, Reach, Diversity, Breadth",
-      info: "The Richard M. Ross Art Museum hosted a series of student-planned 'Chill Nights,' featuring crafts, screenings, and food to engage historically underserved Ohio Wesleyan University..."
+      imageLink: "https://images.unsplash.com/photo-1561484930-974554019ade?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&w=1000&q=80",
+      title: "Digital Nomad Artist Residency", 
+      heading: "Innovative, Remote Collaboration, Cross-Cultural Exchange, Digital Art, Global Community",
+      info: "A virtual residency program that connects artists from around the world to collaborate on digital projects while exploring themes of migration, identity, and global citizenship..."
     },
     {
-      imageLink: "https://cdn.sanity.io/images/x76dkvvf/prod/7fc9e4e31147bd237a0352a614c7d9af6b62ddb5-1430x953.jpg?auto=format&w=640&q=75",
-      title: "Amazing Grace: Celebrating African American Courage, Strength, and Resilience", 
-      heading: "Community Building, Interdisciplinary, Wellness, Perception, Reach, Diversity, Breadth, Artist Collaborations, Tours and Talks",
-      info: "The Mint Museum's two-day 'Amazing Grace' community celebration featured art, music, and dialogue inspired by Eldzier Cortor's 'Southern Souvenir No. II,' using gallery..."
+      imageLink: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&w=1000&q=80",
+      title: "Culinary Arts & Cultural Heritage",
+      heading: "Community Building, Cultural Preservation, Interdisciplinary, Food as Art, Global Traditions",
+      info: "Exploring the intersection of culinary traditions and visual arts through workshops, exhibitions, and interactive dining experiences that celebrate world cultures..."
     },
     {
-      imageLink: "https://cdn.sanity.io/images/x76dkvvf/prod/e74552349b1e86414bf6eee2577d1b041a16396e-1320x880.jpg?auto=format&w=640&q=75",
-      title: "Power Figures Workshop at the El Paso Museum of Art",
-      heading: "Community Building, Artist Collaborations, Diversity, Breadth", 
-      info: "Led by artist vanessa german, this hands-on workshop at the El Paso Museum of Art invited participants to create tactile assemblages and mixed-media sculptures inspired by her...",
-      access:false
+      imageLink: "https://images.unsplash.com/photo-1529154691717-dc8b9f7a2b33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&w=1000&q=80",
+      title: "Indigenous Art & Storytelling", 
+      heading: "Cultural Preservation, Intergenerational Learning, Traditional Arts, Global Indigenous Voices",
+      info: "A platform for indigenous artists from different continents to share their traditional art forms, stories, and cultural practices with global audiences...",
+      access: true
     },
     {
-      imageLink: "https://cdn.sanity.io/images/x76dkvvf/prod/58eecd4762a98c4d625c494190a77e4dcb643540-3024x4032.jpg?auto=format&w=640&q=75",
-      title: "Portraits of Remembrance",
-      heading: "Community Building, Interdisciplinary, Wellness, Students, Perception, Reach, Diversity, Artist Collaborations, Breadth",
-      info: "California State University Northridge (CSUN) Art Galleries hosted five printmaking workshops led by Kalli Arte Collective, which invited participants to create remembran...",
-      access:true
+      imageLink: "https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&w=1000&q=80",
+      title: "Urban Art Across Borders",
+      heading: "Street Art, Cultural Exchange, Public Space, Global Urban Culture", 
+      info: "Connecting street artists from major cities worldwide to create collaborative murals that reflect on urban life, migration, and cultural identity in the 21st century...",
+      access: true
     },
     {
-      imageLink: "https://cdn.sanity.io/images/x76dkvvf/prod/504dc419b082251a2176e8cbbbac842b275e2dd0-383x563.png?auto=format&w=640&q=75", 
-      title: "Interdisciplinary Programming for Middle and High School Students at Grand Rapids Art Museum",
-      heading: "Interdisciplinary, Students, Depth",
-      info: "The Grand Rapids Art Museum partnered with artist Mandy Cano Villalobos and Deos Ballet to create an interdisciplinary, interactive program where middle and high school student...",
-      access:true
+      imageLink: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&w=1000&q=80",
+      title: "Textile Traditions of the World",
+      heading: "Traditional Crafts, Cultural Heritage, Sustainable Practices, Global Textile Arts",
+      info: "Celebrating the rich diversity of textile arts through exhibitions, workshops, and artist talks featuring master weavers and textile artists from different cultural traditions...",
+      access: true
     },
     {
-      imageLink: "https://cdn.sanity.io/images/x76dkvvf/prod/e59f4b943358614edb2f810c21ba19ff7a908055-923x1223.png?auto=format&w=640&q=75",
-      title: "Facial Cast Making at Birmingham Museum of Art",
-      heading: "Students, Artist Collaborations, Reach, Depth",
-      info: "In this six-week program, the Birmingham Museum of Art partnered with local schools to engage students with John Rhoden's sculpture, 'Head' using it as inspiration to create...",
-      access:true
-    },
-  
-    {
-      imageLink: "https://cdn.sanity.io/images/x76dkvvf/prod/e7e5c5600818ffd710fd659eb8e1e0fc05184949-3914x2936.jpg?auto=format&w=640&q=75",
-      title: "Multidisciplinary Art Program for Older Adults (55+) at the Utah Museum of Fine Arts",
-      heading: "Community Building, Diversity, Interdisciplinary, Depth",
-      info: "In this multi-session art workshop, the Utah Museum of Fine Arts (UMFA) provided interdisciplinary outdoor courses for adults aged 55+ that combined environmental concepts wit...",
-      access:true
+      imageLink: "https://images.unsplash.com/photo-1501612780327-45045538702b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&w=1000&q=80", 
+      title: "Contemporary Dance & Visual Arts Dialogue",
+      heading: "Interdisciplinary, Performance Art, Cross-Cultural Collaboration, Movement & Visual Arts",
+      info: "Bringing together choreographers and visual artists from different cultural backgrounds to create immersive performances that explore the intersection of movement and visual expression...",
+      access: true
     },
     {
-      imageLink: "https://cdn.sanity.io/images/x76dkvvf/prod/366a1c312b8a0c8b80a67459f3cdf32fc8f4695b-2268x4032.jpg?auto=format&w=640&q=75",
-      title: "Supercoolwicked: Negro, Spiritual", 
-      heading: "Reach, Interdisciplinary, Students, Breadth",
-      info: "The University of Michigan Museum of Art (UMMA) collaborated with local interdisciplinary performance artist Supercoolwicked to provide a free interpretative...",
-      access:true
+      imageLink: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&w=1000&q=80",
+      title: "Global Printmaking Exchange",
+      heading: "Printmaking, Cultural Exchange, Traditional Techniques, International Collaboration",
+      info: "A collaborative printmaking project that connects artists from different countries to share traditional and contemporary printmaking techniques while creating a collective portfolio...",
+      access: true
     },
     {
-      imageLink: "https://cdn.sanity.io/images/x76dkvvf/prod/74f44c14a8c9e9cc08dae35daa90671e5a6c6a59-1365x1365.jpg?auto=format&w=640&q=75",
-      title: "Jazz Concert with Duke Ellington Orchestra at Syracuse University",
-      heading: "Community Building, Interdisciplinary, Reach, Breadth", 
-      info: "The Syracuse University Art Museum engaged audiences with the works of Gordon Parks and explored his connection to jazz music with a concert by the Duke Ellington Orchestra.",
-      access:false
+      imageLink: "https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&w=1000&q=80",
+      title: "Ceramic Traditions Across Continents",
+      heading: "Ceramic Arts, Cultural Heritage, Traditional Techniques, Global Craft",
+      info: "Exploring the rich diversity of ceramic traditions through workshops, demonstrations, and exhibitions featuring master potters from different cultural backgrounds...",
+      access: true
+    },
+    {
+      imageLink: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&w=1000&q=80",
+      title: "Photography Without Borders", 
+      heading: "Documentary Photography, Cultural Exchange, Global Perspectives, Visual Storytelling",
+      info: "A traveling exhibition and workshop series featuring documentary photographers who capture the diversity of human experience across different cultures and communities...",
+      access: true
+    },
+    {
+      imageLink: "https://images.unsplash.com/photo-1501611730408-d3c9ff41b6e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&w=1000&q=80",
+      title: "Digital Art & Cultural Heritage",
+      heading: "Digital Media, Cultural Preservation, New Media Art, Technology & Tradition", 
+      info: "Exploring how digital technologies can be used to preserve and reinterpret traditional cultural expressions through interactive installations and new media artworks...",
+      access: true
     }
   ];const projectContainer = document.querySelector('.projects-grid');
   let visibleCount = 0; // how many cards to show at once
