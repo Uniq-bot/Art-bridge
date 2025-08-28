@@ -46,7 +46,7 @@ const shiftContent = (contentNumber) => {
                     <p>A spoken word artist shares a completed Juneteenth-inspired square that was a part of “The Threads We Share Quilting and Story Collection” program. The program was held at Allentown Art Museum (Allentown, PA) as part of the Philadelphia Museum of Art Cohort. Image courtesy of Allentown Art Museum, 2021.</p>
                 </div>
                 <div class="para" data-aos="fade-up" data-aos-delay="200">
-                    <h2>After receiving your final application package, the Art Bridges team will prepare your materials for an award review meeting where your project will be evaluated for alignment with Art Bridges’ mission.</h2>
+                    <h2>After receiving your final application package, the Art Pool team will prepare your materials for an award review meeting where your project will be evaluated for alignment with Art Pool's mission.</h2>
                </div> 
         `
     }

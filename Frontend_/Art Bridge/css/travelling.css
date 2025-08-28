@@ -229,11 +229,12 @@ header {
 }
 
 .hero-description {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.6;
     opacity: 0.9;
     margin-bottom: 2rem;
+    color: white;
 }
 
 .play-video {
@@ -287,7 +288,7 @@ main {
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 500;
     line-height: 1.2;
     margin-bottom: 2rem;
@@ -303,7 +304,7 @@ main {
 }
 
 .content-text p {
-    font-size: 16px;
+    font-size: 1.5em;
     line-height: 1.7;
     color: #666;
     margin-bottom: 30px;
@@ -395,7 +396,7 @@ main {
 }
 
 .how-content p {
-    font-size: 16px;
+    font-size: 1.5em;
     line-height: 1.7;
     color: #666;
     margin-bottom: 25px;

@@ -202,7 +202,7 @@ if (inquirySelect) {
                 `;
                 
             } else if (selectedValue === '4') {
-                // Art Bridge Collection Inquiry Form
+                // Art Pool Collection Inquiry Form
                 contactForm.innerHTML = `
                     <div class="section">
                         <div class="section-header">
