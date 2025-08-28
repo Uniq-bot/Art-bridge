@@ -27,6 +27,13 @@ body {
     gap: 1em;
     padding: 2em;
   }
+  .contact-us h1{
+    font-weight: bold;
+    font-size: 2em;
+  }
+  .contact-us span{
+    font-size: 1em;
+  }
   select {
     width: 300px;
     padding: 12px 16px;
@@ -55,9 +62,7 @@ select:focus {
     gap: 20em;
     padding: 5em 2em;
 }
-  form {
-  }
-
+ 
   h3 {
     display: flex;
     align-items: center;
