@@ -3,340 +3,442 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Art Sharing - About Us</title>
+    <title>Art Pool - About Us</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/typography.css">
-    <link rel="stylesheet" href="../css/animations.css">
     <style>
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #1a202c;
+            background-color: #ffffff;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Header Styles */
         header {
-            background: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
+            position: fixed;
             top: 0;
-            z-index: 100;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #111827;
         }
 
         .menu-btn {
+            display: none;
             background: none;
             border: none;
             font-size: 1rem;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            color: #333;
+            color: #111827;
         }
 
         .nav-right {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 2rem;
         }
 
         .search-icon {
             width: 20px;
             height: 20px;
+            color: #6b7280;
             cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .search-icon:hover {
+            color: #111827;
         }
 
         .nav-link {
+            color: #6b7280;
             text-decoration: none;
-            color: #666;
-            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #111827;
         }
 
         .contact-btn {
-            background: #2d2d2d;
+            background: #111827;
             color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: background 0.3s ease;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
 
         .contact-btn:hover {
-            background: #1a1a1a;
+            background: #374151;
+            transform: translateY(-1px);
         }
 
+        /* Main Content */
+        main {
+            margin-top: 80px;
+        }
+
+        /* Container */
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1rem;
         }
 
+        /* Hero Section */
         .hero-section {
-            padding: 4rem 0 2rem;
+            padding: 5rem 0;
+            background-color: #f9fafb;
         }
 
-        .about-label {
-            color: #999;
-            font-size: 0.9rem;
+        .hero-content {
+            max-width: 56rem;
+        }
+
+        .hero-subtitle {
+            font-size: 0.875rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.1em;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.25;
             margin-bottom: 2rem;
         }
 
-        .hero-text {
-            font-size: 3rem;
-            font-weight: 400;
-            line-height: 1.3;
-            color: #2d2d2d;
-            margin-bottom: 4rem;
+        /* Foundation Section */
+        .foundation-section {
+            padding: 5rem 0;
+            background-color: #ffffff;
         }
 
-        .founder-section {
+        .foundation-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
-            padding: 4rem 0;
         }
 
-        .founder-text h2 {
-            font-size: 2.5rem;
+        .foundation-content h2 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .founder-name {
+            display: block;
+            color: #4b5563;
+            font-size: 1.875rem;
             font-weight: 400;
+            margin-top: 0.5rem;
+        }
+
+        .foundation-text {
+            font-size: 1.125rem;
+            line-height: 1.625;
+            color: #374151;
             margin-bottom: 2rem;
-            color: #2d2d2d;
         }
 
-        .founder-text h2 .founded-by {
-            font-style: italic;
-            color: #666;
+        .foundation-image {
+            border-radius: 0.5rem;
+            overflow: hidden;
         }
 
-        .founder-description {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        .founder-image {
+        .foundation-image img {
             width: 100%;
-            height: 400px;
+            height: auto;
             object-fit: cover;
-            border-radius: 8px;
+            transition: transform 0.3s ease;
         }
 
+
+        /* Objectives Section */
         .objectives-section {
-            background: #2d2d3d;
+            padding: 5rem 0;
+            background-color: #111827;
             color: white;
-            padding: 6rem 0;
         }
 
         .objectives-title {
             font-size: 3rem;
-            font-weight: 400;
+            font-weight: 700;
+            text-align: center;
             margin-bottom: 4rem;
         }
 
         .objectives-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 4rem 6rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
-        .objective {
-            opacity: 0;
-            animation: fadeInUp 0.8s ease forwards;
+        .objective-card {
+            background-color: #1f2937;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
         }
 
-        .objective:nth-child(1) { animation-delay: 0.1s; }
-        .objective:nth-child(2) { animation-delay: 0.2s; }
-        .objective:nth-child(3) { animation-delay: 0.3s; }
-        .objective:nth-child(4) { animation-delay: 0.4s; }
-        .objective:nth-child(5) { animation-delay: 0.5s; }
-        .objective:nth-child(6) { animation-delay: 0.6s; }
+        .objective-card:hover {
+            background-color: #374151;
+            transform: translateY(-0.25rem);
+        }
 
         .objective-number {
-            color: #666;
-            font-size: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #9ca3af;
             margin-bottom: 1rem;
         }
 
         .objective-title {
-            font-size: 1.4rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
             color: white;
         }
 
         .objective-description {
-            color: #ccc;
-            font-size: 0.95rem;
-            line-height: 1.6;
+            color: #d1d5db;
+            margin-bottom: 0;
         }
 
+        /* Team Section */
         .team-section {
-            padding: 6rem 0;
+            padding: 5rem 0;
+            background-color: #ffffff;
+        }
+
+        .team-header {
+            text-align: center;
+            margin-bottom: 4rem;
         }
 
         .team-title {
             font-size: 3rem;
-            font-weight: 400;
-            margin-bottom: 2rem;
-            color: #2d2d2d;
+            font-weight: 700;
+            margin-bottom: 1rem;
         }
 
         .team-subtitle {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 3rem;
-            max-width: 500px;
-        }
-
-        .team-tabs {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            border-bottom: 1px solid #eee;
-        }
-
-        .team-tab {
-            padding: 1rem 0;
-            background: none;
-            border: none;
-            font-size: 1rem;
-            color: #666;
-            cursor: pointer;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        .team-tab.active {
-            color: #2d2d2d;
-        }
-
-        .team-tab.active::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: #2d2d2d;
+            font-size: 1.25rem;
+            color: #4b5563;
+            max-width: 42rem;
+            margin: 0 auto;
         }
 
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+            margin-bottom: 3rem;
         }
 
         .team-member {
-            opacity: 0;
-            animation: fadeInUp 0.8s ease forwards;
+            text-align: left;
         }
 
-        .team-member:nth-child(1) { animation-delay: 0.1s; }
-        .team-member:nth-child(2) { animation-delay: 0.2s; }
-        .team-member:nth-child(3) { animation-delay: 0.3s; }
-        .team-member:nth-child(4) { animation-delay: 0.4s; }
-
         .member-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
+            overflow: hidden;
+            border-radius: 0.5rem;
             margin-bottom: 1rem;
         }
 
+        .member-image img {
+            width: 100%;
+            height: 16rem;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-member:hover .member-image img {
+            transform: scale(1.05);
+        }
+
         .member-name {
-            font-size: 1rem;
+            font-size: 1.125rem;
             font-weight: 600;
-            color: #2d2d2d;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
         }
 
-        .member-title {
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.4;
-            font-style: italic;
+        .member-role {
+            color: #4b5563;
+            font-size: 0.875rem;
+            margin-bottom: 0;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+        .view-all-btn {
+            display: block;
+            margin: 0 auto;
+            padding: 0.75rem 2rem;
+            border: 2px solid #111827;
+            background: transparent;
+            color: #111827;
+            font-weight: 500;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .view-all-btn:hover {
+            background: #111827;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            
+            .nav-right {
+                display: none;
             }
-        }
+            
+            nav {
+                padding: 1rem;
+            }
 
-        @media (max-width: 1024px) {
-            .hero-text {
+            .hero-title {
                 font-size: 2.5rem;
             }
-            
-            .founder-section {
+
+            .foundation-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            
+
+            .foundation-content h2 {
+                font-size: 2rem;
+            }
+
+            .objectives-title {
+                font-size: 2.5rem;
+            }
+
             .objectives-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
-            
+
+            .team-title {
+                font-size: 2.5rem;
+            }
+
             .team-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            .hero-section,
+            .foundation-section,
+            .objectives-section,
+            .team-section {
+                padding: 3rem 0;
             }
         }
 
-        @media (max-width: 768px) {
-            .hero-text {
+        @media (max-width: 480px) {
+            .hero-title {
                 font-size: 2rem;
             }
-            
+
+            .foundation-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .founder-name {
+                font-size: 1.25rem;
+            }
+
             .objectives-title,
             .team-title {
                 font-size: 2rem;
             }
-            
+
+            .objective-card {
+                padding: 1.5rem;
+            }
+
             .team-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .nav-right .nav-link {
-                display: none;
             }
         }
     </style>
@@ -347,7 +449,7 @@
             <button class="menu-btn">
                 Menu ☰
             </button>
-            <div class="logo">Art Bridges</div>
+            <div class="logo">Art Pool</div>
             <div class="nav-right">
                 <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <circle cx="11" cy="11" r="8"/>
@@ -360,163 +462,137 @@
     </header>
 
     <main>
-        <section class="hero-section py-20 bg-gray-50">
-            <div class="container mx-auto px-4 max-w-6xl">
-                <div class="text-sm uppercase tracking-wider text-gray-500 mb-4" data-aos="fade-up" data-aos-delay="100">About Us</div>
-                <h1 class="text-5xl font-bold leading-tight mb-8 max-w-4xl" data-aos="fade-up" data-aos-delay="200">
-                    Connecting Cultures Through the Universal Language of Art
-                </h1>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">About Us</div>
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                        Connecting Cultures Through the Universal Language of Art
+                    </h1>
+                </div>
             </div>
         </section>
 
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4 max-w-6xl">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div data-aos="fade-right" data-aos-delay="100">
-                        <h2 class="text-4xl font-semibold mb-6">
-                            Founded in 2017 
-                            <span class="block text-gray-600 text-3xl font-normal mt-2">by Alice Walton</span>
+        <section class="foundation-section">
+            <div class="container">
+                <div class="foundation-grid">
+                    <div class="foundation-content" data-aos="fade-right" data-aos-delay="100">
+                        <h2>
+                            Founded in 2025 
+                            <span class="founder-name">by Art Pool team</span>
                         </h2>
-                        <p class="text-lg leading-relaxed text-gray-700 mb-8">
-                            Art Bridges Foundation® stems from philanthropist Alice 
-                            Walton's vision to expand access to American art in all 
+                        <p class="foundation-text">
+                            Art Pool Foundation® stems from philanthropist Unique 
+                            Prajapati's vision to expand access to educational art in all 
                             regions across the United States—a mission she began with 
-                            the opening of Crystal Bridges Museum of American Art in 
-                            2011.
+                            the opening of Art Pool in 2011.
                         </p>
                     </div>
-                    <div class="rounded-lg overflow-hidden shadow-xl" data-aos="fade-left" data-aos-delay="200">
+                    <div class="foundation-image" data-aos="fade-left" data-aos-delay="200">
                         <img 
-                            src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                            alt="Alice Walton" 
-                            class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
+                            src="../pfp/image.png" 
+                            alt="Art Pool Foundation" 
                         >
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 bg-gray-900 text-white">
-            <div class="container mx-auto px-4 max-w-6xl">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">Our Objectives</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1" 
-                         data-aos="fade-up" data-aos-delay="100">
-                        <div class="text-2xl font-bold text-gray-400 mb-4">01.</div>
-                        <h3 class="text-xl font-semibold mb-3">Broaden access to American art</h3>
-                        <p class="text-gray-300">in every region across the nation.</p>
+        <section class="objectives-section">
+            <div class="container">
+                <h2 class="objectives-title" data-aos="fade-up">Our Objectives</h2>
+                <div class="objectives-grid">
+                    <div class="objective-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="objective-number">01.</div>
+                        <h3 class="objective-title">Broaden access to Educational art</h3>
+                        <p class="objective-description">in every region across the nation.</p>
                     </div>
-                    <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1" 
-                         data-aos="fade-up" data-aos-delay="150">
-                        <div class="text-2xl font-bold text-gray-400 mb-4">02.</div>
-                        <h3 class="text-xl font-semibold mb-3">Energize the field of American art</h3>
-                        <p class="text-gray-300">by exhibiting and activating works of art in exciting and innovative ways.</p>
+                    <div class="objective-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="objective-number">02.</div>
+                        <h3 class="objective-title">Energize the field of Educational art</h3>
+                        <p class="objective-description">by exhibiting and activating works of art in exciting and innovative ways.</p>
                     </div>
-                    <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1" 
-                         data-aos="fade-up" data-aos-delay="200">
-                        <div class="text-2xl font-bold text-gray-400 mb-4">03.</div>
-                        <h3 class="text-xl font-semibold mb-3">Support museums</h3>
-                        <p class="text-gray-300">in deepening their connection with local communities.</p>
+                    <div class="objective-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="objective-number">03.</div>
+                        <h3 class="objective-title">Support museums</h3>
+                        <p class="objective-description">in deepening their connection with local communities.</p>
                     </div>
-                    <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1" 
-                         data-aos="fade-up" data-aos-delay="100">
-                        <div class="text-2xl font-bold text-gray-400 mb-4">04.</div>
-                        <h3 class="text-xl font-semibold mb-3">Inspire museums to open their vaults</h3>
-                        <p class="text-gray-300">as well as share important artworks, and diversify collections.</p>
+                    <div class="objective-card" data-aos="fade-up" data-aos-delay="250">
+                        <div class="objective-number">04.</div>
+                        <h3 class="objective-title">Inspire museums to open their vaults</h3>
+                        <p class="objective-description">as well as share important artworks, and diversify collections.</p>
                     </div>
-                    <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1" 
-                         data-aos="fade-up" data-aos-delay="150">
-                        <div class="text-2xl font-bold text-gray-400 mb-4">05.</div>
-                        <h3 class="text-xl font-semibold mb-3">Connect museums of all sizes</h3>
-                        <p class="text-gray-300">through collaborative partnerships and programming.</p>
+                    <div class="objective-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="objective-number">05.</div>
+                        <h3 class="objective-title">Connect museums of all sizes</h3>
+                        <p class="objective-description">through collaborative partnerships and programming.</p>
                     </div>
-                    <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1" 
-                         data-aos="fade-up" data-aos-delay="200">
-                        <div class="text-2xl font-bold text-gray-400 mb-4">06.</div>
-                        <h3 class="text-xl font-semibold mb-3">Train and uplift</h3>
-                        <p class="text-gray-300">the next generation of museum professionals.</p>
+                    <div class="objective-card" data-aos="fade-up" data-aos-delay="350">
+                        <div class="objective-number">06.</div>
+                        <h3 class="objective-title">Train and uplift</h3>
+                        <p class="objective-description">the next generation of museum professionals.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4 max-w-6xl">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Meet Our Team</h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        <section class="team-section">
+            <div class="container">
+                <div class="team-header" data-aos="fade-up">
+                    <h2 class="team-title">Meet Our Team</h2>
+                    <p class="team-subtitle">
                         We are here to help create the best possible project for 
                         your museum and community.
                     </p>
                 </div>
                 
-                <div class="flex justify-center space-x-2 mb-12" data-aos="fade-up" data-aos-delay="100">
-                    <button class="px-6 py-2 rounded-full bg-gray-900 text-white font-medium text-sm uppercase tracking-wider transition-colors">
-                        Art Bridges Team
-                    </button>
-                    <button class="px-6 py-2 rounded-full text-gray-600 font-medium text-sm uppercase tracking-wider hover:bg-gray-100 transition-colors">
-                        Fellows
-                    </button>
-                    <button class="px-6 py-2 rounded-full text-gray-600 font-medium text-sm uppercase tracking-wider hover:bg-gray-100 transition-colors">
-                        Intern Alums
-                    </button>
-                </div>
-
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="group" data-aos="fade-up" data-aos-delay="100">
-                        <div class="overflow-hidden rounded-lg mb-4">
+                <div class="team-grid">
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-image">
                             <img 
-                                src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                                alt="Aish Arjun" 
-                                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                                src="../pfp/unique.png" 
+                                alt="Unique Prajapati" 
                             >
                         </div>
-                        <h3 class="font-semibold text-lg">Aish Arjun</h3>
-                        <p class="text-gray-600 text-sm">Administrative Assistant, Fellows and Internship Programs</p>
+                        <h3 class="member-name">Unique Prajapati</h3>
+                        <p class="member-role">Administrative Assistant, Fellows and Internship Programs</p>
                     </div>
                     
-                    <div class="group" data-aos="fade-up" data-aos-delay="150">
-                        <div class="overflow-hidden rounded-lg mb-4">
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="150">
+                        <div class="member-image">
                             <img 
-                                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                                alt="Amanda Driver" 
-                                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                                src="../pfp/kabindra.png" 
+                                alt="Kabindra Karki" 
                             >
                         </div>
-                        <h3 class="font-semibold text-lg">Amanda Driver</h3>
-                        <p class="text-gray-600 text-sm">Director of Fellows and Internship Programs</p>
+                        <h3 class="member-name">Kabindra Karki</h3>
+                        <p class="member-role">Director of Fellows and Internship Programs</p>
                     </div>
                     
-                    <div class="group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="overflow-hidden rounded-lg mb-4">
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member-image">
                             <img 
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                                alt="Amy Zavecz" 
-                                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                                src="../pfp/simrika.png" 
+                                alt="Simrika Gora" 
                             >
                         </div>
-                        <h3 class="font-semibold text-lg">Amy Zavecz</h3>
-                        <p class="text-gray-600 text-sm">Assistant Registrar, Partner Loan Network</p>
+                        <h3 class="member-name">Simrika Gora</h3>
+                        <p class="member-role">Assistant Registrar, Partner Loan Network</p>
                     </div>
                     
-                    <div class="group" data-aos="fade-up" data-aos-delay="250">
-                        <div class="overflow-hidden rounded-lg mb-4">
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="250">
+                        <div class="member-image">
                             <img 
-                                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                                alt="Andi Phillips" 
-                                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                                src="../pfp/kumari.png" 
+                                alt="Kumari Baruwal" 
                             >
                         </div>
-                        <h3 class="font-semibold text-lg">Andi Phillips</h3>
-                        <p class="text-gray-600 text-sm">Director, Collection Loans & Exhibitions</p>
+                        <h3 class="member-name">Kumari Baruwal</h3>
+                        <p class="member-role">Director, Collection Loans & Exhibitions</p>
                     </div>
                 </div>
                 
-                <div class="text-center mt-12" data-aos="fade-up">
-                    <button class="px-8 py-3 border-2 border-gray-900 text-gray-900 font-medium rounded-full hover:bg-gray-900 hover:text-white transition-colors">
-                        View All Team Members
-                    </button>
-                </div>
+               
             </div>
         </section>
     </main>
@@ -530,25 +606,6 @@
             easing: 'ease-in-out',
             once: true,
             mirror: false
-        });
-
-        // Team tabs functionality
-        const tabs = document.querySelectorAll('.team-tab');
-        const teams = document.querySelectorAll('.team-grid');
-        
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs
-                tabs.forEach(t => t.classList.remove('bg-gray-900', 'text-white'));
-                tabs.forEach(t => t.classList.add('text-gray-600', 'hover:bg-gray-100'));
-                
-                // Add active class to clicked tab
-                tab.classList.add('bg-gray-900', 'text-white');
-                tab.classList.remove('text-gray-600', 'hover:bg-gray-100');
-                
-                // Here you would typically fetch and display the relevant team data
-                // For now, we'll just show the first team as an example
-            });
         });
 
         // Smooth scrolling for anchor links
@@ -565,16 +622,15 @@
             });
         });
 
-        // Add hover effect for team members
-        const teamMembers = document.querySelectorAll('.group');
-        teamMembers.forEach(member => {
-            member.addEventListener('mouseenter', () => {
-                member.querySelector('img').style.transform = 'scale(1.05)';
+        // Mobile menu toggle (if needed)
+        const menuBtn = document.querySelector('.menu-btn');
+        const navRight = document.querySelector('.nav-right');
+        
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                navRight.style.display = navRight.style.display === 'flex' ? 'none' : 'flex';
             });
-            member.addEventListener('mouseleave', () => {
-                member.querySelector('img').style.transform = 'scale(1)';
-            });
-        });
+        }
     </script>
 </body>
 </html>
