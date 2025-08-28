@@ -3,259 +3,580 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Art Pool</title>
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Art Bridges - About Us</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/animations.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
         }
-        
-        .about-hero {
-            background-color: #f8f8f8;
-            padding: 100px 20px;
-            text-align: center;
-        }
-        
-        .about-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
             color: #333;
         }
-        
-        .about-hero p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
+
+        header {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        
-        .mission-section, .team-section, .values-section {
-            padding: 80px 20px;
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 2rem;
         }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: #222;
-        }
-        
-        .mission-content {
+
+        .menu-btn {
+            background: none;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 40px;
-            margin-top: 40px;
+            gap: 0.5rem;
         }
-        
-        .mission-text {
-            flex: 1;
-        }
-        
-        .mission-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        
-        .mission-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .value-card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .value-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .value-card i {
-            font-size: 2.5rem;
-            color: #4a90e2;
-            margin-bottom: 20px;
-        }
-        
-        .value-card h3 {
-            margin-bottom: 15px;
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 2px;
             color: #333;
         }
-        
-        .team-members {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
-        
-        .team-member {
-            text-align: center;
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
         }
-        
-        .team-member img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 5px solid #f8f8f8;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .team-member h3 {
-            margin-bottom: 5px;
-            color: #333;
-        }
-        
-        .team-member p {
+
+        .nav-link {
+            text-decoration: none;
             color: #666;
+            font-size: 0.95rem;
+        }
+
+        .contact-btn {
+            background: #2d2d2d;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: #1a1a1a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-section {
+            padding: 4rem 0 2rem;
+        }
+
+        .about-label {
+            color: #999;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-text {
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 1.3;
+            color: #2d2d2d;
+            margin-bottom: 4rem;
+        }
+
+        .founder-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 4rem 0;
+        }
+
+        .founder-text h2 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: #2d2d2d;
+        }
+
+        .founder-text h2 .founded-by {
             font-style: italic;
+            color: #666;
+        }
+
+        .founder-description {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .founder-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .objectives-section {
+            background: #2d2d3d;
+            color: white;
+            padding: 6rem 0;
+        }
+
+        .objectives-title {
+            font-size: 3rem;
+            font-weight: 400;
+            margin-bottom: 4rem;
+        }
+
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem 6rem;
+        }
+
+        .objective {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .objective:nth-child(1) { animation-delay: 0.1s; }
+        .objective:nth-child(2) { animation-delay: 0.2s; }
+        .objective:nth-child(3) { animation-delay: 0.3s; }
+        .objective:nth-child(4) { animation-delay: 0.4s; }
+        .objective:nth-child(5) { animation-delay: 0.5s; }
+        .objective:nth-child(6) { animation-delay: 0.6s; }
+
+        .objective-number {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .objective-title {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .objective-description {
+            color: #ccc;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .team-section {
+            padding: 6rem 0;
+        }
+
+        .team-title {
+            font-size: 3rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: #2d2d2d;
+        }
+
+        .team-subtitle {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            max-width: 500px;
+        }
+
+        .team-tabs {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .team-tab {
+            padding: 1rem 0;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            color: #666;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .team-tab.active {
+            color: #2d2d2d;
+        }
+
+        .team-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #2d2d2d;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .team-member {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .team-member:nth-child(1) { animation-delay: 0.1s; }
+        .team-member:nth-child(2) { animation-delay: 0.2s; }
+        .team-member:nth-child(3) { animation-delay: 0.3s; }
+        .team-member:nth-child(4) { animation-delay: 0.4s; }
+
+        .member-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .member-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .member-title {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+            font-style: italic;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hero-text {
+                font-size: 2.5rem;
+            }
+            
+            .founder-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .objectives-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text {
+                font-size: 2rem;
+            }
+            
+            .objectives-title,
+            .team-title {
+                font-size: 2rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-right .nav-link {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="search">
-            <input type="text" placeholder="Search your interest">
-            <div class="close-search">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-        </div>
         <nav>
-            <div class="menu" id="menu-toggle">
-                <span>MENU</span>  <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="logo">
-                <p>Art <h1></h1> Pool</p>
-            </div>
-            <div class="ctas">
-                <i class="searchbtn fa-solid fa-search"></i>
-                <p>Application Portal</p>
-                <a href="contact.html" class="contact-button">Contact Us</a>
+            <button class="menu-btn">
+                Menu ☰
+            </button>
+            <div class="logo">Art Bridges</div>
+            <div class="nav-right">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+                <a href="#" class="nav-link">Application Portal</a>
+                <a href="#" class="contact-btn">Contact Us</a>
             </div>
         </nav>
-        <!-- Include your navigation menu here -->
     </header>
 
-    <section class="about-hero">
-        <h1>About Art Pool</h1>
-        <p>Empowering artists and communities through creative expression and cultural exchange</p>
-    </section>
+    <main>
+        <section class="hero-section py-20 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-sm uppercase tracking-wider text-gray-500 mb-4" data-aos="fade-up" data-aos-delay="100">About Us</div>
+                <h1 class="text-5xl font-bold leading-tight mb-8 max-w-4xl" data-aos="fade-up" data-aos-delay="200">
+                    We partner with museums to provide strategic and financial 
+                    support to get American art out of storage and into communities 
+                    nationwide through our innovative and collaborative programs.
+                </h1>
+            </div>
+        </section>
 
-    <section class="mission-section">
-        <h2 class="section-title">Our Mission</h2>
-        <div class="mission-content">
-            <div class="mission-text">
-                <p>At Art Pool, we believe in the transformative power of art to connect people, inspire change, and build stronger communities. Our mission is to create accessible platforms for artists to showcase their work, collaborate with peers, and engage with diverse audiences.</p>
-                <p>Founded in 2015, Art Pool has grown from a small local initiative to a global network of artists, curators, and art enthusiasts. We're committed to breaking down barriers in the art world and making art accessible to all.</p>
-            </div>
-            <div class="mission-image">
-                <img src="https://cdn.sanity.io/images/x76dkvvf/prod/739e7921b22752177d70d37ff1de63378d59e3d7-1179x1544.jpg" alt="Art Pool Exhibition">
-            </div>
-        </div>
-    </section>
-
-    <section class="values-section">
-        <h2 class="section-title">Our Values</h2>
-        <div class="values-grid">
-            <div class="value-card">
-                <i class="fas fa-palette"></i>
-                <h3>Creativity</h3>
-                <p>We celebrate innovation and original expression in all artistic forms.</p>
-            </div>
-            <div class="value-card">
-                <i class="fas fa-hands-helping"></i>
-                <h3>Community</h3>
-                <p>We build bridges between artists, audiences, and communities.</p>
-            </div>
-            <div class="value-card">
-                <i class="fas fa-globe-americas"></i>
-                <h3>Diversity</h3>
-                <p>We champion diverse voices and perspectives in the arts.</p>
-            </div>
-            <div class="value-card">
-                <i class="fas fa-lock-open"></i>
-                <h3>Accessibility</h3>
-                <p>We believe art should be accessible to everyone, everywhere.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="team-section">
-        <h2 class="section-title">Our Team</h2>
-        <div class="team-members">
-            <div class="team-member">
-                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Team Member">
-                <h3>Sarah Johnson</h3>
-                <p>Founder & Creative Director</p>
-            </div>
-            <div class="team-member">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member">
-                <h3>Michael Chen</h3>
-                <p>Head of Community</p>
-            </div>
-            <div class="team-member">
-                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team Member">
-                <h3>Elena Rodriguez</h3>
-                <p>Curator</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="newsletter">
-            <div class="newsletter-content">
-                <h2>Sign up for Art Pool News</h2>
-                <p>Learn about collection highlights, program offerings, and more.</p>
-            </div>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your email" />
-                <button type="submit">→</button>
-            </form>
-        </div>
-        <div class="footer-main">
-            <div class="footer-left">
-                <div class="logo">Art <span>Pool</span></div>
-                <p>© 2025 Art Pool. All rights reserved.</p>
-            </div>
-            <div class="footer-right">
-                <div class="footer-links">
-                    <div><a href="aboutus.html">About Us</a></div>
-                    <div><a href="contact.html">Contact</a></div>
-                    <div><a href="#">Privacy Policy</a></div>
-                    <div><a href="#">Terms of Service</a></div>
-                </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right" data-aos-delay="100">
+                        <h2 class="text-4xl font-semibold mb-6">
+                            Founded in 2017 
+                            <span class="block text-gray-600 text-3xl font-normal mt-2">by Alice Walton</span>
+                        </h2>
+                        <p class="text-lg leading-relaxed text-gray-700 mb-8">
+                            Art Bridges Foundation® stems from philanthropist Alice 
+                            Walton's vision to expand access to American art in all 
+                            regions across the United States—a mission she began with 
+                            the opening of Crystal Bridges Museum of American Art in 
+                            2011.
+                        </p>
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-xl" data-aos="fade-left" data-aos-delay="200">
+                        <img 
+                            src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                            alt="Alice Walton" 
+                            class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
+                        >
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
 
-    <script src="../js/navbar.js"></script>
+        <section class="py-20 bg-gray-900 text-white">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-16" data-aos="fade-up">Our Objectives</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1" 
+                         data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-2xl font-bold text-gray-400 mb-4">01.</div>
+                        <h3 class="text-xl font-semibold mb-3">Broaden access to American art</h3>
+                        <p class="text-gray-300">in every region across the nation.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1" 
+                         data-aos="fade-up" data-aos-delay="150">
+                        <div class="text-2xl font-bold text-gray-400 mb-4">02.</div>
+                        <h3 class="text-xl font-semibold mb-3">Energize the field of American art</h3>
+                        <p class="text-gray-300">by exhibiting and activating works of art in exciting and innovative ways.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1" 
+                         data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-2xl font-bold text-gray-400 mb-4">03.</div>
+                        <h3 class="text-xl font-semibold mb-3">Support museums</h3>
+                        <p class="text-gray-300">in deepening their connection with local communities.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1" 
+                         data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-2xl font-bold text-gray-400 mb-4">04.</div>
+                        <h3 class="text-xl font-semibold mb-3">Inspire museums to open their vaults</h3>
+                        <p class="text-gray-300">as well as share important artworks, and diversify collections.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1" 
+                         data-aos="fade-up" data-aos-delay="150">
+                        <div class="text-2xl font-bold text-gray-400 mb-4">05.</div>
+                        <h3 class="text-xl font-semibold mb-3">Connect museums of all sizes</h3>
+                        <p class="text-gray-300">through collaborative partnerships and programming.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1" 
+                         data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-2xl font-bold text-gray-400 mb-4">06.</div>
+                        <h3 class="text-xl font-semibold mb-3">Train and uplift</h3>
+                        <p class="text-gray-300">the next generation of museum professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Meet Our Team</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        We are here to help create the best possible project for 
+                        your museum and community.
+                    </p>
+                </div>
+                
+                <div class="flex justify-center space-x-2 mb-12" data-aos="fade-up" data-aos-delay="100">
+                    <button class="px-6 py-2 rounded-full bg-gray-900 text-white font-medium text-sm uppercase tracking-wider transition-colors">
+                        Art Bridges Team
+                    </button>
+                    <button class="px-6 py-2 rounded-full text-gray-600 font-medium text-sm uppercase tracking-wider hover:bg-gray-100 transition-colors">
+                        Fellows
+                    </button>
+                    <button class="px-6 py-2 rounded-full text-gray-600 font-medium text-sm uppercase tracking-wider hover:bg-gray-100 transition-colors">
+                        Intern Alums
+                    </button>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img 
+                                src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                alt="Aish Arjun" 
+                                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                            >
+                        </div>
+                        <h3 class="font-semibold text-lg">Aish Arjun</h3>
+                        <p class="text-gray-600 text-sm">Administrative Assistant, Fellows and Internship Programs</p>
+                    </div>
+                    
+                    <div class="group" data-aos="fade-up" data-aos-delay="150">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img 
+                                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                alt="Amanda Driver" 
+                                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                            >
+                        </div>
+                        <h3 class="font-semibold text-lg">Amanda Driver</h3>
+                        <p class="text-gray-600 text-sm">Director of Fellows and Internship Programs</p>
+                    </div>
+                    
+                    <div class="group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img 
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                alt="Amy Zavecz" 
+                                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                            >
+                        </div>
+                        <h3 class="font-semibold text-lg">Amy Zavecz</h3>
+                        <p class="text-gray-600 text-sm">Assistant Registrar, Partner Loan Network</p>
+                    </div>
+                    
+                    <div class="group" data-aos="fade-up" data-aos-delay="250">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img 
+                                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                                alt="Andi Phillips" 
+                                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                            >
+                        </div>
+                        <h3 class="font-semibold text-lg">Andi Phillips</h3>
+                        <p class="text-gray-600 text-sm">Director, Collection Loans & Exhibitions</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12" data-aos="fade-up">
+                    <button class="px-8 py-3 border-2 border-gray-900 text-gray-900 font-medium rounded-full hover:bg-gray-900 hover:text-white transition-colors">
+                        View All Team Members
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        // Team tabs functionality
+        const tabs = document.querySelectorAll('.team-tab');
+        const teams = document.querySelectorAll('.team-grid');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('bg-gray-900', 'text-white'));
+                tabs.forEach(t => t.classList.add('text-gray-600', 'hover:bg-gray-100'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('bg-gray-900', 'text-white');
+                tab.classList.remove('text-gray-600', 'hover:bg-gray-100');
+                
+                // Here you would typically fetch and display the relevant team data
+                // For now, we'll just show the first team as an example
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add hover effect for team members
+        const teamMembers = document.querySelectorAll('.group');
+        teamMembers.forEach(member => {
+            member.addEventListener('mouseenter', () => {
+                member.querySelector('img').style.transform = 'scale(1.05)';
+            });
+            member.addEventListener('mouseleave', () => {
+                member.querySelector('img').style.transform = 'scale(1)';
+            });
+        });
+    </script>
 </body>
 </html>

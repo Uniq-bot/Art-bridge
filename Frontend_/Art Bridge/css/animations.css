@@ -1,0 +1,111 @@
+/* AOS Animation Overrides */
+[data-aos] {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom Animation Classes */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Reveal Animation */
+.section-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Children */
+.stagger-children > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stagger-children.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay for staggered children */
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.4s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.5s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.6s; }
+
+/* Hover Effects */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.02);
+}
+
+/* Button Hover Effect */
+.btn-hover {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-hover:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+    transform: scaleY(0);
+    transform-origin: bottom center;
+    transition: transform 0.3s;
+    z-index: -1;
+}
+
+.btn-hover:hover:after {
+    transform: scaleY(1);
+}
+
+/* Text Highlight */
+.text-highlight {
+    position: relative;
+    display: inline-block;
+}
+
+.text-highlight:after {
+    content: '';
+    position: absolute;
+    bottom: 0.25em;
+    left: 0;
+    width: 100%;
+    height: 0.5em;
+    background-color: rgba(45, 45, 45, 0.1);
+    z-index: -1;
+    transition: height 0.3s ease;
+}
+
+.text-highlight:hover:after {
+    height: 0.75em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    [data-aos] {
+        transition-delay: 0s !important;
+    }
+}
