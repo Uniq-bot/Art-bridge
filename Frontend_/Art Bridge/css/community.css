@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600;700&display=swap');*{
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --font-body: 'Poppins', sans-serif;
+    --font-serif: 'IBM Plex Serif', serif;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-body);
 }
-body::selection{
+
+body::selection {
     background-color: #000000;
     color: white;
 }
@@ -18,7 +26,6 @@ body::selection{
 }
 
 /* Navigation Styles */
-
 header {
     height: 10vh;
     width: 100%;
@@ -27,7 +34,8 @@ header {
     position: relative;
     z-index: 1000;
 }
-.search{
+
+.search {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -36,39 +44,40 @@ header {
     align-items: center;
     top: -100%;
     transition: 0.5s ease-in-out;
-    
-
+    background: white;
 }
 
-
-  .search input::placeholder {
+.search input::placeholder {
     color: #999;
-  }
-.search.searchactive{
+}
+
+.search.searchactive {
     top: 0;
 }
-.search input{
+
+.search input {
     width: 90%;
     height: 90%;
     font-size: 2em;
     padding: 0.5em 2em;
     border: none;
     outline: none;
-    
-}
-.search::after {
-  content: '';
-  position: absolute;
-  bottom: 10%;
-  width:90%;
-  height: 1px;
-  background-color: rgb(152, 149, 149);
-}
-.search .close-search{
-    padding: 2em;
-    font-size: 1.5em;
 }
 
+.search::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    width: 90%;
+    height: 1px;
+    background-color: rgb(152, 149, 149);
+}
+
+.search .close-search {
+    padding: 2em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
 
 nav {
     width: 100%;
@@ -86,13 +95,21 @@ nav {
     cursor: pointer;
     font-size: 1.5rem;
     color: #2c3e50;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    gap: 1em;
+}
+
+.menu:hover {
+    background-color: #f8f9fa;
 }
 
 .nav-links {
     position: fixed;
     top: 0;
     left: -100%;
-    width:50%;
+    width: 50%;
     height: 100vh;
     background: white;
     padding: 2rem;
@@ -102,13 +119,13 @@ nav {
     background-color: #ffffff;
     font-size: 2em;
     overflow-y: auto;
-    
 }
 
 .nav-links.active {
     left: 0;
 }
-.whole{
+
+.whole {
     width: 100%;
 }
 
@@ -117,8 +134,6 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-
 }
 
 .close-btn {
@@ -130,9 +145,8 @@ nav {
     color: #2c3e50;
 }
 
-
-.dropdown .div{
-    display: flex   ;
+.dropdown .div {
+    display: flex;
     align-items: center;
     width: 100%;
 }
@@ -142,15 +156,15 @@ nav {
     color: #2c3e50;
     font-weight: 400;
     transition: color 0.3s ease;
-   
 }
+
 .nav-links li i {
     font-size: 1.5rem;
     color: #2c3e50;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    
 }
+
 .nav-links li a:after {
     content: "";
     display: block;
@@ -188,14 +202,13 @@ nav {
     position: relative;
     height: 100%;
     width: 100%;
-    white-space:0;
+    white-space: 0;
     font-size: 1.5em;
-   
-    
 }
-.div{
+
+.div {
     display: flex;
-     justify-content: space-between;
+    justify-content: space-between;
 }
 
 .dropdown-content {
@@ -224,6 +237,7 @@ nav {
     opacity: 1;
     left: 0;
 }
+
 .dropdown-content li a {
     flex: 1;
     display: flex;
@@ -238,7 +252,6 @@ nav {
     color: #2c3e50;
     transition: transform 0.3s ease;
 }
-
 
 #arrow {
     margin-left: 0.5rem;
@@ -292,58 +305,6 @@ nav {
     background: #f8f9fa;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .menu {
-        display: flex;
-    }
-    
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 1rem;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    
-    .nav-links ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .dropdown-content {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        box-shadow: none;
-        min-width: 100%;
-    }
-}
-
-/* Header Styles */
-header {
-    background-color: #ffffff;
-   
-}
-.menu {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #2c3e50;
-    padding: 0.5rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    gap: 1em;
-}
-
-.menu:hover {
-    background-color: #f8f9fa;
-}
-
 .ctas {
     display: flex;
     align-items: center;
@@ -366,8 +327,8 @@ header {
 }
 
 .ctas i:hover {
-   background-color: rgb(122, 117, 117);
-   color: white;
+    background-color: rgb(122, 117, 117);
+    color: white;
 }
 
 .ctas button {
@@ -384,24 +345,24 @@ header {
     background-color: #2980b9;
 }
 
-/* header end here  */
-
-/* main starts here  */
-
-main{
+/* Main Section */
+main {
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
 }
 
-.hero-section{
+.hero-section {
     width: 100%;
     min-height: 100vh;
     background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/d551a511edcddc3e0186a80962f65f33dd0dd6a6-1421x1065.png?auto=format&w=1920&q=75');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
 }
+
 .hero-section::before {
     content: '';
     position: absolute;
@@ -416,78 +377,83 @@ main{
         rgba(0, 0, 0, 0.6) 100%
     );
 }
-.text-content{
+
+.text-content {
     position: absolute;
     bottom: 10%;
     color: white;
-    left: 10%;  
-    display: flex; 
+    left: 10%;
+    display: flex;
     flex-direction: column;
+    z-index: 1;
 }
-.text-content h2{
+
+.text-content h2 {
     font-size: 3rem;
 }
-.text-content h2 span{
+
+.text-content h2 span {
     font-style: italic;
     font-weight: 500;
 }
-.text-content p{
+
+.text-content p {
     width: 40%;
     font-size: 1.3em;
 }
 
-/* hero section end here  */
-/* about section starts here  */
-
-.about-section{
+/* About Section */
+.about-section {
     width: 100%;
     min-height: 60vh;
     display: flex;
     padding: 5em;
 }
-.about-section .left{
+
+.about-section .left {
     width: 40%;
     height: auto;
     display: flex;
     justify-content: center;
-    padding: 2em 10em 0 0 ;
+    padding: 2em 10em 0 0;
 }
-.about-section .right{
+
+.about-section .right {
     width: 55%;
     display: flex;
     flex-direction: column;
     gap: 2em;
     align-items: center;
-
 }
-.right .grid{
+
+.right .grid {
     height: 100%;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
 }
-.grid .itemms{
+
+.grid .itemms {
     display: flex;
     flex-direction: column;
     padding: 2em 2em 2em 0;
     gap: 1em;
 }
-.itemms p{
-    padding: 0 5em 0 0 ;
+
+.itemms p {
+    padding: 0 5em 0 0;
 }
 
-/* about section end here  */
-
-/* learn-and-engagement starts here  */
-
-.links-for-other-page{
+/* Links for Other Pages */
+.links-for-other-page {
     width: 100%;
     display: flex;
     flex-direction: column;
     min-height: 50vh;
 }
 
-.links-for-other-page .learn-and-engagement{
+.links-for-other-page .learn-and-engagement {
     display: flex;
     width: 100%;
     min-height: 50vh;
@@ -495,49 +461,59 @@ main{
     padding: 4em 4em;
     justify-content: space-between;
 }
-.learn-and-engagement .left{
+
+.learn-and-engagement .left {
     width: 45%;
     height: 60vh;
     overflow: hidden;
 }
-.learn-and-engagement .left img{
+
+.learn-and-engagement .left img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-.learn-and-engagement .right{
+
+.learn-and-engagement .right {
     width: 45%;
     height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
-.learn-and-engagement .right .upper{
+
+.learn-and-engagement .right .upper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1em;
-
 }
-.learn-and-engagement .right h1{
+
+.learn-and-engagement .right h1 {
     font-size: 3em;
 }
-.learn-and-engagement .right button{
+
+.learn-and-engagement .right button {
     font-size: 1.2em;
     padding: 0.6em 2em;
     border: none;
     border-radius: 50px;
     background-color: #000000;
     color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.learn-and-engagement .right p{
+
+.learn-and-engagement .right button:hover {
+    background-color: #2980b9;
+}
+
+.learn-and-engagement .right p {
     font-size: 1.5em;
     padding-right: 6em;
 }
 
-
-.links-for-other-page .evaluation{
+.links-for-other-page .evaluation {
     display: flex;
     width: 100%;
     min-height: 80vh;
@@ -545,48 +521,59 @@ main{
     padding: 4em 4em;
     justify-content: space-between;
 }
-.evaluation .left{
+
+.evaluation .left {
     width: 45%;
     height: 60vh;
     overflow: hidden;
 }
-.evaluation .left img{
+
+.evaluation .left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.evaluation .right{
+
+.evaluation .right {
     width: 45%;
     height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: 4em;
-
 }
-.evaluation .right .upper{
+
+.evaluation .right .upper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1em;
-
 }
-.evaluation .right h1{
+
+.evaluation .right h1 {
     font-size: 3em;
 }
-.evaluation .right button{
+
+.evaluation .right button {
     font-size: 1.2em;
     padding: 0.6em 2em;
     border: none;
     border-radius: 50px;
     background-color: #000000;
     color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.evaluation .right p{
+
+.evaluation .right button:hover {
+    background-color: #2980b9;
+}
+
+.evaluation .right p {
     font-size: 1.5em;
 }
 
-.links-for-other-page .fellows-program{
+.links-for-other-page .fellows-program {
     display: flex;
     width: 100%;
     min-height: 50vh;
@@ -594,49 +581,60 @@ main{
     padding: 4em 4em;
     justify-content: space-between;
 }
-.fellows-program .left{
+
+.fellows-program .left {
     width: 45%;
     height: 60vh;
     overflow: hidden;
 }
-.fellows-program .left img{
+
+.fellows-program .left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.fellows-program .right{
+
+.fellows-program .right {
     width: 45%;
     height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
-.fellows-program .right .upper{
+
+.fellows-program .right .upper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1em;
-
 }
-.fellows-program .right h1{
+
+.fellows-program .right h1 {
     font-size: 3em;
 }
-.fellows-program .right button{
+
+.fellows-program .right button {
     font-size: 1.2em;
     padding: 0.6em 2em;
     border: none;
     border-radius: 50px;
     background-color: #000000;
     color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.fellows-program .right p{
+
+.fellows-program .right button:hover {
+    background-color: #2980b9;
+}
+
+.fellows-program .right p {
     font-size: 1.5em;
     padding-right: 6em;
 }
 
-
-#fifthSection{
+/* Fifth Section */
+#fifthSection {
     width: 90%;
     min-height: 100vh;
     margin: 0 auto;
@@ -644,8 +642,7 @@ main{
     padding: 4rem 0;
 }
 
-/* Section Title */
-#fifthSection h3{
+#fifthSection h3 {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.2;
@@ -653,8 +650,7 @@ main{
     margin-bottom: 2rem;
 }
 
-/* Partner Header Section */
-#fifthSection .partner{
+#fifthSection .partner {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -663,13 +659,13 @@ main{
     margin-bottom: 3rem;
 }
 
-#fifthSection .partner h2{
+#fifthSection .partner h2 {
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.2;
 }
 
-#fifthSection .partner button{
+#fifthSection .partner button {
     background-color: black;
     color: white;
     border: none;
@@ -678,14 +674,13 @@ main{
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}   
+}
 
-#fifthSection .partner button:hover{
+#fifthSection .partner button:hover {
     background-color: #2980b9;
 }
 
-/* Partner Content Grid */
-#fifthSection .partner-content{
+#fifthSection .partner-content {
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -695,8 +690,7 @@ main{
     gap: 2rem;
 }
 
-/* Individual Partner Items */
-#fifthSection .partner-content .partner-item{
+#fifthSection .partner-content .partner-item {
     width: 30%;
     min-height: 30vh;
     position: relative;
@@ -710,14 +704,14 @@ main{
     background: white;
 }
 
-#fifthSection .partner-content .partner-item .image{
+#fifthSection .partner-content .partner-item .image {
     width: 100%;
     height: 25vh;
     overflow: hidden;
     margin-bottom: 1.5rem;
 }
 
-#fifthSection .partner-content .partner-item .image img{
+#fifthSection .partner-content .partner-item .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -728,21 +722,21 @@ main{
     transform: scale(1.1);
 }
 
-#fifthSection .partner-content .partner-item h3{
+#fifthSection .partner-content .partner-item h3 {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 0.5rem;
 }
 
-#fifthSection .partner-content .partner-item h2{
+#fifthSection .partner-content .partner-item h2 {
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 1rem;
 }
 
-#fifthSection .partner-content .partner-item p{
+#fifthSection .partner-content .partner-item p {
     font-weight: 400;
     line-height: 1.6;
     opacity: 0.9;
@@ -751,7 +745,7 @@ main{
     font-family: var(--font-body);
 }
 
-#fifthSection .partner-content .partner-item button{
+#fifthSection .partner-content .partner-item button {
     background-color: black;
     color: white;
     border: none;
@@ -761,23 +755,21 @@ main{
     transition: background-color 0.3s ease;
     font-size: 0.9rem;
     margin-top: 1rem;
-}   
+}
 
-#fifthSection .partner-content .partner-item button:hover{
+#fifthSection .partner-content .partner-item button:hover {
     background-color: #2980b9;
 }
 
-
-
-
-  .footer {
+/* Footer Styles */
+.footer {
     background-color: #1a162a;
     color: #fff;
     font-size: 16px;
     line-height: 1.6;
-  }
-  
-  .newsletter {
+}
+
+.newsletter {
     background-color: #7b61c3;
     padding: 40px 15%;
     display: flex;
@@ -785,29 +777,29 @@ main{
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-  }
-  
-  .newsletter h2 {
+}
+
+.newsletter h2 {
     margin: 0;
     font-size: 24px;
-  }
-  
-  .newsletter p {
+}
+
+.newsletter p {
     margin: 10px 0 0;
-  }
-  
-  .newsletter-content {
+}
+
+.newsletter-content {
     max-width: 500px;
     width: 100%;
-  }
-  
-  .newsletter-form {
+}
+
+.newsletter-form {
     display: flex;
     align-items: center;
     margin-top: 20px;
-  }
-  
-  .newsletter-form input {
+}
+
+.newsletter-form input {
     padding: 15px;
     border: 1px solid #fff;
     background: transparent;
@@ -815,12 +807,13 @@ main{
     border-radius: 30px 0 0 30px;
     width: 250px;
     outline: none;
-  }
-  input::placeholder{
+}
+
+input::placeholder {
     color: #fff;
-  }
-  
-  .newsletter-form button {
+}
+
+.newsletter-form button {
     padding: 10px 20px;
     border: 1px solid #fff;
     border-left: none;
@@ -829,42 +822,42 @@ main{
     color: #fff;
     font-size: 20px;
     cursor: pointer;
-  }
-  
-  .footer-main {
+}
+
+.footer-main {
     display: flex;
     justify-content: space-between;
     padding: 2rem 15%;
     flex-wrap: wrap;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     gap: 3rem;
-  }
-  
-  .footer-left {
+}
+
+.footer-left {
     flex: 1 1 45%;
     margin-bottom: 30px;
     width: 100%;
-  }
-  
-  .logo {
+}
+
+.footer-left .logo {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
-  }
-  
-  .logo span {
+}
+
+.footer-left .logo span {
     font-weight: 600;
-  }
-  
-  .footer-links {
+}
+
+.footer-links {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 1fr));
     gap: 20px;
     width: 100%;
     padding: 1rem 0;
-  }
-  
-  .footer-links div {
+}
+
+.footer-links div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -874,25 +867,24 @@ main{
     border-bottom: 1px solid rgba(255,255,255,0.1);
     transition: all 0.3s ease;
     position: relative;
-  }
-  
-  .footer-links div:hover {
+}
+
+.footer-links div:hover {
     background-color: rgba(255,255,255,0.05);
     color: #a084e8;
-  }
-  
-  .footer-links div i {
+}
+
+.footer-links div i {
     font-size: 1.2rem;
     transition: transform 0.3s ease;
     margin-left: 0.5rem;
-  }
-  
-  .footer-links div.active i {
+}
+
+.footer-links div.active i {
     transform: rotate(90deg);
-  }
-  
-  /* Dropdown content styles */
-  .footer-dropdown-content {
+}
+
+.footer-dropdown-content {
     position: absolute;
     top: 100%;
     left: 0;
@@ -907,29 +899,29 @@ main{
     transform: translateY(20px);
     transition: all 0.3s ease;
     z-index: 10;
-  }
-  
-  .footer-dropdown-content.active {
+}
+
+.footer-dropdown-content.active {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
-  }
-  
-  .footer-dropdown-content ul {
+}
+
+.footer-dropdown-content ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .footer-dropdown-content li {
+}
+
+.footer-dropdown-content li {
     padding: 0.5rem 0;
     border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-  
-  .footer-dropdown-content li:last-child {
+}
+
+.footer-dropdown-content li:last-child {
     border-bottom: none;
-  }
-  
-  .footer-dropdown-content a {
+}
+
+.footer-dropdown-content a {
     color: #fff;
     text-decoration: none;
     font-size: 0.9rem;
@@ -938,75 +930,81 @@ main{
     align-items: center;
     gap: 0.5rem;
     transition: color 0.3s ease;
-  }
-  
-  .footer-dropdown-content a:hover {
+}
+
+.footer-dropdown-content a:hover {
     color: #a084e8;
-  }
-  
-  .footer-dropdown-content i {
+}
+
+.footer-dropdown-content i {
     font-size: 1rem;
     color: #a084e8;
-  }
-  
-  .footer-right {
+}
+
+.footer-right {
     flex: 1 1 45%;
     width: 100%;
-  }
-  
-  .footer-right h3 {
+}
+
+.footer-right h3 {
     font-size: 20px;
     margin-bottom: 10px;
-  }
-  
-  .footer-right p {
+}
+
+.footer-right p {
     margin-bottom: 20px;
     color: #ccc;
-  }
-  
-  .cta-button {
+}
+
+.cta-button {
     display: inline-block;
     padding: 10px 20px;
     border: 2px solid #a084e8;
     color: #a084e8;
     border-radius: 30px;
     text-decoration: none;
-  }
-  
-  .footer-bottom {
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #a084e8;
+    color: white;
+}
+
+.footer-bottom {
     display: flex;
     justify-content: space-between;
     padding: 30px 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     flex-wrap: wrap;
     gap: 2rem;
-  }
-  
-  .footer-nav {
+}
+
+.footer-nav {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-  }
-  
-  .footer-nav a {
+}
+
+.footer-nav a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
     font-size: 0.9rem;
     transition: color 0.3s ease;
-  }
-  
-  .footer-nav a:hover {
+}
+
+.footer-nav a:hover {
     color: #a084e8;
-  }
-  
-  .footer-carousel {
+}
+
+.footer-carousel {
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-  
-  .footer-carousel button {
+}
+
+.footer-carousel button {
     background: transparent;
     border: 1px solid #a084e8;
     color: #a084e8;
@@ -1016,40 +1014,584 @@ main{
     height: 40px;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .footer-carousel button:hover {
+}
+
+.footer-carousel button:hover {
     background-color: #a084e8;
     color: white;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet Styles (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Navigation adjustments */
+    .logo {
+        margin-left: 2em;
+        font-size: 1.3rem;
+    }
+    
+    nav {
+        padding: 0 1rem;
+    }
+    
+    /* Hero section */
+    .text-content {
+        left: 5%;
+        right: 5%;
+    }
+    
+    .text-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .text-content p {
+        width: 60%;
+        font-size: 1.2em;
+    }
+    
+    /* About section */
+    .about-section {
+        padding: 3em 2em;
+    }
+    
+    .about-section .left {
+        padding: 2em 5em 0 0;
+    }
+    
+    .itemms p {
+        padding: 0 2em 0 0;
+    }
+    
+    /* Links sections */
+    .links-for-other-page .learn-and-engagement,
+    .links-for-other-page .evaluation,
+    .links-for-other-page .fellows-program {
+        padding: 3em 2em;
+    }
+    
+    .learn-and-engagement .right p,
+    .fellows-program .right p {
+        padding-right: 2em;
+    }
+    
+    /* Fifth section */
+    #fifthSection {
+        width: 95%;
+        padding: 3rem 0;
+    }
+    
+    #fifthSection .partner button {
+        width: 20em;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    #fifthSection .partner-content .partner-item {
+        width: 45%;
+    }
+    
+    /* Footer */
     .newsletter {
-      flex-direction: column;
-      text-align: center;
+        padding: 30px 10%;
     }
-  
-    .newsletter-form {
-      justify-content: center;
-    }
-  
+    
     .footer-main {
-      flex-direction: column;
+        padding: 2rem 10%;
     }
-  
+}
+
+/* Mobile Landscape (481px - 767px) */
+@media screen and (max-width: 767px) {
+    /* Header adjustments */
+    header {
+        height: 8vh;
+        min-height: 60px;
+    }
+    
+    .logo {
+        margin-left: 0;
+        font-size: 1.2rem;
+    }
+    
+    .nav-links {
+        width: 80%;
+        font-size: 1.5em;
+    }
+    
+    .search input {
+        font-size: 1.5em;
+    }
+    
+    .ctas {
+        gap: 0.5rem;
+    }
+    
+    .ctas p {
+        display: none;
+    }
+    
+    .ctas button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Hero section */
+    .hero-section {
+        min-height: 70vh;
+    }
+    
+    .text-content {
+        left: 5%;
+        right: 5%;
+        bottom: 5%;
+    }
+    
+    .text-content h2 {
+        font-size: 2rem;
+    }
+    
+    .text-content p {
+        width: 80%;
+        font-size: 1.1em;
+    }
+    
+    /* About section */
+    .about-section {
+        flex-direction: column;
+        padding: 2em 1em;
+        min-height: auto;
+    }
+    
+    .about-section .left,
+    .about-section .right {
+        width: 100%;
+    }
+    
+    .about-section .left {
+        padding: 0;
+        margin-bottom: 2em;
+    }
+    
+    .right .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 0;
+    }
+    
+    .grid .itemms {
+        padding: 1em 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .grid .itemms:last-child {
+        border-bottom: none;
+    }
+    
+    .itemms p {
+        padding: 0;
+    }
+    
+    /* Links sections */
+    .links-for-other-page .learn-and-engagement,
+    .links-for-other-page .evaluation,
+    .links-for-other-page .fellows-program {
+        flex-direction: column;
+        padding: 2em 1em;
+        min-height: auto;
+        gap: 2em;
+    }
+    
+    .learn-and-engagement .left,
+    .learn-and-engagement .right,
+    .evaluation .left,
+    .evaluation .right,
+    .fellows-program .left,
+    .fellows-program .right {
+        width: 100%;
+        height: auto;
+    }
+    
+    .learn-and-engagement .left,
+    .evaluation .left,
+    .fellows-program .left {
+        height: 40vh;
+        order: 2;
+    }
+    
+    .learn-and-engagement .right,
+    .evaluation .right,
+    .fellows-program .right {
+        height: auto;
+        order: 1;
+        padding-left: 0;
+    }
+    
+    .learn-and-engagement .right h1,
+    .evaluation .right h1,
+    .fellows-program .right h1 {
+        font-size: 2em;
+    }
+    
+    .learn-and-engagement .right p,
+    .evaluation .right p,
+    .fellows-program .right p {
+        font-size: 1.2em;
+        padding-right: 0;
+    }
+    
+    .learn-and-engagement .right button,
+    .evaluation .right button,
+    .fellows-program .right button {
+        font-size: 1em;
+        padding: 0.8em 1.5em;
+        margin-top: 1em;
+    }
+    
+    /* Fifth section */
+    #fifthSection {
+        width: 95%;
+        padding: 2rem 1rem;
+    }
+    
+    #fifthSection h3 {
+        font-size: 1.3rem;
+        margin-top: 1em;
+    }
+    
+    #fifthSection .partner {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+    
+    #fifthSection .partner h2 {
+        font-size: 1.8rem;
+    }
+    
+    #fifthSection .partner button {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    #fifthSection .partner-content {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    #fifthSection .partner-content .partner-item {
+        width: 100%;
+        padding: 1.5rem;
+        min-height: auto;
+    }
+    
+    #fifthSection .partner-content .partner-item .image {
+        height: 200px;
+    }
+    
+    /* Footer */
+    .newsletter {
+        flex-direction: column;
+        padding: 30px 5%;
+        text-align: center;
+    }
+    
+    .newsletter-form {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    
+    .newsletter-form input {
+        width: 200px;
+        border-radius: 30px;
+        border-right: 1px solid #fff;
+    }
+    
+    .newsletter-form button {
+        border-radius: 30px;
+        border: 1px solid #fff;
+        margin-top: 10px;
+        padding: 15px 25px;
+    }
+    
+    .footer-main {
+        flex-direction: column;
+        padding: 2rem 5%;
+    }
+    
     .footer-left,
     .footer-right {
-      flex: 1 1 100%;
+        flex: 1 1 100%;
     }
-  
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
     .footer-bottom {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 5%;
     }
-  
+    
     .footer-nav {
-      margin-bottom: 20px;
-      text-align: center;
+        margin-bottom: 20px;
+        text-align: center;
+        justify-content: center;
     }
-  }
-  
+}
+
+/* Mobile Portrait (320px - 480px) */
+@media screen and (max-width: 480px) {
+    /* Navigation */
+    .nav-links {
+        width: 90%;
+        font-size: 1.3em;
+        padding: 1.5rem;
+    }
+    
+    .menu {
+        font-size: 1.3rem;
+        gap: 0.5em;
+    }
+    
+    .search input {
+        font-size: 1.2em;
+        padding: 0.5em 1.5em;
+    }
+    
+    .logo {
+        font-size: 1rem;
+    }
+    
+    .ctas i {
+        font-size: 1.3rem;
+        padding: 0.3rem;
+    }
+    
+    .ctas button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Hero section */
+    .text-content h2 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .text-content p {
+        width: 95%;
+        font-size: 1em;
+    }
+    
+    /* About section */
+    .about-section {
+        padding: 1.5em 0.8em;
+    }
+    
+    /* Links sections */
+    .links-for-other-page .learn-and-engagement,
+    .links-for-other-page .evaluation,
+    .links-for-other-page .fellows-program {
+        padding: 1.5em 0.8em;
+    }
+    
+    .learn-and-engagement .right h1,
+    .evaluation .right h1,
+    .fellows-program .right h1 {
+        font-size: 1.8em;
+    }
+    
+    .learn-and-engagement .right p,
+    .evaluation .right p,
+    .fellows-program .right p {
+        font-size: 1.1em;
+    }
+    
+    /* Fifth section */
+    #fifthSection {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    #fifthSection h3 {
+        font-size: 1.2rem;
+    }
+    
+    #fifthSection .partner h2 {
+        font-size: 1.5rem;
+    }
+    
+    #fifthSection .partner-content .partner-item {
+        padding: 1rem;
+    }
+    
+    #fifthSection .partner-content .partner-item .image {
+        height: 180px;
+    }
+    
+    #fifthSection .partner-content .partner-item button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Footer */
+    .newsletter {
+        padding: 20px 3%;
+    }
+    
+    .newsletter h2 {
+        font-size: 20px;
+    }
+    
+    .newsletter-form input {
+        width: 180px;
+        padding: 12px;
+    }
+    
+    .newsletter-form button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    
+    .footer-main {
+        padding: 1.5rem 3%;
+    }
+    
+    .footer-left .logo {
+        font-size: 20px;
+    }
+    
+    .footer-right h3 {
+        font-size: 18px;
+    }
+    
+    .footer-bottom {
+        padding: 15px 3%;
+    }
+    
+    .footer-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-carousel button {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+/* Extra Small Mobile (max-width: 320px) */
+@media screen and (max-width: 320px) {
+    .nav-links {
+        width: 95%;
+        font-size: 1.2em;
+        padding: 1rem;
+    }
+    
+    .text-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .text-content p {
+        font-size: 0.9em;
+    }
+    
+    .learn-and-engagement .right h1,
+    .evaluation .right h1,
+    .fellows-program .right h1 {
+        font-size: 1.5em;
+    }
+    
+    .learn-and-engagement .right p,
+    .evaluation .right p,
+    .fellows-program .right p {
+        font-size: 1em;
+    }
+    
+    #fifthSection .partner h2 {
+        font-size: 1.3rem;
+    }
+    
+    .newsletter h2 {
+        font-size: 18px;
+    }
+    
+    .newsletter-form {
+        width: 100%;
+    }
+    
+    .newsletter-form input {
+        width: 150px;
+        padding: 10px;
+    }
+    
+    .newsletter-form button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 100vh;
+    }
+    
+    .text-content {
+        bottom: 5%;
+    }
+    
+    .text-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .text-content p {
+        font-size: 0.9em;
+    }
+    
+    .about-section {
+        padding: 1em;
+    }
+    
+    .links-for-other-page .learn-and-engagement,
+    .links-for-other-page .evaluation,
+    .links-for-other-page .fellows-program {
+        padding: 1.5em;
+        min-height: auto;
+    }
+}
+
+/* High DPI/Retina Display Optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-section {
+        background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/d551a511edcddc3e0186a80962f65f33dd0dd6a6-1421x1065.png?auto=format&w=3840&q=75');
+    }
+}
+
+/* Accessibility improvements for touch devices */
+@media (pointer: coarse) {
+    .menu,
+    .ctas i,
+    .ctas button,
+    .nav-links li a,
+    .dropdown-content li a,
+    button {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .close-btn,
+    .close-search {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}

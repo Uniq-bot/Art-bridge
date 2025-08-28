@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-body);
+    font-family: 'Poppins', sans-serif;
 }
-body::selection{
+
+:root {
+    --font-body: 'Poppins', sans-serif;
+}
+
+body::selection {
     background-color: #000000;
     color: white;
 }
@@ -18,9 +24,7 @@ body::selection{
     overflow-x: hidden;
 }
 
-
-
-/* Main starts here  */
+/* Main starts here */
 main {
     width: 100%;
     position: relative;
@@ -37,7 +41,7 @@ main {
     background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/299b3717f8baa0e2c6d579c30de4f8c95d2b5b0e-1800x1200.jpg?auto=format&w=1920&q=75');
     background-size: cover;
     background-position: center;
-    position: relative;
+    background-attachment: fixed;
 }
 
 #heroSection::before {
@@ -56,168 +60,13 @@ main {
     z-index: 1;
 }
 
-#heroSection .hero-content {
+.hero-content {
     position: absolute;
     bottom: 10%;
     left: 10%;
     color: white;
     z-index: 2;
     max-width: 600px;
-}
-
-#heroSection .hero-content h1 {
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-#heroSection .hero-content h1 span {
-    font-style: italic;
-}
-
-#heroSection .hero-content p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    opacity: 0.9;
-    font-style: italic;
-}
-
-/* Second Section Styles */
-#secondSection {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    background-color: #ffffff;
-    padding: 2rem 0;
-}
-
-#secondSection .top {
-    width: 90%;
-    min-height: 40vh;
-    position: relative;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ccc;
-    padding: 4rem 3rem;
-    margin: 0 auto;
-}
-
-#secondSection .top h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-#secondSection .top h3 {
-    font-size: 2.5rem;
-    letter-spacing: -2px;
-    font-weight: 500;
-    opacity: 0.9;
-}
-
-#secondSection .second {
-    width: 90%;
-    min-height: 40vh;
-    position: relative;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ccc;
-    padding: 4rem 3rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-#secondSection .second .left {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#secondSection .second .left h1 {
-    font-size: 2.5rem;
-    letter-spacing: -2px;
-    font-weight: 500;
-    opacity: 0.9;
-}
-
-#secondSection .second .left h1 span {
-    font-style: italic;
-    font-weight: 300;
-}
-
-#secondSection .second .left p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    opacity: 0.9;
-    padding-right: 2rem;
-}
-
-#secondSection .second .right {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#secondSection .second .right .image {
-    width: 100%;
-    height: 50vh;
-    position: relative;
-    background-color: #ffffff;
-}
-
-#secondSection .second .right .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#secondSection .second .right p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    opacity: 0.9;
-    font-style: italic;
-}
-#heroSection{
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/299b3717f8baa0e2c6d579c30de4f8c95d2b5b0e-1800x1200.jpg?auto=format&w=1920&q=75');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-#heroSection::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.1) 0%,
-        rgba(0, 0, 0, 0.4) 50%,
-        rgba(0, 0, 0, 0.6) 100%
-    );
-    z-index: 1;
-}
-.hero-content{
-    position: absolute;
-    bottom: 10%;
-    left: 10%;  
-    color: white;
-    z-index: 2;
-    max-width: 600px;
-   
 }
 
 .hero-content h1 {
@@ -236,6 +85,7 @@ main {
     font-weight: 400;
     line-height: 1.6;
     opacity: 0.9;
+    font-style: italic;
 }
 
 /* Add a subtle glow effect */
@@ -249,36 +99,40 @@ main {
     opacity: 0.8;
 }
 
-#secondSection{
+/* Second Section Styles */
+#secondSection {
     width: 100%;
     min-height: 100vh;
     position: relative;
     background-color: #ffffff;
     padding: 2rem 0;
 }
-.top{
+
+.top {
     width: 90%;
-   min-height: 40vh;
+    min-height: 40vh;
     position: relative;
     background-color: #ffffff;
     border-bottom: 1px solid #ccc;
     padding: 4rem 3rem;
     margin: 0 auto;
 }
-.top h2{
+
+.top h2 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
-.top h3{
+
+.top h3 {
     font-size: 2.5rem;
     letter-spacing: -2px;
     font-weight: 500;
     opacity: 0.9;
 }
 
-.second{
+.second {
     width: 90%;
     min-height: 40vh;
     position: relative;
@@ -288,64 +142,75 @@ main {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
 }
-.left{
+
+.left {
     width: 50%;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    }
-    .left h1{
-        font-size: 2.5rem;
-        letter-spacing: -2px;
-        font-weight: 500;
-        opacity: 0.9;
-    }
-    .left h1 span{
-        font-style: italic;
-        font-weight: 300;
-    }
-    .left p{
-        font-size: 1.2rem;
-        font-weight: 400;
-        line-height: 1.6;
-        opacity: 0.9;
-        padding-right: 2rem;
-    }
-.right{
-        width: 50%;
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .right .image{
-        width: 100%;
-        height: 50vh;
-        position: relative;
-        background-color: #ffffff;
-    }
-    .right .image img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .right p{
-        font-size: 1.2rem;
-        font-weight: 400;
-        line-height: 1.6;
-        opacity: 0.9;
-        font-style: italic;
-    }
+}
 
-    /* Third Section Styles */
+.left h1 {
+    font-size: 2.5rem;
+    letter-spacing: -2px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.left h1 span {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.left p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0.9;
+    padding-right: 2rem;
+}
+
+.right {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right .image {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.right .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* Third Section Styles */
 #thirdSection {
     width: 100%;
     min-height: 10vh;
     position: relative;
     background-color: #ffffff;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 #thirdSection .thirdSec-top {
@@ -370,6 +235,7 @@ main {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
 #thirdSection .thirdSec-second .item {
@@ -403,10 +269,8 @@ main {
     font-style: italic;
     font-family: var(--font-body);
 }
-        /* Fourth Section - Main Content Section
-   Contains three main sections with alternating background colors */
 
-/* Main Top Section - Purple Background */
+/* Fourth Section - Main Content Section */
 #fourthSection {
     width: 100%;
     min-height: 40vh;
@@ -415,174 +279,32 @@ main {
     flex-direction: column;
 }
 
+/* Shared styles for all fourth section parts */
+#fourthSection .fourthSec-top,
+#fourthSection .fourthSec-sec,
+#fourthSection .fourthSec-bot {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    gap: 2rem;
+}
+
 #fourthSection .fourthSec-top {
-    /* Purple background section */
     background-color: #D1BDFA;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
 }
 
-/* Left Content - Text and Description */
-#fourthSection .fourthSec-top .left {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#fourthSection .fourthSec-top .left h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-#fourthSection .fourthSec-top .left p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    opacity: 0.9;
-    font-style: italic;
-    font-family: var(--font-body);
-}
-
-/* Right Content - Image Section */
-#fourthSection .fourthSec-top .right {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#fourthSection .fourthSec-top .left img {
-    width: 90%;
-    height: 60vh;
-    object-fit: cover;
-}
-
-/* Upper Section - Title and Button */
-#fourthSection .fourthSec-top .right .upper {
-    width: 100%;
-    min-height: 10vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1em;
-}
-
-#fourthSection .fourthSec-top .right .upper h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-#fourthSection .fourthSec-top .right .upper button {
-    background-color: black;
-    color: white;
-    border: none;
-    width: 30em;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#fourthSection .fourthSec-top .right .upper button:hover {
-    background-color: #2980b9;
-}
-/* Second Section - Green Background */
 #fourthSection .fourthSec-sec {
     background-color: #D4EDD3;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
 }
 
-    #fourthSection .fourthSec-sec .left {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#fourthSection .fourthSec-sec .left h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-#fourthSection .fourthSec-sec .left p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.6;
-    opacity: 0.9;
-    font-style: italic;
-    font-family: var(--font-body);
-}
-
-#fourthSection .fourthSec-sec .right {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#fourthSection .fourthSec-sec .left img {
-    width: 90%;
-    height: 60vh;
-    object-fit: cover;
-}
-
-#fourthSection .fourthSec-sec .right .upper {
-    width: 100%;
-    min-height: 10vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#fourthSection .fourthSec-sec .right .upper h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-#fourthSection .fourthSec-sec .right .upper button {
-    background-color: black;
-    color: white;
-    border: none;
-    width: 30em;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#fourthSection .fourthSec-sec .right .upper button:hover {
-    background-color: #2980b9;
-}
-
-/* Third Section - Beige Background */
 #fourthSection .fourthSec-bot {
     background-color: #EDDFD3;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
 }
 
-    #fourthSection .fourthSec-bot .left {
+#fourthSection .left,
+#fourthSection .right {
     width: 50%;
     padding: 2rem;
     display: flex;
@@ -590,13 +312,15 @@ main {
     justify-content: space-between;
 }
 
-#fourthSection .fourthSec-bot .left h2 {
+#fourthSection .left h2,
+#fourthSection .right .upper h2 {
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.2;
+    margin-bottom: 2rem;
 }
 
-#fourthSection .fourthSec-bot .left p {
+#fourthSection .left p {
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.6;
@@ -605,53 +329,43 @@ main {
     font-family: var(--font-body);
 }
 
-#fourthSection .fourthSec-bot .right {
-    width: 50%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#fourthSection .fourthSec-bot .left img {
-    width: 90%;
+#fourthSection .left img {
+    width: 100%;
+    max-width: 90%;
     height: 60vh;
     object-fit: cover;
+    border-radius: 8px;
 }
 
-#fourthSection .fourthSec-bot .right .upper {
+#fourthSection .right .upper {
     width: 100%;
     min-height: 10vh;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 2rem;
 }
 
-#fourthSection .fourthSec-bot .right .upper h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-#fourthSection .fourthSec-bot .right .upper button {
+#fourthSection .right .upper button {
     background-color: black;
     color: white;
     border: none;
-    width: 30em;
+    max-width: 300px;
+    width: 100%;
     padding: 1rem 2rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 1rem;
 }
 
-#fourthSection .fourthSec-bot .right .upper button:hover {
+#fourthSection .right .upper button:hover {
     background-color: #2980b9;
 }
 
-
 /* Fifth Section - Partner Stories Section */
-#fifthSection{
+#fifthSection {
     width: 90%;
     min-height: 100vh;
     margin: 0 auto;
@@ -659,8 +373,7 @@ main {
     padding: 4rem 0;
 }
 
-/* Section Title */
-#fifthSection h3{
+#fifthSection h3 {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.2;
@@ -668,51 +381,50 @@ main {
     margin-bottom: 2rem;
 }
 
-/* Partner Header Section */
-#fifthSection .partner{
+#fifthSection .partner {
     width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3rem;
+    gap: 2rem;
 }
 
-#fifthSection .partner h2{
+#fifthSection .partner h2 {
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.2;
 }
 
-#fifthSection .partner button{
+#fifthSection .partner button {
     background-color: black;
     color: white;
     border: none;
-    width: 30em;
+    max-width: 300px;
+    width: 100%;
     padding: 1rem 2rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}   
+}
 
-#fifthSection .partner button:hover{
+#fifthSection .partner button:hover {
     background-color: #2980b9;
 }
 
-/* Partner Content Grid */
-#fifthSection .partner-content{
-    width: 90%;
+#fifthSection .partner-content {
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 2rem;
 }
 
-/* Individual Partner Items */
-#fifthSection .partner-content .partner-item{
-    width: 30%;
+#fifthSection .partner-content .partner-item {
+    width: calc(33.333% - 1.33rem);
     min-height: 30vh;
     position: relative;
     padding: 2.5rem;
@@ -725,14 +437,19 @@ main {
     background: white;
 }
 
-#fifthSection .partner-content .partner-item .image{
+#fifthSection .partner-content .partner-item:hover {
+    transform: translateY(-5px);
+}
+
+#fifthSection .partner-content .partner-item .image {
     width: 100%;
     height: 25vh;
     overflow: hidden;
     margin-bottom: 1.5rem;
+    border-radius: 8px;
 }
 
-#fifthSection .partner-content .partner-item .image img{
+#fifthSection .partner-content .partner-item .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -743,21 +460,21 @@ main {
     transform: scale(1.1);
 }
 
-#fifthSection .partner-content .partner-item h3{
+#fifthSection .partner-content .partner-item h3 {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 0.5rem;
 }
 
-#fifthSection .partner-content .partner-item h2{
+#fifthSection .partner-content .partner-item h2 {
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 1rem;
 }
 
-#fifthSection .partner-content .partner-item p{
+#fifthSection .partner-content .partner-item p {
     font-weight: 400;
     line-height: 1.6;
     opacity: 0.9;
@@ -766,19 +483,340 @@ main {
     font-family: var(--font-body);
 }
 
-#fifthSection .partner-content .partner-item button{
+#fifthSection .partner-content .partner-item button {
     background-color: black;
     color: white;
     border: none;
-    padding: 1rem 2.5rem;
+    padding: 1rem 2rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-size: 0.9rem;
-    margin-top: 1rem;
-}   
+    margin-top: auto;
+    align-self: flex-start;
+}
 
-#fifthSection .partner-content .partner-item button:hover{
+#fifthSection .partner-content .partner-item button:hover {
     background-color: #2980b9;
 }
 
+/* TABLET STYLES (768px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-content {
+        max-width: 500px;
+    }
+
+    .left p {
+        padding-right: 1rem;
+    }
+
+    #thirdSection .thirdSec-top h2 {
+        padding-right: 10rem;
+        font-size: 2.5rem;
+    }
+
+    #fourthSection .left img {
+        height: 50vh;
+    }
+
+    #fifthSection .partner-content .partner-item {
+        width: calc(50% - 1rem);
+    }
+}
+
+/* MOBILE STYLES (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Hero Section Mobile */
+    #heroSection {
+        background-attachment: scroll;
+    }
+    
+    .hero-content {
+        left: 5%;
+        right: 5%;
+        bottom: 15%;
+        max-width: 90%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .hero-content h1::after {
+        width: 80%;
+    }
+
+    /* Second Section Mobile */
+    .top {
+        padding: 3rem 1.5rem;
+        width: 95%;
+    }
+
+    .top h2 {
+        font-size: 1.2rem;
+    }
+
+    .top h3 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
+
+    .second {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+        width: 95%;
+        gap: 1rem;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .left h1 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
+
+    .left p,
+    .right p {
+        font-size: 1rem;
+        padding-right: 0;
+    }
+
+    .right .image {
+        height: 40vh;
+    }
+
+    /* Third Section Mobile */
+    #thirdSection {
+        padding: 2rem 0;
+    }
+
+    #thirdSection .thirdSec-top {
+        width: 95%;
+    }
+
+    #thirdSection .thirdSec-top h2 {
+        font-size: 2rem;
+        padding-right: 0;
+        padding-top: 2rem;
+    }
+
+    #thirdSection .thirdSec-second {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    #thirdSection .thirdSec-second .item {
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    #thirdSection .thirdSec-second .item h2 {
+        font-size: 1.5rem;
+    }
+
+    #thirdSection .thirdSec-second .item span {
+        font-size: 1.5em;
+    }
+
+    #thirdSection .thirdSec-second .item p {
+        font-size: 1rem;
+    }
+
+    /* Fourth Section Mobile */
+    #fourthSection .fourthSec-top,
+    #fourthSection .fourthSec-sec,
+    #fourthSection .fourthSec-bot {
+        flex-direction: column;
+        padding: 3rem 1rem;
+        gap: 2rem;
+    }
+
+    #fourthSection .left,
+    #fourthSection .right {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #fourthSection .left h2,
+    #fourthSection .right .upper h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #fourthSection .left p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    #fourthSection .left img {
+        height: 40vh;
+        max-width: 100%;
+    }
+
+    #fourthSection .right .upper {
+        gap: 1.5rem;
+    }
+
+    #fourthSection .right .upper button {
+        max-width: 100%;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Fifth Section Mobile */
+    #fifthSection {
+        width: 95%;
+        padding: 3rem 0;
+    }
+
+    #fifthSection h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #fifthSection .partner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #fifthSection .partner h2 {
+        font-size: 1.5rem;
+    }
+
+    #fifthSection .partner button {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #fifthSection .partner-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #fifthSection .partner-content .partner-item {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    #fifthSection .partner-content .partner-item .image {
+        height: 30vh;
+    }
+
+    #fifthSection .partner-content .partner-item h3 {
+        font-size: 0.9rem;
+    }
+
+    #fifthSection .partner-content .partner-item h2 {
+        font-size: 1.1rem;
+    }
+
+    #fifthSection .partner-content .partner-item p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #fifthSection .partner-content .partner-item button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.85rem;
+        width: 100%;
+    }
+}
+
+/* SMALL MOBILE STYLES (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .top,
+    .second {
+        width: 98%;
+        padding: 2rem 1rem;
+    }
+
+    .top h3 {
+        font-size: 1.8rem;
+    }
+
+    .left h1 {
+        font-size: 1.8rem;
+    }
+
+    .right .image {
+        height: 35vh;
+    }
+
+    #thirdSection .thirdSec-top h2 {
+        font-size: 1.8rem;
+        padding-top: 1rem;
+    }
+
+    #thirdSection .thirdSec-second .item {
+        padding: 1.5rem 0;
+    }
+
+    #fourthSection .fourthSec-top,
+    #fourthSection .fourthSec-sec,
+    #fourthSection .fourthSec-bot {
+        padding: 2rem 0.5rem;
+    }
+
+    #fourthSection .left img {
+        height: 35vh;
+    }
+
+    #fifthSection {
+        width: 98%;
+    }
+
+    #fifthSection .partner-content .partner-item {
+        padding: 1.5rem;
+    }
+
+    #fifthSection .partner-content .partner-item .image {
+        height: 25vh;
+    }
+}
+
+/* PERFORMANCE OPTIMIZATIONS */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* HIGH CONTRAST MODE */
+@media (prefers-contrast: high) {
+    #fourthSection .fourthSec-top,
+    #fourthSection .fourthSec-sec,
+    #fourthSection .fourthSec-bot {
+        border: 2px solid #000;
+    }
+    
+    #fifthSection .partner-content .partner-item {
+        border: 2px solid #000;
+    }
+}
