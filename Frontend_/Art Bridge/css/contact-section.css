@@ -1,0 +1,82 @@
+/* Contact Section */
+.seventh-section {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #2d374d 0%, #1a202c 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a0aec0;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1.5rem 0;
+    color: white;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #cbd5e0;
+    margin-bottom: 2.5rem;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 1.1rem 2.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d374d;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2rem;
+    }
+    
+    .contact-description {
+        font-size: 1.1rem;
+    }
+    
+    .seventh-section {
+        padding: 4rem 1.5rem;
+    }
+}
