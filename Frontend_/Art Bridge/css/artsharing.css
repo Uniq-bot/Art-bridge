@@ -415,11 +415,8 @@ main {
 
 #fifthSection .partner-content {
     width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -429,7 +426,6 @@ main {
     position: relative;
     padding: 2.5rem;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -437,9 +433,7 @@ main {
     background: white;
 }
 
-#fifthSection .partner-content .partner-item:hover {
-    transform: translateY(-5px);
-}
+
 
 #fifthSection .partner-content .partner-item .image {
     width: 100%;
