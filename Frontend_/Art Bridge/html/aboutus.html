@@ -65,85 +65,6 @@
             line-height: 1.7;
         }
 
-        /* Header Styles */
-        header {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            justify-content: space-between;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #111827;
-        }
-
-        .menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1rem;
-            cursor: pointer;
-            color: #111827;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .search-icon {
-            width: 20px;
-            height: 20px;
-            color: #6b7280;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .search-icon:hover {
-            color: #111827;
-        }
-
-        .nav-link {
-            color: #6b7280;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #111827;
-        }
-
-        .contact-btn {
-            background: #111827;
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 2rem;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .contact-btn:hover {
-            background: #374151;
-            transform: translateY(-1px);
-        }
 
         /* Main Content */
         main {
@@ -155,13 +76,12 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1rem;
         }
 
         /* Hero Section */
-        .hero-section {
-            padding: 5rem 0;
-            background-color: #f9fafb;
+        .hero-sectionn {
+            padding: 2rem 0;
+        
         }
 
         .hero-content {
@@ -451,41 +371,18 @@
 <body>
     <header>
         <div class="search">
-            <input type="text" placeholder="Search your interest">
-            <div class="close-search">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-        <nav>
-            <div class="menu">
-                <span>MENU</span>
-                <i class="fas fa-bars"></i>                                                                                                                                              
-            </div>
-            <a href="../index.html" class="logo">Art Pool</a>
-            <div class="nav-links">
-                <div class="close-btn">
-                    <i class="fas fa-times"></i>
+            <input type="text" placeholder="Search your intreast">
+             <div class="close-search">
+                    <i class="fa-solid fa-xmark"></i>
                 </div>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li class="dropdown">
-                        <div class="div">
-                            <a href="#">Explore</a>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <ul class="dropdown-content">
-                            <li><a href="Artbridgecollection.html">Art Bridge Collection</a></li>
-                            <li><a href="Availablecollection.html">Available Collection</a></li>
-                            <li><a href="#">Exhibitions</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="artsharing.html">Art Sharing</a></li>
-                    <li><a href="community.html">Community</a></li>
-                    <li><a href="aboutus.html" class="active">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-         
+        </div>
+            <nav>
+                <div class="menu" id="menu-toggle">
+                  <span>MENU</span>  <i class="fa-solid fa-bars"></i>
+                </div>
+                <a href="index.html" class="logo">
+      <span>Art Pool</span>
+    </a>
                 <div class="ctas">
                     <i class="searchbtn fa-solid fa-search"></i>
                     <p>Application Portal</p>
@@ -552,7 +449,7 @@
         </header>
 
     <main>
-        <section class="hero-section">
+        <section class="hero-sectionn">
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">About Us</div>
@@ -560,7 +457,6 @@
                         Connecting Cultures Through the Universal Language of Art
                     </h1>
                 </div>
-            </div>
         </section>
 
         <section class="foundation-section">
