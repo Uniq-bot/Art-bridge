@@ -126,7 +126,6 @@ main {
     position: relative;
     background-color: #ffffff;
     border-bottom: 1px solid #ccc;
-    padding: 4rem 3rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -136,9 +135,6 @@ main {
 .about-left {
     width: 50%;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .about-left h1 {
@@ -146,7 +142,6 @@ main {
     letter-spacing: -2px;
     font-weight: 500;
     opacity: 0.9;
-    margin-bottom: 2rem;
 }
 
 .about-left h1 span {
@@ -163,10 +158,16 @@ main {
     text-align: justify;
     margin-bottom: 2rem;
 }
+.about-content{
+  width: 80%;
+  margin: auto;
+
+}
 .about-content p{
-  font-size: 2.7rem;
-  line-height: 0.99;
-  letter-spacing: 1.1;
+  font-size: 2.5rem;
+  line-height:0.9;
+  letter-spacing: 0.9px;
+  text-align: justify;
 
 }
 .about-right {
