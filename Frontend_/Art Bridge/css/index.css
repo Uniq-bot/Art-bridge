@@ -1,20 +1,18 @@
 /*
- * Art Pool - Main Stylesheet
+ * Art Pool - Mobile Responsive Stylesheet
  * 
- * This file contains all the styles for the Art Pool website,
- * including responsive design, typography, and component styling.
+ * This file contains all the responsive styles for the Art Pool website,
+ * optimized for mobile devices and tablets.
  * 
  * Table of Contents:
  * 1. Base Styles & Reset
- * 2. Layout & Structure
- * 3. Navigation & Header
- * 4. Hero Sections
- * 5. Content Sections
- * 6. Sliders & Interactive Elements
- * 7. Forms & Buttons
- * 8. Footer
- * 9. Animations & Transitions
- * 10. Media Queries
+ * 2. Mobile Navigation
+ * 3. Hero Sections - Mobile
+ * 4. Content Sections - Mobile
+ * 5. Sliders & Interactive Elements - Mobile
+ * 6. Footer - Mobile
+ * 7. Tablet Styles
+ * 8. Large Mobile Styles
  */
 
 /* 1. Base Styles & Reset */
@@ -46,19 +44,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'GT America', 'GT America Fallback', sans-serif; /* Default font for the entire site */
+    font-family: 'GT America', 'GT America Fallback', sans-serif;
 }
+
 body::selection{
     background-color: #000000;
     color: white;
 }
-/* Base Typography */
+
 body {
     font-family: 'GT America', 'GT America Fallback', sans-serif;
     line-height: 1.6;
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'GT America', 'GT America Fallback', sans-serif;
     font-weight: 700;
@@ -66,12 +64,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5em;
 }
 
-/* Paragraphs */
 p {
     font-family: 'IBM Plex Serif', serif;
     margin-bottom: 1em;
     line-height: 1.6;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -83,8 +81,7 @@ html {
     flex-direction: column;
 }
 
-/* Navigation Styles */
-
+/* 2. Navigation Styles */
 header {
     height: 10vh;
     width: 100%;
@@ -93,6 +90,7 @@ header {
     position: relative;
     z-index: 1000;
 }
+
 .search{
     width: 100%;
     height: 100%;
@@ -102,17 +100,14 @@ header {
     align-items: center;
     top: -100%;
     transition: 0.5s ease-in-out;
-    
-
+    background: white;
+    z-index: 1001;
 }
 
-
-  .search input::placeholder {
-    color: #999;
-  }
 .search.searchactive{
     top: 0;
 }
+
 .search input{
     width: 90%;
     height: 90%;
@@ -120,21 +115,26 @@ header {
     padding: 0.5em 2em;
     border: none;
     outline: none;
-    
 }
+
+.search input::placeholder {
+    color: #999;
+}
+
 .search::after {
-  content: '';
-  position: absolute;
-  bottom: 10%;
-  width:90%;
-  height: 1px;
-  background-color: rgb(152, 149, 149);
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    width: 90%;
+    height: 1px;
+    background-color: rgb(152, 149, 149);
 }
+
 .search .close-search{
     padding: 2em;
     font-size: 1.5em;
+    cursor: pointer;
 }
-
 
 nav {
     width: 100%;
@@ -152,13 +152,21 @@ nav {
     cursor: pointer;
     font-size: 1.5rem;
     color: #2c3e50;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    gap: 1em;
+}
+
+.menu:hover {
+    background-color: #f8f9fa;
 }
 
 .nav-links {
     position: fixed;
     top: 0;
     left: -100%;
-    width:50%;
+    width: 80%;
     height: 100vh;
     background: white;
     padding: 2rem;
@@ -168,12 +176,12 @@ nav {
     background-color: #ffffff;
     font-size: 2em;
     overflow-y: auto;
-    
 }
 
 .nav-links.active {
     left: 0;
 }
+
 .whole{
     width: 100%;
 }
@@ -183,8 +191,6 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-
 }
 
 .close-btn {
@@ -196,9 +202,8 @@ nav {
     color: #2c3e50;
 }
 
-
 .dropdown .div{
-    display: flex   ;
+    display: flex;
     align-items: center;
     width: 100%;
 }
@@ -208,15 +213,15 @@ nav {
     color: #2c3e50;
     font-weight: 400;
     transition: color 0.3s ease;
-   
 }
+
 .nav-links li i {
     font-size: 1.5rem;
     color: #2c3e50;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    
 }
+
 .nav-links li a:after {
     content: "";
     display: block;
@@ -240,13 +245,6 @@ nav {
     color: #2c3e50;
     display: flex;
     gap: 0.5em;
-    margin-left: 5em;
-}
-
-.logo h1 {
-    width: 1em;
-    border-top: 10px solid #000000;
-    border-radius: 100%;
 }
 
 /* Dropdown Styles */
@@ -254,14 +252,13 @@ nav {
     position: relative;
     height: 100%;
     width: 100%;
-    white-space:0;
+    white-space: 0;
     font-size: 1.5em;
-   
-    
 }
+
 .div{
     display: flex;
-     justify-content: space-between;
+    justify-content: space-between;
 }
 
 .dropdown-content {
@@ -290,6 +287,7 @@ nav {
     opacity: 1;
     left: 0;
 }
+
 .dropdown-content li a {
     flex: 1;
     display: flex;
@@ -304,7 +302,6 @@ nav {
     color: #2c3e50;
     transition: transform 0.3s ease;
 }
-
 
 #arrow {
     margin-left: 0.5rem;
@@ -328,86 +325,13 @@ nav {
     border-bottom: none;
 }
 
-.dropdown-content li a {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #666;
-    padding: 0;
-}
-
-.dropdown-content li a i {
-    font-size: 1rem;
-    color: #2c3e50;
-    transition: transform 0.3s ease;
-}
-
 .dropdown-content li:hover a i {
     transform: translateX(5px);
-}
-
-.dropdown-content li a {
-    color: #666;
-    display: block;
-    padding: 0.5rem 0;
 }
 
 .dropdown-content li a:hover {
     color: #3498db;
     background: #f8f9fa;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .menu {
-        display: flex;
-    }
-    
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 1rem;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    
-    .nav-links ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .dropdown-content {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        box-shadow: none;
-        min-width: 100%;
-    }
-}
-
-/* Header Styles */
-header {
-    background-color: #ffffff;
-   
-}
-.menu {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #2c3e50;
-    padding: 0.5rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    gap: 1em;
-}
-
-.menu:hover {
-    background-color: #f8f9fa;
 }
 
 .ctas {
@@ -432,8 +356,8 @@ header {
 }
 
 .ctas i:hover {
-   background-color: rgb(122, 117, 117);
-   color: white;
+    background-color: rgb(122, 117, 117);
+    color: white;
 }
 
 .ctas button {
@@ -450,29 +374,25 @@ header {
     background-color: #2980b9;
 }
 
-/* header end here  */
-
-/* 
- * 4. Hero Sections 
- * Styles for the main hero banner and secondary hero sections
- */
-
+/* 3. Hero Sections */
 .hero {
-    width: 80%;
+    width: 90%;
     min-height: 30vh;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     color: #2c3e50;
-    padding: 0 15rem;
+    padding: 0 2rem;
     gap: 1rem;
     justify-content: center;
 }
+
 .hero-text1 {
     text-align: left;
     font-size: 4rem;
     font-weight: 600;
 }
+
 .hero-text2 {
     font-size: 4rem;
     text-align: right;
@@ -486,90 +406,32 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     color: #2c3e50;
-    padding: 5em 10rem;
-    gap: 10rem;
-    
+    padding: 5em 2rem;
+    gap: 2rem;
 }
 
-.leftContent{
+.leftContent, .rightContent{
     width: 100%;
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image:url('https://cdn.sanity.io/images/x76dkvvf/prod/910c8919cd3c5120325712f7f11c610a73eca389-1312x1576.jpg?auto=format&w=750&q=75') ;
     background-size: cover;
     background-position: center; 
-    padding: 5em; 
-
-}
-.rightContent{
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image:url('https://cdn.sanity.io/images/x76dkvvf/prod/1f0aeb11b97526a0a68ce4142d779e2d3372fc86-1312x1576.jpg?auto=format&w=750&q=75') ;
-    background-size: cover;
-    background-position: center; 
-    padding: 5em; 
-
-}
-.container {
-    min-width: 30%;
-    min-height: 60%;
-    display: flex;
-    align-items: left;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: rgb(255, 255, 255);
     padding: 2em;
-    transition: transform 0.3s ease;
-}
-@media(max-width:800px){
-
-.secondHero {
-    width: 100%;
-    min-height: 80vh;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(1, 1fr);
-    color: #2c3e50;
-    padding: 5em 10rem;
-    gap: 10rem;
-    
 }
 
 .leftContent{
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image:url('https://cdn.sanity.io/images/x76dkvvf/prod/910c8919cd3c5120325712f7f11c610a73eca389-1312x1576.jpg?auto=format&w=750&q=75') ;
-    background-size: cover;
-    background-position: center; 
-    padding: 5em; 
-
+    background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/910c8919cd3c5120325712f7f11c610a73eca389-1312x1576.jpg?auto=format&w=750&q=75');
 }
+
 .rightContent{
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image:url('https://cdn.sanity.io/images/x76dkvvf/prod/1f0aeb11b97526a0a68ce4142d779e2d3372fc86-1312x1576.jpg?auto=format&w=750&q=75') ;
-    background-size: cover;
-    background-position: center; 
-    padding: 5em; 
-
+    background-image: url('https://cdn.sanity.io/images/x76dkvvf/prod/1f0aeb11b97526a0a68ce4142d779e2d3372fc86-1312x1576.jpg?auto=format&w=750&q=75');
 }
+
 .container {
-    min-width: 30%;
+    min-width: 80%;
     min-height: 60%;
     display: flex;
     align-items: left;
@@ -580,13 +442,11 @@ header {
     transition: transform 0.3s ease;
 }
 
-}
-.rightContent:hover .container {
-    transform: scale(1.1);
-}
+.rightContent:hover .container,
 .leftContent:hover .container {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
+
 .container button {
     background-color: transparent;
     color: black;
@@ -596,6 +456,7 @@ header {
     transition: all 0.3s ease;
     border: none;
 }
+
 .container button::after{
     content: "";
     display: block;
@@ -605,6 +466,7 @@ header {
     transition: width 0.5s ease;
 }
 
+/* 4. Content Sections */
 .ourMission {
     width: 90%;
     margin: 0 auto;
@@ -615,6 +477,7 @@ header {
     align-items: center;
     padding: 2rem;
 }
+
 .topContent {
     width: 100%;
     min-height: 10vh;
@@ -623,17 +486,20 @@ header {
     justify-content: center;
     gap: 1em;
 }
+
 .topContent h1{
-    padding-right: 7em;
+    padding-right: 2em;
     line-height: 1.2;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
+
 .bottomContent {
     width: 100%;
     min-height: 10vh;
     display: flex;
     gap: 1em;
 }
+
 .bottomContent .left{
     width: 50%;
     min-height: 10vh;
@@ -643,25 +509,25 @@ header {
     gap: 1em;
     padding: 2em 0;
 }
+
 .bottomContent .left p{
     color: rgb(0, 0, 0);
-    font-size: 1.3em;
-    width: 60%;
+    font-size: 1.2em;
+    width: 80%;
     text-align: left;
 }
+
 .bottomContent .left button{
     background-color: transparent;
     color: black;
-   padding: 1.5em 2em;
-   width: 20em;
+    padding: 1.2em 1.5em;
+    width: 18em;
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
     border: 1px solid #356494;
     border-radius: 50px;
 }
-    
-
 
 .bottomContent .right{
     width: 50%;
@@ -672,6 +538,7 @@ header {
     gap: 1em;
     padding: 2em;
 }
+
 .bottomContent .right img{
     width: 100%;
     height: 100%;
@@ -679,17 +546,12 @@ header {
     animation: fadeIn 2s;
 }
 
-/* 
- * 6. Sliders & Interactive Elements 
- * Styles for content sliders, carousels, and interactive components
- */
-
+/* 5. Sliders & Interactive Elements */
 .slider {
     width: 100%;
     overflow: hidden;
     position: relative;
 }
-
 
 .slider-container {
     display: flex;
@@ -705,7 +567,7 @@ header {
     min-width: 100%;
     display: flex;
     align-items: center;
-     transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     padding: 2rem;
     opacity: 0;
 }
@@ -729,7 +591,6 @@ header {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    
 }
 
 .items h1 {
@@ -773,25 +634,6 @@ header {
     color: #666;
 }
 
-.ctass {
-    width: 100%;
-    min-height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-}
-.ctass button {
-    background-color: transparent;
-    color: black;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-    border: 1px solid #356494;
-    border-radius: 50px;
-}
-
 .faqs{
     width: 100%;
     min-height: 10vh;
@@ -810,9 +652,10 @@ header {
     justify-content: center;
     padding: 2rem;
 }
+
 .topper h1{
     font-size: 2.5rem;
-    padding:1em 10em 0em 0;
+    padding: 1em 2em 0em 0;
 }
 
 .mainer{
@@ -824,6 +667,7 @@ header {
     align-items: center;
     padding: 2rem;
 }
+
 .contentainer{
     width: 100%;
     min-height: 10vh;
@@ -834,8 +678,9 @@ header {
     padding: 2rem;
     border-top: 1px solid #ccc;
 }
-.left{
-    width: 20%;
+
+.contentainer .left{
+    width: 30%;
     min-height: 10vh;
     display: flex;
     justify-content: center;
@@ -843,7 +688,8 @@ header {
     padding: 2rem;
     gap: 2em;
 }
-.left span{
+
+.contentainer .left span{
     font-size: 1rem;
     font-weight: 600;
     padding: 1.2em 1.5em;
@@ -851,26 +697,29 @@ header {
     color: #ffffff;
     border-radius: 50px;
 }
-.left h3{
+
+.contentainer .left h3{
     font-size: 1.5rem;
-    
 }
-.left h3 span{
+
+.contentainer .left h3 span{
     color: #356494;
     padding: 0;
     background-color: transparent;
     font-size: 1.5rem;
     font-style: italic;
 }
-.right{
-    width: 80%;
+
+.contentainer .right{
+    width: 70%;
     min-height: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 2rem 20em;
+    align-items: flex-start;
+    padding: 2rem;
 }
+
 .contentainer:last-child{
     border-bottom: 1px solid #ccc;
 }
@@ -883,15 +732,16 @@ header {
     padding: 2rem;
     background-color: #201D30;
     color: #F2F0F7;
-    padding: 5rem 10em 5em 0;
+    padding: 5rem 2rem;
 }
+
 .impact h3{
     width: 30%;
     font-size: 1rem;
     padding: 3em 2em 0 0;
-text-align: center;
-    
+    text-align: center;
 }
+
 .Grid-numbers{
     width: 70%;
     min-height: 50vh;
@@ -899,15 +749,14 @@ text-align: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
-    column-gap: 10rem;
-    
 }
+
 .Grid-numbers .number{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .availableCollection{
@@ -919,26 +768,30 @@ text-align: center;
     align-items: flex-start;
     padding: 2rem;
 }
+
 .availableCollection h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 2rem 0;
 }
+
 .availableCollection p{
-    width: 30%;
-    font-size: 1.5rem;
+    width: 80%;
+    font-size: 1.2rem;
     padding: 2rem 0;
 }
+
 .availableCollection button{
     background-color: transparent;
     color: black;
-    padding: 2rem 3rem;
+    padding: 1.5rem 2.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
     border: 1px solid #356494;
     border-radius: 50px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
+
 .artbridgeCollections{
     width: 100%;
     min-height: 30vh;
@@ -948,17 +801,9 @@ text-align: center;
     align-items: flex-start;
     padding: 2rem;
 }
-.artbridgeCollections h4{
-    font-size: 3rem;
-    padding: 2rem 0;
-}
-.artbridgeCollections {
-    width: 100%;
-    padding: 2rem;
-}
 
-.artbridgeCollections h4 {
-    font-size: 2rem;
+.artbridgeCollections h4{
+    font-size: 2.5rem;
     padding: 2rem 0;
     text-align: center;
     border-bottom: 1px solid #ccc;
@@ -970,74 +815,31 @@ text-align: center;
     display: flex;
     justify-content: space-around;
 }
+
 .collection-item{
-    width:20%;
-   height: 60vh;
-   display: flex;
+    width: 30%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
 }
+
 .collection-item div{
-    width: 80%;
+    width: 100%;
 }
+
 .collection-item div h3{
     width: fit-content;
 }
+
 .collection-item img{
     width: 100%;
-    height: 100%;
+    height: 80%;
     object-fit: contain;
-   transition:0.5s all ease-in-out;
-
-    ;
+    transition: 0.5s all ease-in-out;
 }
+
 .collection-item:hover img{
     transform: scale(1.01);
-}
-
-.collections-slider {
-    display: flex;
-    width: 100%;
-    transition: transform 0.5s ease;
-}
-
-.itemm {
-    width: 70vh;
-   height: 60vh;
-    display: flex;
-    padding: 1rem;
-    margin: 1rem;
-    gap: 2rem;
-}
-
-.itemm .imagee {
-    flex: 1;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.itemm .imagee img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.infooo {
-    padding: 1rem;
-}
-
-.infooo p {
-    font-size: 1.2rem;
-    color: #333;
-    margin: 0;
-}
-
-.infooo span {
-    font-size: 1rem;
-    color: #666;
-    display: block;
-    margin-top: 0.5rem;
 }
 
 .ctaControll {
@@ -1061,49 +863,45 @@ text-align: center;
     background-color: #2c3e50;
 }
 
-/* 
- * 8. Footer 
- * Styles for the site footer and newsletter signup
- */
-
-  .footer {
+/* 6. Footer */
+.footer {
     background-color: #1a162a;
     color: #fff;
     font-size: 16px;
     line-height: 1.6;
-  }
-  
-  .newsletter {
+}
+
+.newsletter {
     background-color: #7b61c3;
-    padding: 40px 15%;
+    padding: 40px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-  }
-  
-  .newsletter h2 {
+}
+
+.newsletter h2 {
     margin: 0;
     font-size: 24px;
-  }
-  
-  .newsletter p {
+}
+
+.newsletter p {
     margin: 10px 0 0;
-  }
-  
-  .newsletter-content {
+}
+
+.newsletter-content {
     max-width: 500px;
     width: 100%;
-  }
-  
-  .newsletter-form {
+}
+
+.newsletter-form {
     display: flex;
     align-items: center;
     margin-top: 20px;
-  }
-  
-  .newsletter-form input {
+}
+
+.newsletter-form input {
     padding: 15px;
     border: 1px solid #fff;
     background: transparent;
@@ -1111,12 +909,13 @@ text-align: center;
     border-radius: 30px 0 0 30px;
     width: 250px;
     outline: none;
-  }
-  input::placeholder{
+}
+
+input::placeholder{
     color: #fff;
-  }
-  
-  .newsletter-form button {
+}
+
+.newsletter-form button {
     padding: 10px 20px;
     border: 1px solid #fff;
     border-left: none;
@@ -1125,42 +924,42 @@ text-align: center;
     color: #fff;
     font-size: 20px;
     cursor: pointer;
-  }
-  
-  .footer-main {
+}
+
+.footer-main {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 15%;
+    padding: 2rem 5%;
     flex-wrap: wrap;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     gap: 3rem;
-  }
-  
-  .footer-left {
+}
+
+.footer-left {
     flex: 1 1 45%;
     margin-bottom: 30px;
     width: 100%;
-  }
-  
-  .logo {
+}
+
+.logo {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
-  }
-  
-  .logo span {
+}
+
+.logo span {
     font-weight: 600;
-  }
-  
-  .footer-links {
+}
+
+.footer-links {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 1fr));
     gap: 20px;
     width: 100%;
     padding: 1rem 0;
-  }
-  
-  .footer-links div {
+}
+
+.footer-links div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1170,139 +969,71 @@ text-align: center;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     transition: all 0.3s ease;
     position: relative;
-  }
-  
-  .footer-links div:hover {
+}
+
+.footer-links div:hover {
     background-color: rgba(255,255,255,0.05);
     color: #a084e8;
-  }
-  
-  .footer-links div i {
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
-    margin-left: 0.5rem;
-  }
-  
-  .footer-links div.active i {
-    transform: rotate(90deg);
-  }
-  
-  /* Dropdown content styles */
-  .footer-dropdown-content {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #1a162a;
-    border-radius: 10px;
-    padding: 1rem;
-    width: 100%;
-    max-width: 300px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
-    z-index: 10;
-  }
-  
-  .footer-dropdown-content.active {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .footer-dropdown-content ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-dropdown-content li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-  
-  .footer-dropdown-content li:last-child {
-    border-bottom: none;
-  }
-  
-  .footer-dropdown-content a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-dropdown-content a:hover {
-    color: #a084e8;
-  }
-  
-  .footer-dropdown-content i {
-    font-size: 1rem;
-    color: #a084e8;
-  }
-  
-  .footer-right {
+}
+
+.footer-right {
     flex: 1 1 45%;
     width: 100%;
-  }
-  
-  .footer-right h3 {
+}
+
+.footer-right h3 {
     font-size: 20px;
     margin-bottom: 10px;
-  }
-  
-  .footer-right p {
+}
+
+.footer-right p {
     margin-bottom: 20px;
     color: #ccc;
-  }
-  
-  .cta-button {
+}
+
+.cta-button {
     display: inline-block;
     padding: 10px 20px;
     border: 2px solid #a084e8;
     color: #a084e8;
     border-radius: 30px;
     text-decoration: none;
-  }
-  
-  .footer-bottom {
+}
+
+.footer-bottom {
     display: flex;
     justify-content: space-between;
     padding: 30px 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     flex-wrap: wrap;
     gap: 2rem;
-  }
-  
-  .footer-nav {
+}
+
+.footer-nav {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-  }
-  
-  .footer-nav a {
+}
+
+.footer-nav a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
     font-size: 0.9rem;
     transition: color 0.3s ease;
-  }
-  
-  .footer-nav a:hover {
+}
+
+.footer-nav a:hover {
     color: #a084e8;
-  }
-  
-  .footer-carousel {
+}
+
+.footer-carousel {
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-  
-  .footer-carousel button {
+}
+
+.footer-carousel button {
     background: transparent;
     border: 1px solid #a084e8;
     color: #a084e8;
@@ -1312,39 +1043,808 @@ text-align: center;
     height: 40px;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .footer-carousel button:hover {
+}
+
+.footer-carousel button:hover {
     background-color: #a084e8;
     color: white;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+/* 7. Mobile Styles (320px - 768px) */
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-links {
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+
+    nav {
+        padding: 0 1rem;
+    }
+
+    .ctas p {
+        display: none;
+    }
+
+    /* Hero sections */
+    .hero {
+        padding: 0 1rem;
+        width: 95%;
+    }
+
+    .hero-text1, .hero-text2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .secondHero {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        padding: 2em 1rem;
+        gap: 2rem;
+        min-height: 120vh;
+    }
+
+    .leftContent, .rightContent {
+        height: 50vh;
+        padding: 1em;
+    }
+
+    .container {
+        min-width: 90%;
+        min-height: 70%;
+        padding: 1.5em;
+    }
+
+    /* Mission section */
+    .topContent h1 {
+        font-size: 2rem;
+        padding-right: 0;
+    }
+
+    .bottomContent {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .bottomContent .left,
+    .bottomContent .right {
+        width: 100%;
+    }
+
+    .bottomContent .left p {
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    .bottomContent .left button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Slider */
+    .items {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .items .left,
+    .items .right {
+        width: 100%;
+    }
+
+    .items .right {
+        height: 40vh;
+        order: -1;
+    }
+
+    .items .left {
+        padding: 1rem;
+    }
+
+    .items h1 {
+        font-size: 2rem;
+    }
+
+    .items p {
+        font-size: 1rem;
+    }
+
+    .controls {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .controls button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* FAQ section */
+    .topper h1 {
+        font-size: 2rem;
+        padding: 0.5em 0;
+    }
+
+    .contentainer {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .contentainer .left {
+        width: 100%;
+        flex-direction: row;
+        gap: 1em;
+        padding: 1rem;
+    }
+
+    .contentainer .left h3 {
+        font-size: 1.2rem;
+    }
+
+    .contentainer .right {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    /* Impact section */
+    .impact {
+        flex-direction: column;
+        padding: 3rem 1rem;
+    }
+
+    .impact h3 {
+        width: 100%;
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    .Grid-numbers {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .Grid-numbers .number {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    /* Available collection */
+    .availableCollection h2 {
+        font-size: 2rem;
+    }
+
+    .availableCollection p {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .availableCollection button {
+        width: 100%;
+        max-width: 300px;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Art bridge collections */
+    .artbridgeCollections h4 {
+        font-size: 2rem;
+    }
+
+    .collections-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collection-item {
+        width: 80%;
+        height: 50vh;
+        margin-bottom: 2rem;
+    }
+
+    .collection-item img {
+        height: 70%;
+    }
+
+    /* Footer */
     .newsletter {
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 5%;
     }
-  
+
     .newsletter-form {
-      justify-content: center;
+        justify-content: center;
+        width: 100%;
     }
-  
+
+    .newsletter-form input {
+        width: 200px;
+    }
+
     .footer-main {
-      flex-direction: column;
+        flex-direction: column;
+        padding: 2rem 5%;
     }
-  
+
     .footer-left,
     .footer-right {
-      flex: 1 1 100%;
+        flex: 1 1 100%;
     }
-  
+
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+
     .footer-bottom {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-  
+
     .footer-nav {
-      margin-bottom: 20px;
-      text-align: center;
+        margin-bottom: 20px;
+        justify-content: center;
     }
-  }
+
+    .search input {
+        font-size: 1.5em;
+        padding: 0.5em 1em;
+    }
+}
+
+/* 8. Large Mobile Styles (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero-text1, .hero-text2 {
+        font-size: 3rem;
+    }
+
+    .topContent h1 {
+        font-size: 2.5rem;
+    }
+
+    .items h1 {
+        font-size: 2.2rem;
+    }
+
+    .topper h1 {
+        font-size: 2.2rem;
+    }
+
+    .collection-item {
+        width: 70%;
+    }
+
+    .Grid-numbers .number {
+        font-size: 1.5rem;
+    }
+}
+
+/* 9. Small Mobile Styles (320px - 480px) */
+@media (max-width: 480px) {
+    .hero {
+        min-height: 25vh;
+    }
+
+    .hero-text1, .hero-text2 {
+        font-size: 2rem;
+    }
+
+    .secondHero {
+        padding: 1em 0.5rem;
+    }
+
+    .leftContent, .rightContent {
+        height: 40vh;
+        padding: 0.5em;
+    }
+
+    .container {
+        padding: 1em;
+        min-height: 80%;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .container p {
+        font-size: 0.9rem;
+    }
+
+    .topContent h1 {
+        font-size: 1.8rem;
+    }
+
+    .items .right {
+        height: 30vh;
+    }
+
+    .items h1 {
+        font-size: 1.8rem;
+    }
+
+    .items p {
+        font-size: 0.9rem;
+    }
+
+    .topper h1 {
+        font-size: 1.8rem;
+    }
+
+    .contentainer .left h3 {
+        font-size: 1rem;
+    }
+
+    .contentainer .left span {
+        padding: 1em 1.2em;
+        font-size: 0.9rem;
+    }
+
+    .Grid-numbers {
+        grid-template-columns: 1fr;
+    }
+
+    .Grid-numbers .number {
+        font-size: 1rem;
+    }
+
+    .availableCollection h2,
+    .artbridgeCollections h4 {
+        font-size: 1.8rem;
+    }
+
+    .collection-item {
+        width: 95%;
+        height: 45vh;
+    }
+
+    .newsletter-form input {
+        width: 150px;
+    }
+
+    .nav-links {
+        font-size: 1.2em;
+    }
+
+    .menu span {
+        display: none;
+    }
+
+    nav {
+        padding: 0 0.5rem;
+    }
+}
+
+/* 10. Tablet Styles (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+        padding: 0 4rem;
+    }
+
+    .hero-text1, .hero-text2 {
+        font-size: 3.5rem;
+    }
+
+    .secondHero {
+        padding: 3em 4rem;
+        gap: 4rem;
+    }
+
+    .topContent h1 {
+        font-size: 2.8rem;
+        padding-right: 4em;
+    }
+
+    .bottomContent .left p {
+        width: 90%;
+        font-size: 1.25em;
+    }
+
+    .items h1 {
+        font-size: 2.3rem;
+    }
+
+    .topper h1 {
+        font-size: 2.3rem;
+        padding: 1em 6em 0em 0;
+    }
+
+    .contentainer .right {
+        padding: 2rem 10em;
+    }
+
+    .impact {
+        padding: 4rem 4rem;
+    }
+
+    .availableCollection p {
+        width: 50%;
+    }
+
+    .collection-item {
+        width: 28%;
+    }
+}
+
+/* 11. Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 12. Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+/* 13. Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Focus styles for better accessibility */
+button:focus,
+input:focus,
+a:focus {
+    outline: 2px solid #356494;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .container {
+        border: 2px solid #000;
+    }
+    
+    button {
+        border: 2px solid currentColor;
+    }
+}
+
+/* 14. Missing Mobile Specific Adjustments */
+
+/* Logo positioning fix for mobile */
+@media (max-width: 768px) {
+    .logo {
+        margin-left: 0 !important;
+        justify-self: center;
+    }
+    
+    .logo h1 {
+        display: none;
+    }
+}
+
+/* Search functionality mobile improvements */
+@media (max-width: 768px) {
+    .search input {
+        width: 85%;
+        font-size: 1.2em;
+        padding: 0.7em 1em;
+    }
+    
+    .search .close-search {
+        padding: 1.5em;
+        font-size: 1.2em;
+    }
+}
+
+/* CTA buttons mobile optimization */
+@media (max-width: 768px) {
+    .ctas {
+        gap: 0.5rem;
+    }
+    
+    .ctas .contact-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Dropdown mobile improvements */
+@media (max-width: 768px) {
+    .dropdown-content.active {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        background: #f8f9fa;
+        margin-top: 0.5rem;
+        padding: 0.5em 1em;
+    }
+    
+    .dropdown-content li {
+        padding: 0.3rem 0;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .dropdown-content li a {
+        font-size: 0.9em;
+        padding: 0.2rem 0;
+    }
+}
+
+/* Slider mobile specific fixes */
+@media (max-width: 768px) {
+    .slider {
+        padding: 1rem 0;
+    }
+    
+    .items {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .items .left {
+        padding: 1rem 0;
+    }
+    
+    .items .right {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Collections container mobile scroll fix */
+@media (max-width: 768px) {
+    .collections-container {
+        overflow-x: hidden;
+        gap: 1rem;
+    }
+    
+    .collection-item {
+        margin-bottom: 1.5rem;
+    }
+    
+    .collection-item div h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .collection-item div p {
+        font-size: 0.9rem;
+        color: #666;
+    }
+}
+
+/* Impact section mobile number sizing */
+@media (max-width: 768px) {
+    .Grid-numbers .number h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .Grid-numbers .number p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Newsletter form mobile improvements */
+@media (max-width: 480px) {
+    .newsletter-form {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .newsletter-form input {
+        width: 100%;
+        border-radius: 25px;
+        text-align: center;
+    }
+    
+    .newsletter-form button {
+        width: 100%;
+        border-radius: 25px;
+        border: 1px solid #fff;
+        padding: 15px;
+    }
+}
+
+/* Footer dropdown functionality for mobile */
+@media (max-width: 768px) {
+    .footer-links div {
+        position: relative;
+    }
+    
+    .footer-links div span {
+        transition: transform 0.3s ease;
+    }
+    
+    .footer-links div.active span {
+        transform: rotate(180deg);
+    }
+}
+
+/* Text scaling improvements */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .container h1 {
+        line-height: 1.3;
+    }
+    
+    .container p {
+        line-height: 1.5;
+    }
+}
+
+/* Touch target improvements */
+@media (max-width: 768px) {
+    button, .ctas i, .menu, .close-btn, .dropdown .div {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav-links li {
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-links li a {
+        padding: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+/* Horizontal scrolling prevention */
+@media (max-width: 768px) {
+    body, html {
+        overflow-x: hidden;
+    }
+    
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .secondHero {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .hero {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Loading and animation improvements for mobile */
+@media (max-width: 768px) {
+    [data-aos] {
+        transition-duration: 0.4s;
+    }
+    
+    .items {
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .container {
+        transition: transform 0.2s ease;
+    }
+}
+
+/* Form elements mobile styling */
+@media (max-width: 768px) {
+    input[type="text"], input[type="email"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 8px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 40vh;
+    }
+    
+    .secondHero {
+        min-height: 100vh;
+    }
+    
+    .leftContent, .rightContent {
+        height: 70vh;
+    }
+    
+    .items .right {
+        height: 35vh;
+    }
+}
+
+/* Print styles */
+@media print {
+    .nav-links, .menu, .ctas, .controls, .ctaControll, .footer-carousel {
+        display: none !important;
+    }
+    
+    .hero, .secondHero, .ourMission, .faqs, .impact, .availableCollection {
+        page-break-inside: avoid;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+}
+
+/* Final mobile polish */
+@media (max-width: 768px) {
+    /* Ensure proper spacing */
+    section, .hero, .secondHero, .ourMission, .faqs, .impact, .availableCollection, .artbridgeCollections {
+        margin-bottom: 2rem;
+    }
+    
+    /* Button consistency */
+    button, .cta-button, .contact-button {
+        font-family: 'GT America', 'GT America Fallback', sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+    
+    /* Improve readability */
+    p {
+        text-align: left;
+        word-spacing: 0.1em;
+    }
+    
+    /* Image optimization */
+    img {
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
