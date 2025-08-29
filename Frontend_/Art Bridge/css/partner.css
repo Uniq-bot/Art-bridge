@@ -83,8 +83,9 @@ span {
 
 .para {
   font-size: 20px;
-  word-spacing: 1px;
-  line-height: 25px;
+  letter-spacing: 1px;
+  line-height: 1;
+  width: 80%;
 }
 
 .div2 {
@@ -247,12 +248,16 @@ button:hover {
 .h4 {
   font-size: 30px;
 }
+p{
+  font-family: serif
+}
 
 .p4 {
   font-size: 20px;
   line-height: 25px;
   padding-bottom: 30px;
   color: rgb(64, 42, 42);
+  font-family: serif;
 }
 
 .hd {

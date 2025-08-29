@@ -6,7 +6,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+p{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 :root {
     --font-body: 'Poppins', sans-serif;
     --primary-color: #2c3e50;

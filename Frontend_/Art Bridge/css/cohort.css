@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+p{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 :root {
     --primary-purple: #D1BDFA;
     --dark-purple: #6530B8;

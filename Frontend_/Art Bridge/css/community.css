@@ -5,7 +5,9 @@
     --font-body: 'Poppins', sans-serif;
     --font-serif: 'IBM Plex Serif', serif;
 }
-
+p{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 * {
     margin: 0;
     padding: 0;
