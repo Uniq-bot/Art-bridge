@@ -35,7 +35,8 @@ body {
     font-size: 1em;
   }
   select {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     padding: 12px 16px;
     font-size: 16px;
     border: 2px solid #ddd;
@@ -56,6 +57,7 @@ select:focus {
     outline: none;
     border-color: #666;
 }
+
 .details{
     display: flex;
     justify-content: center;
@@ -83,6 +85,7 @@ select:focus {
     align-items: center;
     justify-content: center;
     margin-right: 10px;
+    flex-shrink: 0;
   }
 
   label {
@@ -169,6 +172,7 @@ select:focus {
     font-weight: 600;
     font-size: 16px;
     margin-right: 15px;
+    flex-shrink: 0;
 }
 
 .section-title {
@@ -311,4 +315,197 @@ textarea {
 .social-link:hover {
     border-color: #999;
     color: #333;
+}
+
+/* Mobile Responsive Media Queries */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+    .details {
+        gap: 10em;
+        padding: 3em 2em;
+    }
+    
+    .container {
+        max-width: 90%;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .contact-us {
+        padding: 1.5em;
+    }
+    
+    .contact-us h1 {
+        font-size: 1.8em;
+    }
+    
+    .details {
+        flex-direction: column;
+        gap: 3em;
+        padding: 2em 1em;
+        align-items: center;
+    }
+    
+    .form-content {
+        padding: 30px 20px;
+    }
+    
+    .form-row {
+        gap: 15px;
+    }
+    
+    .section-title {
+        font-size: 18px;
+    }
+    
+    .address-container {
+        max-width: 90%;
+        padding: 25px;
+        margin: 0 1em;
+    }
+    
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .contact-us {
+        padding: 1em;
+    }
+    
+    .contact-us h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    
+    .contact-us span {
+        font-size: 0.9em;
+        text-align: center;
+    }
+    
+    .details {
+        gap: 2em;
+        padding: 1.5em 0.5em;
+    }
+    
+    .form-content {
+        padding: 20px 15px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .section {
+        margin-bottom: 30px;
+    }
+    
+    .section-header {
+        margin-bottom: 15px;
+    }
+    
+    .section-number {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+        margin-right: 12px;
+    }
+    
+    .section-title {
+        font-size: 16px;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
+    
+    h3::before {
+        width: 24px;
+        height: 24px;
+        font-size: 0.8rem;
+        margin-right: 8px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        padding: 10px 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    textarea {
+        height: 100px;
+    }
+    
+    button,
+    .submit-button {
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+    
+    .address-container {
+        padding: 20px 15px;
+        margin: 0 0.5em;
+    }
+    
+    .section h3 {
+        font-size: 15px;
+    }
+    
+    .section p {
+        font-size: 13px;
+    }
+    
+    .social-link {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+    
+    .social-links {
+        gap: 10px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 320px) {
+    .contact-us {
+        padding: 0.8em;
+    }
+    
+    .form-content {
+        padding: 15px 10px;
+    }
+    
+    .details {
+        padding: 1em 0.3em;
+    }
+    
+    .address-container {
+        padding: 15px 12px;
+        margin: 0 0.3em;
+    }
+    
+    .section-number {
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+        margin-right: 10px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        padding: 8px 10px;
+    }
 }
